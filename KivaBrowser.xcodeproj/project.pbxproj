@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C71797C9198614200049D44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797C8198614200049D44C /* AppDelegate.swift */; };
+		C71797CB198614200049D44C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797CA198614200049D44C /* ViewController.swift */; };
+		C71797CE198614200049D44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71797CC198614200049D44C /* Main.storyboard */; };
+		C71797D0198614200049D44C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C71797CF198614200049D44C /* Images.xcassets */; };
+		C71797DC198614200049D44C /* KivaBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797DB198614200049D44C /* KivaBrowserTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C71797D6198614200049D44C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C71797BB198614200049D44C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C71797C2198614200049D44C;
+			remoteInfo = KivaBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C71797C3198614200049D44C /* KivaBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KivaBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71797C7198614200049D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C71797C8198614200049D44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C71797CA198614200049D44C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C71797CD198614200049D44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C71797CF198614200049D44C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C71797D5198614200049D44C /* KivaBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KivaBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71797DA198614200049D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C71797DB198614200049D44C /* KivaBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KivaBrowserTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C71797C0198614200049D44C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C71797D2198614200049D44C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C71797BA198614200049D44C = {
+			isa = PBXGroup;
+			children = (
+				C71797C5198614200049D44C /* KivaBrowser */,
+				C71797D8198614200049D44C /* KivaBrowserTests */,
+				C71797C4198614200049D44C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C71797C4198614200049D44C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C71797C3198614200049D44C /* KivaBrowser.app */,
+				C71797D5198614200049D44C /* KivaBrowserTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C71797C5198614200049D44C /* KivaBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				C71797C8198614200049D44C /* AppDelegate.swift */,
+				C71797CA198614200049D44C /* ViewController.swift */,
+				C71797CC198614200049D44C /* Main.storyboard */,
+				C71797CF198614200049D44C /* Images.xcassets */,
+				C71797C6198614200049D44C /* Supporting Files */,
+			);
+			path = KivaBrowser;
+			sourceTree = "<group>";
+		};
+		C71797C6198614200049D44C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C71797C7198614200049D44C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C71797D8198614200049D44C /* KivaBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				C71797DB198614200049D44C /* KivaBrowserTests.swift */,
+				C71797D9198614200049D44C /* Supporting Files */,
+			);
+			path = KivaBrowserTests;
+			sourceTree = "<group>";
+		};
+		C71797D9198614200049D44C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C71797DA198614200049D44C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C71797C2198614200049D44C /* KivaBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C71797DF198614200049D44C /* Build configuration list for PBXNativeTarget "KivaBrowser" */;
+			buildPhases = (
+				C71797BF198614200049D44C /* Sources */,
+				C71797C0198614200049D44C /* Frameworks */,
+				C71797C1198614200049D44C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KivaBrowser;
+			productName = KivaBrowser;
+			productReference = C71797C3198614200049D44C /* KivaBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C71797D4198614200049D44C /* KivaBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C71797E2198614200049D44C /* Build configuration list for PBXNativeTarget "KivaBrowserTests" */;
+			buildPhases = (
+				C71797D1198614200049D44C /* Sources */,
+				C71797D2198614200049D44C /* Frameworks */,
+				C71797D3198614200049D44C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C71797D7198614200049D44C /* PBXTargetDependency */,
+			);
+			name = KivaBrowserTests;
+			productName = KivaBrowserTests;
+			productReference = C71797D5198614200049D44C /* KivaBrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C71797BB198614200049D44C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "wanming zhang";
+				TargetAttributes = {
+					C71797C2198614200049D44C = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					C71797D4198614200049D44C = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = C71797C2198614200049D44C;
+					};
+				};
+			};
+			buildConfigurationList = C71797BE198614200049D44C /* Build configuration list for PBXProject "KivaBrowser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C71797BA198614200049D44C;
+			productRefGroup = C71797C4198614200049D44C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C71797C2198614200049D44C /* KivaBrowser */,
+				C71797D4198614200049D44C /* KivaBrowserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C71797C1198614200049D44C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C71797CE198614200049D44C /* Main.storyboard in Resources */,
+				C71797D0198614200049D44C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C71797D3198614200049D44C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C71797BF198614200049D44C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C71797CB198614200049D44C /* ViewController.swift in Sources */,
+				C71797C9198614200049D44C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C71797D1198614200049D44C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C71797DC198614200049D44C /* KivaBrowserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C71797D7198614200049D44C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C71797C2198614200049D44C /* KivaBrowser */;
+			targetProxy = C71797D6198614200049D44C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C71797CC198614200049D44C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C71797CD198614200049D44C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C71797DD198614200049D44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C71797DE198614200049D44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C71797E0198614200049D44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = KivaBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C71797E1198614200049D44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = KivaBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C71797E3198614200049D44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KivaBrowser.app/KivaBrowser";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KivaBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		C71797E4198614200049D44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KivaBrowser.app/KivaBrowser";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KivaBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C71797BE198614200049D44C /* Build configuration list for PBXProject "KivaBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C71797DD198614200049D44C /* Debug */,
+				C71797DE198614200049D44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C71797DF198614200049D44C /* Build configuration list for PBXNativeTarget "KivaBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C71797E0198614200049D44C /* Debug */,
+				C71797E1198614200049D44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C71797E2198614200049D44C /* Build configuration list for PBXNativeTarget "KivaBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C71797E3198614200049D44C /* Debug */,
+				C71797E4198614200049D44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C71797BB198614200049D44C /* Project object */;
+}
