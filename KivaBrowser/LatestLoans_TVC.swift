@@ -51,18 +51,21 @@ class LatestLoans_TVC: Loans_TVC, UIScrollViewDelegate {
         
         if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"
-            //println("\(self.currPageNum) out of \(self.paginator.pages) pages")
+            println("\(text)")
             label.text = text
+            println("\(label.text)")
         }
         
-        if tableView == self.searchDisplayController?.searchResultsTableView {
-            println("viewForFooterInsection...\(tableView)")
-            let count: Int? = self.searchResultsArray.count
-            label.text = "\(count) loan(s)"
-        } else {
-            let text: String = "\(self.currPageNum) out of \(self.paginator.pages) pages"
-            label.text = text
-        }
+//        if tableView == self.searchDisplayController?.searchResultsTableView {
+//            println("viewForFooterInsection...\(tableView)")
+//            let count: Int? = self.searchResultsArray.count
+//            label.text = "\(count) loan(s)"
+//        } else {
+//            if let pages = self.paginator.pages {
+//                let text: String = "\(self.currPageNum) out of \(self.paginator.pages) pages"
+//            label.text = text
+//            }
+//        }
         
         footerView.addSubview(label)
         self.tableView.tableFooterView = footerView
@@ -72,9 +75,9 @@ class LatestLoans_TVC: Loans_TVC, UIScrollViewDelegate {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 98.0
     }
+    
     //#pragma mark - Refreshing
     // Fires off a block on a queue to fetch data from kiva
-    
     @IBAction func refresh() {
         self.refreshControl!.beginRefreshing()
         let fetchQ: dispatch_queue_t = dispatch_queue_create("Kiva Fetch", nil)
