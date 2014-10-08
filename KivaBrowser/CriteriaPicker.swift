@@ -32,6 +32,7 @@ class CriteriaPicker: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //println("criteria picker self.view = \(self.view)")
         genderPicker.delegate = self
         sectorPicker.delegate = self
         statusPicker.delegate = self

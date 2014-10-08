@@ -48,7 +48,9 @@ class Loan {
             self.use = description
         }
         
-        self.imgDic = loanDic.valueForKey("image") as? NSDictionary
+        if let imgDic = loanDic.valueForKey("image") as? NSDictionary {
+            self.imgDic = imgDic
+        } 
         
         if let sector = loanDic.valueForKey("sector") as? NSString {
             self.sector = sector

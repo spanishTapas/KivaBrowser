@@ -19,4 +19,11 @@ import Foundation
     
     //This method is called when the Detailed Loan retrieved from Kiva is parsed
     optional func didReceiveDetailedLoan(detailedLoan: DetailedLoan)
+    
+    //This method is called when the list of teams retrieved from Kiva is parsed
+    optional func didReceiveTeams(teams: [Team])
+    
+    //This method is called when an error occurred
+    optional func fetchingTeamsFailedWithError(error: NSErrorPointer)
+    optional func didReceiveTeamPagingInfo(paginator: Paginator)
 }

@@ -35,10 +35,20 @@ class LoanManager :JsonDataFetcherDelegate {
         //println("LoanManager self.fetcher = \(self.fetcher)")
     }
     
+    func fetchTeamsBy(sortByStr: String, pageNum: Int) {
+        //println("LoanManager fetchTeams()......")
+        self.fetcher?.fetchTeamsBy(sortByStr, pageNum: pageNum)
+    }
+    
+    func fetchTeamPagingInfoBy(sortByStr: String) {
+        println("LoanManager fetchTeamPagingInfoBy...")
+        self.fetcher?.getTeamPagingInfoSortedBy(sortByStr)
+    }
+    
     func receivedJsonData(data: NSData) {
         var error: NSError?
         if let loans: [Loan]? = Loan.loanArrayFromJsonData(data, error: &error) {
-            println("LoanManager loans.count: \(loans?.count)")
+            //println("LoanManager loans.count: \(loans?.count)")
             if (error != nil) {
                 self.delegate?.fetchingLoansFailedWithError!(&error)
             } else {
@@ -47,7 +57,7 @@ class LoanManager :JsonDataFetcherDelegate {
         }
     }
     
-    func receivedDetailedLoanJSON(jsonData: NSData) {
+    func receivedDetailedLoanJson(jsonData: NSData) {
         var error: NSError?
         let detailedLoan: DetailedLoan? = DetailedLoan.detailedLoanFromJsonData(jsonData, error: &error)
         if (error != nil) {
@@ -71,6 +81,32 @@ class LoanManager :JsonDataFetcherDelegate {
             self.delegate?.fetchingLoansFailedWithError!(&error)
         } else {
             self.delegate?.didReceivePagingInfo!(paginator!)
+        }
+    }
+
+    func receivedTeamJsonData(data: NSData) {
+        var error: NSError?
+        if let teams: [Team]? = Team.TeamArrayFromJsonData(data, error: &error) {
+            println("LoanManager teams.count: \(teams?.count)")
+            if (error != nil) {
+                self.delegate?.fetchingTeamsFailedWithError!(&error)
+            } else {
+                self.delegate?.didReceiveTeams!(teams!)
+            }
+        }
+    }
+
+    func receivedTeamPagingInfo(data: NSData) {
+        //println("LoanManager teamPaginator")
+        var error: NSError?
+        let paginator: Paginator? = Paginator.paginatorFromJsonData(data, error: &error)
+        
+        if (error != nil) {
+            
+            self.delegate?.fetchingLoansFailedWithError!(&error)
+        } else {
+            self.delegate?.didReceiveTeamPagingInfo!(paginator!)
+            
         }
     }
     

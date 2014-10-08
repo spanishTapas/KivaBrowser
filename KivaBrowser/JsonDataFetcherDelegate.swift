@@ -10,9 +10,12 @@ import Foundation
 
 @objc protocol JsonDataFetcherDelegate {
     func receivedJsonData(data: NSData)
-    func receivedDetailedLoanJSON(jsonData: NSData)
+    func receivedDetailedLoanJson(jsonData: NSData)
     
     func fetchingDataFailedWithError(error: NSErrorPointer)
     
     func receivedPagingInfo(data: NSData)
+    
+    func receivedTeamJsonData(data: NSData)
+    func receivedTeamPagingInfo(data: NSData)
 }

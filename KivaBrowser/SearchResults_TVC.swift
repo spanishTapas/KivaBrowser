@@ -192,15 +192,22 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController]
         if sender is LoanCell {
-            let indexPath: NSIndexPath = self.tableView.indexPathForCell(sender as UITableViewCell)!
-            if segue.identifier == "Show Details" {
+            let view: UIView? = sender.superview
+            var tableView = UITableView()
+            if view?.superview is UITableView {
+                tableView = view?.superview as UITableView
+            } else if view is UITableView {
+                tableView = view as UITableView
+            } else {
+                //NSAssert(NO, @"UITableView shall always be found.");
+            }
+            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
+            if segue.identifier == "Show Detail" {
                 let selectedLoan: Loan = self.loanArray[indexPath.row]
                 let myDestVC = segue.destinationViewController as DetailedLoanVC
                 myDestVC.setLoan_id(selectedLoan.loan_id!)
-                println("LatestLoans_TVC prepareForSegue selectedLoan.loan_id = \(selectedLoan.loan_id)")
-                
+                println("SearchResults_TVC prepareForSegue selectedLoan.loan_id = \(selectedLoan.loan_id)")
             }
         }
-
     }
 }

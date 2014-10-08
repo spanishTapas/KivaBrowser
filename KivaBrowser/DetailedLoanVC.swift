@@ -28,6 +28,7 @@ class DetailedLoanVC: UIViewController, LoanManagerDelegate, UIScrollViewDelegat
     @IBOutlet weak var protectionLabel: UILabel!
     @IBOutlet weak var descriptionView: UITextView!
     
+    
     let loanManager: LoanManager
     var detailedLoan: DetailedLoan?
     var loan_id: Int
@@ -46,23 +47,28 @@ class DetailedLoanVC: UIViewController, LoanManagerDelegate, UIScrollViewDelegat
         loanManager.fetcher!.delegate = loanManager
         loanManager.delegate = self
         
-        self.scrollView.delegate = self
+        //self.scrollView.delegate = self
         self.descriptionView.delegate = self
         
         loanManager.fetchDetailedLoanByID(self.loan_id)
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        self.scrollView.layoutIfNeeded()
-        self.scrollView.contentSize = self.contentView.bounds.size
-        //println("self.scrollView = \(scrollView)")
-        //println("scrollView.contentSize= \(NSStringFromCGSize(self.scrollView.contentSize))")
-        //println("self.contentView.bounds.size=\(NSStringFromCGSize(self.contentView.bounds.size))");
-        let bottomOffset: CGPoint = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.height)
-        //println("bottomOffset=\(bottomOffset)")
-        self.scrollView.setContentOffset(bottomOffset, animated: true)
-    }
+        override func viewWillLayoutSubviews() {
+            super.viewWillLayoutSubviews()
+    
+            self.scrollView.layoutIfNeeded()
+            self.scrollView.contentSize = self.contentView.bounds.size
+            //println("self.view = \(self.view)")
+            println("self.scrollView = \(scrollView)")
+            //println("self.scrollView bound size = \(NSStringFromCGSize(self.scrollView.frame.size))")
+            //println("self.scrollView frame size = \(NSStringFromCGSize(self.scrollView.bounds.size))")
+            //println("scrollView.contentSize= \(NSStringFromCGSize(self.scrollView.contentSize))")
+            //println("self.contentView.bounds.size=\(NSStringFromCGSize(self.contentView.bounds.size))");
+            let bottomOffset: CGPoint = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.height)
+            //println("bottomOffset=\(bottomOffset)")
+            self.scrollView.setContentOffset(bottomOffset, animated: true)
+        }
+    
     func setLoan_id(loan_id: Int) {
         self.loan_id = loan_id
         println("Detailedloan self.loan_id: \(self.loan_id)")

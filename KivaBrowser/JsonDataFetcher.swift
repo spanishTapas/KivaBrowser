@@ -43,6 +43,7 @@ class JsonDataFetcher {
         })
     }
     
+   
     func fetchLoansByRequest(requestStr: String, pageNum: Int) {
         dispatch_async(kBGQueue, {
             var connectionError: NSError?
@@ -65,7 +66,7 @@ class JsonDataFetcher {
             
         })
     }
-
+    
     func getPagingInfo(){
         dispatch_async(kBGQueue, {
         var connectionError: NSError?
@@ -112,19 +113,63 @@ class JsonDataFetcher {
             var dataStr: String = "http://api.kivaws.org/v1/loans/"
             dataStr = dataStr.stringByAppendingString("\(loan_id)")
             dataStr = dataStr.stringByAppendingString(".json")
-            println("JsonDataFetcher fetchDetailedLoanByID dataStr = \(dataStr)")
+            //println("JsonDataFetcher fetchDetailedLoanByID dataStr = \(dataStr)")
             let dataURL = NSURL(string: dataStr)
             let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
                     self.delegate?.fetchingDataFailedWithError(&connectionError)
                 } else {
-                    self.delegate?.receivedDetailedLoanJSON(data!)
+                    self.delegate?.receivedDetailedLoanJson(data!)
                 }
             })
         })
     }
 
+    func fetchTeamsBy(sortByStr: String, pageNum: Int) {
+        dispatch_async(kBGQueue, {
+            var connectionError: NSError?
+            var dataStr: String = "http://api.kivaws.org/v1/teams/search.json"
+            var pathComp: String = "\(sortByStr)"
+            pathComp += "&page=\(pageNum)"
+            dataStr = dataStr.stringByAppendingString(pathComp)
+            println("JsonDataFetcher fetchTeamsBy dataStr = \(dataStr)")
+            let dataURL: NSURL = NSURL(string: dataStr)
+            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            dispatch_async(dispatch_get_main_queue(), {
+                if (connectionError != nil) {
+                    // handle error
+                    self.delegate?.fetchingDataFailedWithError(&connectionError)
+                }else {
+                    self.delegate?.receivedTeamJsonData(data!)
+                }
+            })
+        })
+    }
+    
+    func getTeamPagingInfoSortedBy(sortByStr: String) {
+        dispatch_async(kBGQueue, {
+            var connectionError: NSError?
+            //form data string by search criteria
+            //search criteria by user selection
+            var dataStr: String = "http://api.kivaws.org/v1/teams/search.json"
+            let pathComp = sortByStr
+            dataStr = dataStr.stringByAppendingString(pathComp)
+            let dataURL = NSURL(string: dataStr)
+            
+            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            dispatch_async(dispatch_get_main_queue(), {
+                if (connectionError != nil) {
+                    self.delegate?.fetchingDataFailedWithError(&connectionError)
+                }else {
+                    self.delegate?.receivedTeamPagingInfo(data!)
+                }
+            })
+            
+        })
+    }
+
+    
     init() {
         
     }

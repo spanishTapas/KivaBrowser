@@ -22,8 +22,9 @@ class Loans_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
     var isLoading: Bool
     var currPageNum: Int
     var paginator: Paginator
-   
+    
     required init(coder aDecoder: NSCoder) {
+        
         self.loanManager = LoanManager()
         self.paginator = Paginator()
         self.currPageNum = 1
@@ -82,7 +83,7 @@ class Loans_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
             return numberOfRows
         } else {
             let numberOfRows = loanArray.count
-            println("Loans_TVC number of rows: \(numberOfRows)")
+            //println("Loans_TVC number of rows: \(numberOfRows)")
             return numberOfRows
         }
     }
@@ -110,22 +111,28 @@ class Loans_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         cell.amountLabel.text = "$ \(loan.amount)"
         cell.nameLabel.text = loan.name
         cell.descLabel.text = loan.use
-        self.squareImageOfLoanForImageView(loan, imgView: cell.loanImage)
-
+        
+        if loan.imgDic != nil {
+            self.squareImageOfLoanForImageView(loan, imgView: cell.loanImage)
+        }
     }
     
     func squareImageOfLoanForImageView(loan: Loan, imgView: UIImageView) {
+        
         let imageURL = loan.urlForImageFormat(loan.imgDic!, format: Loan.KivaImageFormat.KivaImageFormatSquare)
+        
         let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
         dispatch_async(imageFetchQ, {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true//not good
-            let imageData: NSData = NSData(contentsOfURL: imageURL)//could take a while
+            let imageData = NSData(contentsOfURL: imageURL)//could take a while
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false//not good
+            
             // UIImage is one of the few UIKit objects which is thread-safe, so we can do this here
             let image: UIImage = UIImage(data: imageData)
+            
             dispatch_async(dispatch_get_main_queue(), {
                 imgView.image = image
-                })
+            })
             
         })
     }
