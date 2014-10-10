@@ -39,6 +39,8 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         
         self.loadTeamsForPage(1)
         self.loanManager.fetchTeamPagingInfoBy(self.sortByStr)
+        
+        self.refreshControl!.addTarget(self, action:"refresh", forControlEvents: .ValueChanged)
     }
     
     func setsortByStr(sortByStr: String) {
@@ -143,7 +145,18 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 98.0
     }
-    
+    //#pragma mark - Refreshing
+    // Fires off a block on a queue to fetch data from kiva
+    @IBAction func refresh() {
+        self.refreshControl!.beginRefreshing()
+        let fetchQ: dispatch_queue_t = dispatch_queue_create("Kiva Fetch", nil)
+        dispatch_async(fetchQ, {
+            self.loadTeamsForPage(self.currPageNum)
+            dispatch_async(dispatch_get_main_queue(), {
+                self.refreshControl!.endRefreshing()
+            })
+        })
+    }
     //#pragma mark - UIScrollViewDelegate Methods
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         // when reaching bottom, load a new page
@@ -179,4 +192,25 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
 
+    //#pragma mark - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        // Get the new view controller using [segue destinationViewController]
+        if sender is TeamCell {
+            let view: UIView? = sender.superview
+            var tableView = UITableView()
+            if view?.superview is UITableView {
+                tableView = view?.superview as UITableView
+            } else if view is UITableView {
+                tableView = view as UITableView
+            } else {
+                //NSAssert(NO, @"UITableView shall always be found.");
+            }
+            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
+            if segue.identifier == "ShowTeam" {
+                let selectedTeam: Team = self.teamArray[indexPath.row]
+                let myDestVC = segue.destinationViewController as DetailedTeam_VC
+                myDestVC.setTeam(selectedTeam)
+            }
+        }
+    }
 }

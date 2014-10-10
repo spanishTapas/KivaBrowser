@@ -43,4 +43,26 @@ extension Team {
         return team
     }
     
+    class func dateWithJsonString(dateStr: String) -> NSDate {
+        NSDateFormatter.setDefaultFormatterBehavior(NSDateFormatterBehavior.Behavior10_4)
+        let dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssz"
+        dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
+        dateFormatter.calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        
+        var date: NSDate = NSDate()
+        date = dateFormatter.dateFromString(dateStr)!
+        
+        return date
+    }
+    
+    class func stringFromDate(date: NSDate) -> String {
+        var dateStr: String
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateStr = dateFormatter.stringFromDate(date)
+        
+        return dateStr
+    }
+
 }

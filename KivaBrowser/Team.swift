@@ -35,25 +35,55 @@ class Team {
     var loan_count: Int = 0
     
     init(teamDic: NSDictionary) {
-        self.team_id = teamDic.valueForKey("id") as? Int
-        self.category = teamDic.valueForKey("category") as String
-        self.description = teamDic.valueForKey("description") as String
-        self.loan_because = teamDic.valueForKey("loan_because") as String
-        self.team_since = teamDic.valueForKey("team_since") as String
-        self.website_url = teamDic.valueForKey("website_url") as String
-        self.shortname = teamDic.valueForKey("shortname") as String
+        if let team_id = teamDic.valueForKey("id") as? Int {
+            self.team_id = team_id
+        }
+        if let category = teamDic.valueForKey("category")as? String {
+            self.category = category
+        }
+        if let description = teamDic.valueForKey("description") as? String {
+            self.description = description
+        }
+        if let loan_because = teamDic.valueForKey("loan_because") as? String {
+            self.loan_because = loan_because
+        }
+        
+        if let jsonStr = teamDic.valueForKey("team_since") as? String {
+            let date: NSDate = Team.dateWithJsonString(jsonStr)
+            let dateStr = Team.stringFromDate(date)
+            self.team_since = dateStr
+        }
+        
+        if let website_url = teamDic.valueForKey("website_url") as? String {
+            self.website_url = website_url
+        }
+        
+        if let shortname = teamDic.valueForKey("shortname") as? String {
+            self.shortname = shortname
+        }
         
         if let imgDic = teamDic.valueForKey("image") as? NSDictionary {
             self.imgDic = imgDic
             //println("Team... imgDic = \(imgDic)")
         }
-        
-        self.member_count = teamDic.valueForKey("member_count") as Int
-        self.loaned_amount = teamDic.valueForKey("loaned_amount") as Int
-        self.membership_type = teamDic.valueForKey("membership_type") as String
-        self.whereabouts = teamDic.valueForKey("whereabouts") as String
-        self.name = teamDic.valueForKey("name") as String
-        self.loan_count = teamDic.valueForKey("loan_count") as Int        
+        if let member_count = teamDic.valueForKey("member_count") as? Int {
+            self.member_count = member_count
+        }
+        if let loaned_amount = teamDic.valueForKey("loaned_amount") as? Int {
+            self.loaned_amount = loaned_amount
+        }
+        if let membership_type = teamDic.valueForKey("membership_type") as? String {
+            self.membership_type = membership_type
+        }
+        if let whereabouts = teamDic.valueForKey("whereabouts") as? String {
+            self.whereabouts = whereabouts
+        }
+        if let name = teamDic.valueForKey("name") as? String {
+            self.name = name
+        }
+        if let loan_count = teamDic.valueForKey("loan_count") as? Int {
+            self.loan_count = loan_count
+        }
     }
     
     required init(coder aDecoder: NSCoder) {

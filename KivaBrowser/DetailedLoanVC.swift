@@ -47,7 +47,7 @@ class DetailedLoanVC: UIViewController, LoanManagerDelegate, UIScrollViewDelegat
         loanManager.fetcher!.delegate = loanManager
         loanManager.delegate = self
         
-        //self.scrollView.delegate = self
+        self.scrollView.delegate = self
         self.descriptionView.delegate = self
         
         loanManager.fetchDetailedLoanByID(self.loan_id)
@@ -58,8 +58,8 @@ class DetailedLoanVC: UIViewController, LoanManagerDelegate, UIScrollViewDelegat
     
             self.scrollView.layoutIfNeeded()
             self.scrollView.contentSize = self.contentView.bounds.size
-            //println("self.view = \(self.view)")
-            println("self.scrollView = \(scrollView)")
+        
+            //println("self.scrollView = \(scrollView)")
             //println("self.scrollView bound size = \(NSStringFromCGSize(self.scrollView.frame.size))")
             //println("self.scrollView frame size = \(NSStringFromCGSize(self.scrollView.bounds.size))")
             //println("scrollView.contentSize= \(NSStringFromCGSize(self.scrollView.contentSize))")
@@ -82,7 +82,9 @@ class DetailedLoanVC: UIViewController, LoanManagerDelegate, UIScrollViewDelegat
     
     func setupViewForLoan(detailedLoan: DetailedLoan) {
         //setup imageView
-        self.squareImageOfDetailedLoanForImageView(detailedLoan, imgView: self.photoView)
+        if detailedLoan.img_id != nil {
+            self.squareImageOfDetailedLoanForImageView(detailedLoan, imgView: self.photoView)
+        }
         
         self.nameLabel.text = "\(detailedLoan.name)"
         //println("DetailedLoanVC setupViewForLoan...\(detailedLoan.name)")

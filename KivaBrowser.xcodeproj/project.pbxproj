@@ -33,6 +33,7 @@
 		C7B4D02D19E1FBA40042C2F7 /* TeamImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D02C19E1FBA40042C2F7 /* TeamImage.swift */; };
 		C7B4D02F19E270780042C2F7 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D02E19E270780042C2F7 /* TeamCell.swift */; };
 		C7B4D03319E3BE640042C2F7 /* BrowseTeamBy_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D03219E3BE640042C2F7 /* BrowseTeamBy_TVC.swift */; };
+		C7B4D03719E600A90042C2F7 /* DetailedTeam_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D03619E600A90042C2F7 /* DetailedTeam_VC.swift */; };
 		C7E5F95819958D0D00566754 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5F95719958D0D00566754 /* Paginator.swift */; };
 		C7E5F95B19A87C6C00566754 /* DetailedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5F95A19A87C6C00566754 /* DetailedLoan.swift */; };
 		C7E5F95E19A9C10300566754 /* CreateDetailedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5F95D19A9C10300566754 /* CreateDetailedLoan.swift */; };
@@ -79,6 +80,7 @@
 		C7B4D02C19E1FBA40042C2F7 /* TeamImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamImage.swift; sourceTree = "<group>"; };
 		C7B4D02E19E270780042C2F7 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		C7B4D03219E3BE640042C2F7 /* BrowseTeamBy_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseTeamBy_TVC.swift; sourceTree = "<group>"; };
+		C7B4D03619E600A90042C2F7 /* DetailedTeam_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTeam_VC.swift; sourceTree = "<group>"; };
 		C7E5F95719958D0D00566754 /* Paginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		C7E5F95A19A87C6C00566754 /* DetailedLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedLoan.swift; sourceTree = "<group>"; };
 		C7E5F95D19A9C10300566754 /* CreateDetailedLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDetailedLoan.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				C71937FB19DE266900D1AA17 /* Teams_TVC.swift */,
 				C7B4D03219E3BE640042C2F7 /* BrowseTeamBy_TVC.swift */,
 				C7B4D02E19E270780042C2F7 /* TeamCell.swift */,
+				C7B4D03619E600A90042C2F7 /* DetailedTeam_VC.swift */,
 			);
 			name = Teams_TVC;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				C7ABFEBC19943E7B0016BA53 /* LatestLoans_TVC.swift in Sources */,
 				C71797EF198788700049D44C /* CreateLoan.swift in Sources */,
 				C7B4D02819DFC5E90042C2F7 /* Team.swift in Sources */,
+				C7B4D03719E600A90042C2F7 /* DetailedTeam_VC.swift in Sources */,
 				C71797F11989683E0049D44C /* LoanImage.swift in Sources */,
 				C7ABFEB01990342A0016BA53 /* LoanCell.swift in Sources */,
 				C7B4D03319E3BE640042C2F7 /* BrowseTeamBy_TVC.swift in Sources */,
