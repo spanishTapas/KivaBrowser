@@ -11,7 +11,9 @@ import UIKit
 
 class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegate  {
     var team: Team?
-    
+    var website_url: NSURL?
+    var shortName: String?
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -31,7 +33,10 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Team Details"
+        if let name = team?.shortname {
+            self.shortName = name
+            self.title = "Team \"\(name)\" Details"
+        }
         
         self.scrollView.delegate = self
         self.descriptionTextView.delegate = self
@@ -63,14 +68,6 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
         self.team = team
     }
     
-    @IBAction func urlButtonPressed(sender: UIButton) {
-        if let urlStr = team?.website_url {
-            let url = NSURL(string: urlStr)
-            UIApplication.sharedApplication().openURL(url)
-        }
-    }
-
-    
     func setupViewForToan(team: Team) {
         //setup imageView
         if team.imgDic != nil {
@@ -101,6 +98,7 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
         
         if team.website_url != "" {
             self.URLButton.setTitle("\(team.website_url)", forState: UIControlState.Normal)
+            self.website_url = NSURL(string: team.website_url)
         } else {
             self.URLButton.setTitle("Website N/A", forState: UIControlState.Normal)
         }
@@ -126,4 +124,23 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
         })
     }
 
+    @IBAction func urlButtonPressed(sender: AnyObject) {
+        if self.website_url != nil {
+            performSegueWithIdentifier("ShowTeamWebView", sender: sender)
+        }
+    }
+    
+    //#pragma mark - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
+        if sender is UIButton {
+            if segue.identifier == "ShowTeamWebView" {
+                let TWV = segue.destinationViewController as TeamWebView
+                TWV.setTeamURL(self.website_url!)
+                if shortName != nil {
+                TWV.setShortName(shortName!)
+                }
+            }
+        }
+    }
+    
 }

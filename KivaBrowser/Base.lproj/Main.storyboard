@@ -951,7 +951,7 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="urlButtonPressed:" destination="mvg-Il-zyy" eventType="touchUpInside" id="4KQ-NY-yi9"/>
+                                                    <action selector="urlButtonPressed:" destination="mvg-Il-zyy" eventType="touchUpInside" id="z48-yB-rdQ"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Membership_type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybs-G2-eWn">
@@ -1153,11 +1153,52 @@
                         <outlet property="shortNameLabel" destination="mqG-hf-wRP" id="UwT-rx-QfC"/>
                         <outlet property="teamImage" destination="S2J-iq-k5U" id="JJb-ny-bNa"/>
                         <outlet property="teamSinceLabel" destination="dUU-mY-NWA" id="rQ6-N4-xma"/>
+                        <segue destination="dkF-qj-ZWs" kind="show" identifier="ShowTeamWebView" id="6Zs-82-C76"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HmY-3s-5Hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4924.5" y="1885.5"/>
+        </scene>
+        <!--Team Web View-->
+        <scene sceneID="hst-dl-aER">
+            <objects>
+                <viewController id="dkF-qj-ZWs" customClass="TeamWebView" customModule="KivaBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZJI-4T-5Rp"/>
+                        <viewControllerLayoutGuide type="bottom" id="SC4-U0-rhg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mkh-Ds-aPu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7C-tC-yen">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="i7C-tC-yen"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="i7C-tC-yen"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="teamWebView" destination="i7C-tC-yen" id="tHV-bo-X5s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXq-58-yt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5722.5" y="1885.5"/>
         </scene>
         <!--Detailed LoanVC-->
         <scene sceneID="mkX-fm-86N">
