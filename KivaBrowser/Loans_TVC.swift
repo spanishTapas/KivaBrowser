@@ -108,7 +108,13 @@ class Loans_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
     func configureCell(cell: LoanCell, loan: Loan) {
         
         cell.countryLabel.text = loan.country
-        cell.amountLabel.text = "$ \(loan.amount)"
+
+        let attributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(17), NSForegroundColorAttributeName: UIColor.orangeColor()]
+        
+        let amountStr = "$ \(loan.amount)"
+        var attrAmountStr = NSMutableAttributedString(string: amountStr, attributes:attributes)
+        cell.amountLabel.attributedText = attrAmountStr
+        
         cell.nameLabel.text = loan.name
         cell.descLabel.text = loan.use
         
