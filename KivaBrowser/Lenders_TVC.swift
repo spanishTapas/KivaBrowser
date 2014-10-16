@@ -1,21 +1,21 @@
 //
-//  Teams_TVC.swift
+//  Lenders_TVC.swift
 //  KivaBrowser
 //
-//  Created by wanming zhang on 10/2/14.
+//  Created by wanming zhang on 10/13/14.
 //  Copyright (c) 2014 wanming zhang. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, LoanManagerDelegate{
+class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, LoanManagerDelegate{
     let loanManager: LoanManager
     
-    var teamArray = [Team]()
-    var searchResultsArray = [Team]()
+    var lenderArray = [Lender]()
+    var searchResultsArray = [Lender]()
     
-    var sortByStr: String = ""
+    var requestStr: String = ""
     var isLoading: Bool
     var currPageNum: Int
     var paginator: Paginator
@@ -35,34 +35,34 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         loanManager.fetcher!.delegate = loanManager
         loanManager.delegate = self
         
-        //self.searchDisplayController?.searchResultsTableView.registerClass(LoanCell.self, forCellReuseIdentifier: "LoanCell")
-        
-        self.loadTeamsForPage(1)
-        self.loanManager.fetchTeamPagingInfoBy(self.sortByStr)
+        self.loadLendersForPage(1)
+        self.loanManager.fetchLatestLendersPagingInfo()
         
         self.refreshControl!.addTarget(self, action:"refresh", forControlEvents: .ValueChanged)
+        
+        self.title = "Lenders"
     }
     
-    func setsortByStr(sortByStr: String) {
-        self.sortByStr = sortByStr
-    }
-    //#pragma mark - set Model
-    func loadTeamsForPage(pageNum: Int) {
-        self.loanManager.fetchTeamsBy(self.sortByStr, pageNum: pageNum)
+//    func setsortByStr(sortByStr: String) {
+//        self.sortByStr = sortByStr
+//    }
+   // #pragma mark - set Model
+    func loadLendersForPage(pageNum: Int) {
+        self.loanManager.fetchLatestLenders(pageNum)
     }
     
     //LoanManagerDelegate
-    func didReceiveTeams(teams: [Team]) {
+    func didReceiveLenders(lenders: [Lender]) {
         if currPageNum == 1 {
-            teamArray = teams as [Team]
+            lenderArray = lenders as [Lender]
         } else {
-            self.teamArray += teams
+            self.lenderArray += lenders
         }
         self.isLoading = false
         self.tableView.reloadData()
     }
     
-    func fetchingTeamsFailedWithError(error: NSErrorPointer) {
+    func fetchingLendersFailedWithError(error: NSErrorPointer) {
         
     }
     
@@ -72,11 +72,11 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     //LoanManagerDelegate
-    func didReceiveTeamPagingInfo(paginator: Paginator) {
+    func didReceiveLenderPagingInfo(paginator: Paginator) {
         self.paginator = paginator
-        println("Teams_TVC paginator.pages: \(self.paginator.pages)")
+        //println("Lenders_TVC paginator.pages: \(self.paginator.pages)")
     }
-
+    
     //pragma mark - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
@@ -92,35 +92,40 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
             //println("numberOfRows = \(numberOfRows)")
             return numberOfRows
         } else {
-            let numberOfRows = teamArray.count
-            //println("Teams_TVC number of rows: \(numberOfRows)")
+            let numberOfRows = lenderArray.count
+            //println("Lenders_TVC number of rows: \(numberOfRows)")
             return numberOfRows
         }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "TeamCell"
-        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as TeamCell
+        let cellIdentifier = "LenderCell"
+        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as LenderCell
         if tableView == self.searchDisplayController?.searchResultsTableView {
-            let team = searchResultsArray[indexPath.row] as Team
-            self.configureCell(cell, team: team)
+            let lender = searchResultsArray[indexPath.row] as Lender
+            self.configureCell(cell, lender: lender)
         } else {
-            let team = teamArray[indexPath.row] as Team
-            self.configureCell(cell, team: team)
+            let lender = lenderArray[indexPath.row] as Lender
+            self.configureCell(cell, lender: lender)
         }
         return cell
     }
     
-    func configureCell(cell: TeamCell, team: Team) {
-        cell.nameLabel.text = team.name
-        cell.categoryLabel.text = team.category
-        cell.descriptionLabel.text = team.description
+    func configureCell(cell: LenderCell, lender: Lender) {
+        self.squareImageOfLenderForImageView(lender, imgView: cell.imageView!)
         
-        if team.imgDic != nil {
-            self.squareImageOfTeamForImageView(team, imgView: cell.teamImage)
+        cell.textLabel?.text = lender.name
+        
+        if lender.whereabouts != "" {
+            cell.detailTextLabel?.text = "\(lender.whereabouts) \(lender.country_code)"
+        } else if lender.country_code != "" {
+            cell.detailTextLabel?.text = "\(lender.country_code)"
+        } else {
+            cell.detailTextLabel?.text = "Location Unknown"
         }
+        
     }
-
+    
     //#pragma mark - Table view delegate
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 28.0
@@ -128,7 +133,7 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
     
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         //set up label
-        let footerView: UIView = UIView(frame: CGRectMake(0, 0, 320, 28))
+        let footerView: UIView = UIView(frame: CGRectMake(0, 0, 320, 44))
         
         let label: UILabel = UILabel(frame: CGRectMake(0, 0, 320, 28))
         label.backgroundColor = UIColor.whiteColor()
@@ -138,7 +143,7 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         
         if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"
-            println("LatestLoans_TVC...\(text)")
+            println("LatestLenders_TVC...\(text)")
             label.text = text
             println("\(label.text)")
         }
@@ -147,10 +152,11 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         tableView.tableFooterView = footerView
         
         return footerView
+
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 98.0
+        return 44.0
     }
     //#pragma mark - Refreshing
     // Fires off a block on a queue to fetch data from kiva
@@ -158,7 +164,7 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         self.refreshControl!.beginRefreshing()
         let fetchQ: dispatch_queue_t = dispatch_queue_create("Kiva Fetch", nil)
         dispatch_async(fetchQ, {
-            self.loadTeamsForPage(self.currPageNum)
+            //self.loadTeamsForPage(self.currPageNum)
             dispatch_async(dispatch_get_main_queue(), {
                 self.refreshControl!.endRefreshing()
             })
@@ -174,16 +180,16 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
             if self.isLoading == false {
                 self.isLoading = true
                 if (!self.reachedLastPage()) {
-                    self.loadTeamsForPage(++self.currPageNum)
+                    self.loadLendersForPage(++self.currPageNum)
                 }
             }
         }
     }
     
-    func squareImageOfTeamForImageView(team: Team, imgView: UIImageView) {
+    func squareImageOfLenderForImageView(lender: Lender, imgView: UIImageView) {
         
-        let imageURL = team.urlForImageFormat(team.imgDic!, format:
-        Team.KivaImageFormat.KivaImageFormatSquare)
+        let imageURL = lender.urlForImageFormat(lender.imgDic!, format:
+            Lender.KivaImageFormat.KivaImageFormatSquare)
         
         let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
         dispatch_async(imageFetchQ, {
@@ -198,11 +204,66 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
             
         })
     }
+    
+    //#pragma mark Search Bar and Search Display Controller
+    
+    //#pragma mark Content Filtering
 
+    func filterContentForSearchText(searchText: String, scope: String) {
+        
+        if !searchText.isEmpty {
+            if scope == "Name" {
+                self.searchResultsArray = self.lenderArray.filter({ (lender: Lender) -> Bool in
+                    var stringMatch = lender.name.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                    return stringMatch != nil
+                })
+            }
+            
+            if scope == "Location" {
+                self.searchResultsArray = self.lenderArray.filter({ (lender: Lender) -> Bool in
+                    var locationMatch = lender.whereabouts.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                    var countryMatch = lender.country_code.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                    return (locationMatch != nil) || (countryMatch != nil)
+                })
+            }
+            
+            if scope == "Occupation" {
+                self.searchResultsArray = self.lenderArray.filter({ (lender: Lender) -> Bool in
+                    var stringMatch = lender.occupation.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                    return stringMatch != nil
+                })
+            }
+        }
+    }
+    
+    //#pragma mark - UISearchDisplayController Delegate Methods
+    func searchDisplayController(controller: UISearchDisplayController, willUnloadSearchResultsTableView tableView: UITableView) {
+        // search is done so get rid of the search FRC and reclaim memory
+    }
+    
+    //  The method runs the text filtering function whenever the user changes the search string in the search bar.
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        // Tells the table data source to reload when text changes
+        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+        let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
+        
+        self.filterContentForSearchText(searchString, scope: selectedScope)
+        return true
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        // Tells the table data source to reload when scope bar selection changes
+        let scope = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text, scope: scope[searchOption])
+        
+        // Return true to cause the search result table view to be reloaded.
+        return true
+    }
+    
     //#pragma mark - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController]
-        if sender is TeamCell {
+        if sender is LenderCell {
             let view: UIView? = sender.superview
             var tableView = UITableView()
             if view?.superview is UITableView {
@@ -213,10 +274,10 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
                 //NSAssert(NO, @"UITableView shall always be found.");
             }
             let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
-            if segue.identifier == "ShowTeam" {
-                let selectedTeam: Team = self.teamArray[indexPath.row]
-                let myDestVC = segue.destinationViewController as DetailedTeam_VC
-                myDestVC.setTeam(selectedTeam)
+            if segue.identifier == "ShowLender" {
+                let selectedLender: Lender = self.lenderArray[indexPath.row]
+                let myDestVC = segue.destinationViewController as DetailedLender_VC
+                myDestVC.setLender(selectedLender)
             }
         }
     }

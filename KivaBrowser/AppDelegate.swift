@@ -16,6 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        
+        let tabBarController: UITabBarController = self.window?.rootViewController as UITabBarController
+        let loanImage = UIImage(named: "Loans")
+        let teamImage = UIImage(named: "Teams")
+        let lenderImage = UIImage(named: "Lenders")
+        let tabBar: UITabBar = tabBarController.tabBar
+        
+        tabBar.translucent = false
+        
+        if let items = tabBar.items as? [UITabBarItem] {
+            let item0 = items[0]
+            item0.image = loanImage
+            
+            let item2 = items[2]
+            item2.image = teamImage
+            //println("AppDelegate item2.selectedImage \(item2.image)")
+            
+            let item3 = items[3]
+            item3.image = lenderImage
+        }
+        
         return true
     }
 

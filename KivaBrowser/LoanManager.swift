@@ -45,6 +45,20 @@ class LoanManager :JsonDataFetcherDelegate {
         self.fetcher?.getTeamPagingInfoSortedBy(sortByStr)
     }
     
+    func fetchLatestLenders(pageNum: Int) {
+        self.fetcher?.fetchLatestLendersData(pageNum)
+    }
+    func fetchLatestLendersPagingInfo() {
+        self.fetcher?.getLatestLendersPagingInfo()
+    }
+    func fetchLendersBy(requestStr: String, pageNum: Int) {
+        //println("LoanManager fetchLenders()......")
+        self.fetcher?.fetchLendersByRequest(requestStr, pageNum: pageNum)
+    }
+    func fetchLenderPagingInfoBy(requestStr: String) {
+        self.fetchLenderPagingInfoBy(requestStr)
+    }
+    
     func receivedJsonData(data: NSData) {
         var error: NSError?
         if let loans: [Loan]? = Loan.loanArrayFromJsonData(data, error: &error) {
@@ -102,10 +116,35 @@ class LoanManager :JsonDataFetcherDelegate {
         let paginator: Paginator? = Paginator.paginatorFromJsonData(data, error: &error)
         
         if (error != nil) {
-            
-            self.delegate?.fetchingLoansFailedWithError!(&error)
+            self.delegate?.fetchingTeamsFailedWithError!(&error)
         } else {
             self.delegate?.didReceiveTeamPagingInfo!(paginator!)
+            
+        }
+    }
+    
+    func receivedLenderJsonData(data: NSData) {
+        var error: NSError?
+        if let lenders: [Lender]? = Lender.LenderArrayFromJsonData(data, error: &error) {
+            println("LoanManager lenders.count: \(lenders?.count)")
+            if (error != nil) {
+                self.delegate?.fetchingLendersFailedWithError!(&error)
+            } else {
+                self.delegate?.didReceiveLenders!(lenders!)
+            }
+        }
+    }
+    
+    func receivedLenderPagingInfo(data: NSData) {
+        //println("LoanManager lenderPaginator")
+        var error: NSError?
+        let paginator: Paginator? = Paginator.paginatorFromJsonData(data, error: &error)
+        
+        if (error != nil) {
+            
+            self.delegate?.fetchingLendersFailedWithError!(&error)
+        } else {
+            self.delegate?.didReceiveLenderPagingInfo!(paginator!)
             
         }
     }

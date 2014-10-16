@@ -169,6 +169,87 @@ class JsonDataFetcher {
         })
     }
 
+    func fetchLatestLendersData(pageNum: Int) {
+        dispatch_async(kBGQueue, {
+            var connectionError: NSError?
+            let dataStr: String = "http://api.kivaws.org/v1/lenders/newest.json&page=\(pageNum)"
+            //println("JsonDataFetcher fetchLatestLenderData dataStr = \(dataStr)")
+            let dataURL: NSURL = NSURL(string: dataStr)
+            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            dispatch_async(dispatch_get_main_queue(), {
+                if (connectionError != nil) {
+                    // handle error
+                    self.delegate?.fetchingDataFailedWithError(&connectionError)
+                }else {
+                    self.delegate?.receivedLenderJsonData(data!)
+                }
+            })
+        })
+    }
+    
+    func getLatestLendersPagingInfo() {
+        dispatch_async(kBGQueue, {
+            var connectionError: NSError?
+            let dataStr: String = "http://api.kivaws.org/v1/lenders/newest.json"
+            let dataURL: NSURL = NSURL(string: dataStr)
+            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            dispatch_async(dispatch_get_main_queue(), {
+                if (connectionError != nil) {
+                    self.delegate?.fetchingDataFailedWithError(&connectionError)
+                }else {
+                    println("JsonDataFetcher... getLatestLenderPagingInfo")
+                    self.delegate?.receivedLenderPagingInfo(data!)
+                }
+            })
+            
+        })
+    }
+    
+    func fetchLendersByRequest(requestStr: String, pageNum: Int) {
+        dispatch_async(kBGQueue, {
+            var connectionError: NSError?
+            //form data string by search criteria
+            //search criteria by string q
+            var dataStr: String = "http://api.kivaws.org/v1/lenders/search.json"
+            var pathComp: String = "\(requestStr)"
+            pathComp += "&page=\(pageNum)"
+            dataStr = dataStr.stringByAppendingString(pathComp)
+            //println("JsonDataFetcher fetchLendersByRequest dataStr = \(dataStr)")
+            let dataURL: NSURL = NSURL(string: dataStr)
+            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            dispatch_async(dispatch_get_main_queue(), {
+                if (connectionError != nil) {
+                    self.delegate?.fetchingDataFailedWithError(&connectionError)
+                } else {
+                    self.delegate?.receivedLenderJsonData(data!)
+                }
+            })
+            
+        })
+    }
+    
+    func getLenderPagingInfoByRequest(requestStr: String) {
+        dispatch_async(kBGQueue, {
+            var connectionError: NSError?
+            //form data string by search criteria
+            //search criteria by string q
+            var dataStr: String = "http://api.kivaws.org/v1/lenders/search.json"
+            let pathComp = requestStr
+            dataStr = dataStr.stringByAppendingString(pathComp)
+            let dataURL = NSURL(string: dataStr)
+            
+            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            dispatch_async(dispatch_get_main_queue(), {
+                if (connectionError != nil) {
+                    self.delegate?.fetchingDataFailedWithError(&connectionError)
+                }else {
+                    self.delegate?.receivedLenderPagingInfo(data!)
+                }
+            })
+            
+        })
+
+    }
     
     init() {
         

@@ -45,36 +45,33 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
     //#pragma mark - Table view delegate
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         //set up label
-        let footerView: UIView = UIView(frame: CGRectMake(0, 0, 400, 28))
-        let label: UILabel = UILabel(frame: CGRectMake(0, 0, 400, 28))
-        label.font = UIFont.boldSystemFontOfSize(16)
-        label.textColor = UIColor.lightGrayColor()
-        label.textAlignment = NSTextAlignment.Center
+        let footerView: UIView = UIView(frame: CGRectMake(0, 0, 320, 98))
         
+        let label: UILabel = UILabel(frame: CGRectMake(0, 0, 320, 28))
+        label.backgroundColor = UIColor.whiteColor()
+        label.font = UIFont.boldSystemFontOfSize(16)
+        label.textColor = UIColor.darkGrayColor()
+        label.textAlignment = NSTextAlignment.Center
         
         if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"
-            //println("\(self.currPageNum) out of \(self.paginator.pages) pages")
+            println("LatestLoans_TVC...\(text)")
             label.text = text
+            println("\(label.text)")
         }
-        //        if (tableView == self.searchDisplayController.searchResultsTableView) {
-        //            println("viewForFooterInsection...\(tableView)")
-        //            let count: Int? = self.searchedResultsArray?.count
-        //            label.text = "\(count) loan(s)"
-        //        } else {
-        //            let text: String = "\(self.currPageNum) out of \(self.paginator.pages) pages"
-        //            label.text = text
-        //        }
         
         footerView.addSubview(label)
-        self.tableView.tableFooterView = footerView
+        tableView.tableFooterView = footerView
+        
         return footerView
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 98.0
     }
-    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 28.0
+    }
 //    override func configureCell(cell: LoanCell, loan: Loan) {
 //        
 //        cell.countryLabel.text = loan.country

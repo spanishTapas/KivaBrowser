@@ -18,4 +18,7 @@ import Foundation
     
     func receivedTeamJsonData(data: NSData)
     func receivedTeamPagingInfo(data: NSData)
+    
+    func receivedLenderJsonData(data: NSData)
+    func receivedLenderPagingInfo(data: NSData)
 }
