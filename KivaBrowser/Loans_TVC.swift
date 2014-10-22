@@ -119,28 +119,9 @@ class Loans_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         cell.descLabel.text = loan.use
         
         if loan.imgDic != nil {
-            self.squareImageOfLoanForImageView(loan, imgView: cell.loanImage)
+            let imageURL = KivaImage.urlForImageFormat(loan.imgDic!, format: KivaImageFormat.KivaImageFormatSquare)
+            KivaImage.squareImageOfURLForImageView(imageURL, imgView: cell.loanImage)
         }
-    }
-    
-    func squareImageOfLoanForImageView(loan: Loan, imgView: UIImageView) {
-        
-        let imageURL = loan.urlForImageFormat(loan.imgDic!, format: Loan.KivaImageFormat.KivaImageFormatSquare)
-        
-        let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
-        dispatch_async(imageFetchQ, {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true//not good
-            let imageData = NSData(contentsOfURL: imageURL)//could take a while
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false//not good
-            
-            // UIImage is one of the few UIKit objects which is thread-safe, so we can do this here
-            let image: UIImage = UIImage(data: imageData)
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                imgView.image = image
-            })
-            
-        })
     }
     
 }

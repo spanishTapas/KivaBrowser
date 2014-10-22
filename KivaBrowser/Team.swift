@@ -10,12 +10,6 @@ import Foundation
 
 class Team {
     
-    enum KivaImageFormat: Int {
-        case KivaImageFormatSquare = 1
-        case KivaImageFormatSpecifyBoth = 2
-        case KivaImageFormatFullSize = 64
-    }
-    
     var team_id: Int?
     var category: String = ""
     var description: String = ""

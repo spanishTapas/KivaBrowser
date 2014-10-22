@@ -9,6 +9,12 @@
 import Foundation
 
 @objc protocol LoanManagerDelegate {
+    //LendingActions
+    //This method is called when the list of lending_actions retrieved from Kiva is parsed
+    optional func didReceiveLending_Actions(lending_actions: [LendingAction])
+    //This method is called when an error occurred
+    optional func fetchingLending_ActionsFailedWithError(error: NSErrorPointer)
+    
     //Loans
     //This method is called when the list of loans retrieved from Kiva is parsed
     optional func didReceiveLoans(loans: [Loan])
@@ -32,6 +38,7 @@ import Foundation
     optional func fetchingLendersFailedWithError(error: NSErrorPointer)
     optional func didReceiveLenders(lenders: [Lender])
     optional func didReceiveLenderPagingInfo(paginator: Paginator)
+    
 }
 
 

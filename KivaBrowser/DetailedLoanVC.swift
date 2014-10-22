@@ -138,7 +138,7 @@ class DetailedLoanVC: UIViewController, LoanManagerDelegate, UIScrollViewDelegat
     
     func squareImageOfDetailedLoanForImageView(detailedLoan: DetailedLoan, imgView: UIImageView) {
         
-        let imageURL = detailedLoan.urlForImageFormat(detailedLoan.img_id!, format: Loan.KivaImageFormat.KivaImageFormatSquare)
+        let imageURL = detailedLoan.urlForImageFormat(detailedLoan.img_id!, format: KivaImageFormat.KivaImageFormatSquare)
         let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
         dispatch_async(imageFetchQ, {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true//not good

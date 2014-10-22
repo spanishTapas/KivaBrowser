@@ -9,11 +9,6 @@
 import Foundation
 
 class Lender {
-    enum KivaImageFormat: Int {
-        case KivaImageFormatSquare = 1
-        case KivaImageFormatSpecifyBoth = 2
-        case KivaImageFormatFullSize = 64
-    }
     
     var name: String = ""
     var whereabouts: String = ""
@@ -60,8 +55,10 @@ class Lender {
             self.occupational_info = occupational_info
         }
         
-        if let member_since = lenderDic.valueForKey("member_since") as? String {
-            self.member_since = member_since
+        if let jsonStr = lenderDic.valueForKey("member_since") as? String {
+            let date: NSDate = Lender.dateWithJsonString(jsonStr)
+            let dateStr = Lender.stringFromDate(date)
+            self.member_since = dateStr
         }
         
         if let invitee_count = lenderDic.valueForKey("invitee_count") as? Int {

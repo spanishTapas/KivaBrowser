@@ -25,6 +25,24 @@ class JsonDataFetcher {
         return data;
     }
 
+    func fetchRecentLending_Actions() {
+        dispatch_async(kBGQueue, {
+            var connectionError: NSError?
+            let dataStr: String = "http://api.kivaws.org/v1/lending_actions/recent.json"
+            //println("JsonDataFetcher fetchLatestLoanData dataStr = \(dataStr)")
+            let dataURL: NSURL = NSURL(string: dataStr)
+            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            dispatch_async(dispatch_get_main_queue(), {
+                if (connectionError != nil) {
+                    // handle error
+                    self.delegate?.fetchingDataFailedWithError(&connectionError)
+                }else {
+                    self.delegate?.receivedLending_ActionJsonData(data!)
+                }
+            })
+        })
+    }
+    
     func fetchLatestLoanData(pageNum: Int) {
         dispatch_async(kBGQueue, {
             var connectionError: NSError?
@@ -197,7 +215,7 @@ class JsonDataFetcher {
                 if (connectionError != nil) {
                     self.delegate?.fetchingDataFailedWithError(&connectionError)
                 }else {
-                    println("JsonDataFetcher... getLatestLenderPagingInfo")
+                    //println("JsonDataFetcher... getLatestLenderPagingInfo")
                     self.delegate?.receivedLenderPagingInfo(data!)
                 }
             })

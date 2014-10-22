@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, LoanManagerDelegate{
+class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, LoanManagerDelegate {
     let loanManager: LoanManager
     
     var teamArray = [Team]()
@@ -117,7 +117,8 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         cell.descriptionLabel.text = team.description
         
         if team.imgDic != nil {
-            self.squareImageOfTeamForImageView(team, imgView: cell.teamImage)
+            let imageURL = KivaImage.urlForImageFormat(team.imgDic!, format: KivaImageFormat.KivaImageFormatSquare)
+            KivaImage.squareImageOfURLForImageView(imageURL, imgView: cell.teamImage)
         }
     }
 
@@ -180,25 +181,6 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func squareImageOfTeamForImageView(team: Team, imgView: UIImageView) {
-        
-        let imageURL = team.urlForImageFormat(team.imgDic!, format:
-        Team.KivaImageFormat.KivaImageFormatSquare)
-        
-        let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
-        dispatch_async(imageFetchQ, {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true//not good
-            let imageData: NSData = NSData(contentsOfURL: imageURL)//could take a while
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false//not good
-            // UIImage is one of the few UIKit objects which is thread-safe, so we can do this here
-            let image: UIImage = UIImage(data: imageData)
-            dispatch_async(dispatch_get_main_queue(), {
-                imgView.image = image
-            })
-            
-        })
-    }
-
     //#pragma mark - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController]
@@ -213,10 +195,17 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
                 //NSAssert(NO, @"UITableView shall always be found.");
             }
             let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
+            
             if segue.identifier == "ShowTeam" {
-                let selectedTeam: Team = self.teamArray[indexPath.row]
-                let myDestVC = segue.destinationViewController as DetailedTeam_VC
-                myDestVC.setTeam(selectedTeam)
+                if tableView == self.searchDisplayController?.searchResultsTableView {
+                    let selectedTeam: Team = self.searchResultsArray[indexPath.row]
+                    let myDestVC = segue.destinationViewController as DetailedTeam_VC
+                    myDestVC.setTeam(selectedTeam)
+                } else {
+                    let selectedTeam: Team = self.teamArray[indexPath.row]
+                    let myDestVC = segue.destinationViewController as DetailedTeam_VC
+                    myDestVC.setTeam(selectedTeam)
+                }
             }
         }
     }

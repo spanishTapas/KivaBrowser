@@ -20,7 +20,7 @@ class LatestLoans_TVC: Loans_TVC, UIScrollViewDelegate {
         self.loadLoansForPage(1)
         self.loanManager.fetchPagingInfo()
         //println("LatestLoans_TVC viewDidLoad self.loanManager = \(self.loanManager)")
-        self.title = "Latest Loans"
+        self.title = "Loans"
         self.refreshControl!.addTarget(self, action:"refresh", forControlEvents: .ValueChanged)
     }
     
@@ -62,14 +62,16 @@ class LatestLoans_TVC: Loans_TVC, UIScrollViewDelegate {
         
         if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"
-            println("LatestLoans_TVC...\(text)")
+            //println("LatestLoans_TVC...\(text)")
             label.text = text
-            println("\(label.text)")
+            //println("\(label.text)")
+        }
+        if tableView != self.searchDisplayController?.searchResultsTableView {
+            footerView.addSubview(label)
         }
         
-        footerView.addSubview(label)
-        tableView.tableFooterView = footerView
-
+        //tableView.tableFooterView = footerView
+        
         return footerView
     }
     //#pragma mark - Refreshing
@@ -97,7 +99,6 @@ class LatestLoans_TVC: Loans_TVC, UIScrollViewDelegate {
                 self.isLoading = true
                 if (!self.reachedLastPage()) {
                     self.loadLoansForPage(++self.currPageNum)
-                    //self.currPageNum++;
                 }
             }
         }
@@ -169,10 +170,16 @@ class LatestLoans_TVC: Loans_TVC, UIScrollViewDelegate {
             }
             let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
             if segue.identifier == "Show Details" {
-                let selectedLoan: Loan = self.loanArray[indexPath.row]
-                let myDestVC = segue.destinationViewController as DetailedLoanVC
-                myDestVC.setLoan_id(selectedLoan.loan_id!)
-                //println("LatestLoans_TVC prepareForSegue selectedLoan.loan_id = \(selectedLoan.loan_id)")
+                if tableView == self.searchDisplayController?.searchResultsTableView {
+                    let selectedLoan: Loan = self.searchResultsArray[indexPath.row]
+                    let myDestVC = segue.destinationViewController as DetailedLoanVC
+                    myDestVC.setLoan_id(selectedLoan.loan_id!)
+                } else {
+                    let selectedLoan: Loan = self.loanArray[indexPath.row]
+                    let myDestVC = segue.destinationViewController as DetailedLoanVC
+                    myDestVC.setLoan_id(selectedLoan.loan_id!)
+                    //println("LatestLoans_TVC prepareForSegue selectedLoan.loan_id = \(selectedLoan.loan_id)"
+                }
             }
         }
     }

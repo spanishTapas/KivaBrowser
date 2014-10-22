@@ -12,6 +12,10 @@ class LoanManager :JsonDataFetcherDelegate {
     var fetcher: JsonDataFetcher?
     weak var delegate: LoanManagerDelegate?
     
+    func fetchLending_Actions() {
+        self.fetcher?.fetchRecentLending_Actions()
+    }
+    
     func fetchLatestLoans(pageNum: Int) {
         self.fetcher?.fetchLatestLoanData(pageNum)
         //println("LoanManager self.fetcher = \(self.fetcher)")
@@ -41,7 +45,7 @@ class LoanManager :JsonDataFetcherDelegate {
     }
     
     func fetchTeamPagingInfoBy(sortByStr: String) {
-        println("LoanManager fetchTeamPagingInfoBy...")
+        //println("LoanManager fetchTeamPagingInfoBy...")
         self.fetcher?.getTeamPagingInfoSortedBy(sortByStr)
     }
     
@@ -57,6 +61,18 @@ class LoanManager :JsonDataFetcherDelegate {
     }
     func fetchLenderPagingInfoBy(requestStr: String) {
         self.fetchLenderPagingInfoBy(requestStr)
+    }
+    
+    func receivedLending_ActionJsonData(data: NSData){
+        var error: NSError?
+        if let lending_actions: [LendingAction]? = LendingAction.LendingActionArrayFromJsonData(data, error: &error) {
+            println("LoanManager lending_actions.count: \(lending_actions?.count)")
+            if (error != nil) {
+                self.delegate?.fetchingLending_ActionsFailedWithError!(&error)
+            } else {
+                self.delegate?.didReceiveLending_Actions!(lending_actions!)
+            }
+        }
     }
     
     func receivedJsonData(data: NSData) {
@@ -101,7 +117,7 @@ class LoanManager :JsonDataFetcherDelegate {
     func receivedTeamJsonData(data: NSData) {
         var error: NSError?
         if let teams: [Team]? = Team.TeamArrayFromJsonData(data, error: &error) {
-            println("LoanManager teams.count: \(teams?.count)")
+            //println("LoanManager teams.count: \(teams?.count)")
             if (error != nil) {
                 self.delegate?.fetchingTeamsFailedWithError!(&error)
             } else {

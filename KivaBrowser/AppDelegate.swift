@@ -21,20 +21,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loanImage = UIImage(named: "Loans")
         let teamImage = UIImage(named: "Teams")
         let lenderImage = UIImage(named: "Lenders")
+        let aboutImage = UIImage(named: "About")
         let tabBar: UITabBar = tabBarController.tabBar
         
         tabBar.translucent = false
         
         if let items = tabBar.items as? [UITabBarItem] {
-            let item0 = items[0]
-            item0.image = loanImage
-            
-            let item2 = items[2]
-            item2.image = teamImage
-            //println("AppDelegate item2.selectedImage \(item2.image)")
+            let item1 = items[1]
+            item1.image = loanImage
             
             let item3 = items[3]
-            item3.image = lenderImage
+            item3.image = teamImage
+            //println("AppDelegate item3.selectedImage \(item3.image)")
+            
+            let item4 = items[4]
+            item4.image = lenderImage
+            
+            let item5 = items[5]
+            item5.image = aboutImage
         }
         
         return true

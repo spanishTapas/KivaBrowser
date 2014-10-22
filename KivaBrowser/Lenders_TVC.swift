@@ -112,7 +112,11 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func configureCell(cell: LenderCell, lender: Lender) {
-        self.squareImageOfLenderForImageView(lender, imgView: cell.imageView!)
+
+        if lender.imgDic != nil {
+            let imageURL = KivaImage.urlForImageFormat(lender.imgDic!, format: KivaImageFormat.KivaImageFormatSquare)
+            KivaImage.squareImageOfURLForImageView(imageURL, imgView: cell.imageView!)
+        }
         
         cell.textLabel?.text = lender.name
         
@@ -143,16 +147,16 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
         
         if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"
-            println("LatestLenders_TVC...\(text)")
+            //println("LatestLenders_TVC...\(text)")
             label.text = text
-            println("\(label.text)")
+            //println("\(label.text)")
+        }
+        if tableView != self.searchDisplayController?.searchResultsTableView {
+            footerView.addSubview(label)
+            tableView.tableFooterView = footerView
         }
         
-        footerView.addSubview(label)
-        tableView.tableFooterView = footerView
-        
         return footerView
-
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -184,25 +188,6 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
                 }
             }
         }
-    }
-    
-    func squareImageOfLenderForImageView(lender: Lender, imgView: UIImageView) {
-        
-        let imageURL = lender.urlForImageFormat(lender.imgDic!, format:
-            Lender.KivaImageFormat.KivaImageFormatSquare)
-        
-        let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
-        dispatch_async(imageFetchQ, {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true//not good
-            let imageData: NSData = NSData(contentsOfURL: imageURL)//could take a while
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false//not good
-            // UIImage is one of the few UIKit objects which is thread-safe, so we can do this here
-            let image: UIImage = UIImage(data: imageData)
-            dispatch_async(dispatch_get_main_queue(), {
-                imgView.image = image
-            })
-            
-        })
     }
     
     //#pragma mark Search Bar and Search Display Controller
@@ -275,9 +260,16 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
             }
             let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
             if segue.identifier == "ShowLender" {
-                let selectedLender: Lender = self.lenderArray[indexPath.row]
-                let myDestVC = segue.destinationViewController as DetailedLender_VC
-                myDestVC.setLender(selectedLender)
+                if tableView == self.searchDisplayController?.searchResultsTableView {
+                    let selectedLender: Lender = self.searchResultsArray[indexPath.row]
+                    let myDestVC = segue.destinationViewController as DetailedLender_VC
+                    myDestVC.setLender(selectedLender)
+                } else {
+                    let selectedLender: Lender = self.lenderArray[indexPath.row]
+                    let myDestVC = segue.destinationViewController as DetailedLender_VC
+                    myDestVC.setLender(selectedLender)
+
+                }
             }
         }
     }

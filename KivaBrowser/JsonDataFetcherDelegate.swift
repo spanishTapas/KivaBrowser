@@ -21,4 +21,6 @@ import Foundation
     
     func receivedLenderJsonData(data: NSData)
     func receivedLenderPagingInfo(data: NSData)
+    
+    func receivedLending_ActionJsonData(data: NSData)
 }

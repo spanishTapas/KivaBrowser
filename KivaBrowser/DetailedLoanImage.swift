@@ -10,7 +10,7 @@ import Foundation
 
 extension DetailedLoan {
     
-    func urlStringForDetailedLoan(img_id: Int, format: Loan.KivaImageFormat) -> String {
+    func urlStringForDetailedLoan(img_id: Int, format: KivaImageFormat) -> String {
         let fileType = "jpg"
         var formatStr: String
         var height = 0, width = 0
@@ -29,7 +29,7 @@ extension DetailedLoan {
 
     }
     
-    func urlForImageFormat (img_id: Int, format:Loan.KivaImageFormat) -> NSURL {
+    func urlForImageFormat (img_id: Int, format: KivaImageFormat) -> NSURL {
         let urlString = self.urlStringForDetailedLoan(img_id, format: format)
         return NSURL(string: urlString)
     }

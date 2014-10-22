@@ -60,8 +60,10 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
             println("\(label.text)")
         }
         
-        footerView.addSubview(label)
-        tableView.tableFooterView = footerView
+        if tableView != self.searchDisplayController?.searchResultsTableView {
+            footerView.addSubview(label)
+            tableView.tableFooterView = footerView
+        }
         
         return footerView
     }
@@ -72,34 +74,6 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 28.0
     }
-//    override func configureCell(cell: LoanCell, loan: Loan) {
-//        
-//        cell.countryLabel.text = loan.country
-//        cell.amountLabel.text = "$ \(loan.amount)"
-//        cell.nameLabel.text = loan.name
-//        cell.descLabel.text = loan.use
-//        self.squareImageOfLoanForImageView(loan, imgView: cell.loanImage)
-////        if let countryLabel = cell.viewWithTag(100) as? UILabel {
-////            //println("Loans_TVC countryLabel = \(countryLabel)")
-////            countryLabel.text = loan.country
-////        }
-////        
-////        if let amountLabel = cell.viewWithTag(101) as? UILabel {
-////            amountLabel.text = "$ \(loan.amount)"
-////        }
-////        
-////        if let nameLabel = cell.viewWithTag(102) as? UILabel {
-////            nameLabel.text = loan.name
-////        }
-////        
-////        if let descLabel = cell.viewWithTag(103) as? UILabel {
-////            descLabel.text = loan.description
-////        }
-////        
-////        if let loanImage = cell.viewWithTag(104) as?  UIImageView {
-////            self.squareImageOfLoanForImageView(loan, imgView: loanImage)
-////        }
-//    }
     
     //#pragma mark - UIScrollViewDelegate Methods
     override func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -200,10 +174,16 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
             }
             let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
             if segue.identifier == "Show Detail" {
-                let selectedLoan: Loan = self.loanArray[indexPath.row]
-                let myDestVC = segue.destinationViewController as DetailedLoanVC
-                myDestVC.setLoan_id(selectedLoan.loan_id!)
-                println("SearchResults_TVC prepareForSegue selectedLoan.loan_id = \(selectedLoan.loan_id)")
+                if tableView == self.searchDisplayController?.searchResultsTableView {
+                    let selectedLoan: Loan = self.searchResultsArray[indexPath.row]
+                    let myDestVC = segue.destinationViewController as DetailedLoanVC
+                    myDestVC.setLoan_id(selectedLoan.loan_id!)
+                } else {
+                    let selectedLoan: Loan = self.loanArray[indexPath.row]
+                    let myDestVC = segue.destinationViewController as DetailedLoanVC
+                    myDestVC.setLoan_id(selectedLoan.loan_id!)
+                    println("SearchResults_TVC prepareForSegue selectedLoan.loan_id = \(selectedLoan.loan_id)")
+                }
             }
         }
     }

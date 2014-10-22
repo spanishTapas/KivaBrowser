@@ -45,7 +45,7 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
     
     override func viewWillAppear(animated: Bool) {
         if let team = self.team? {
-            self.setupViewForToan(team)
+            self.setupViewForTeam(team)
         }
     }
     
@@ -68,10 +68,12 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
         self.team = team
     }
     
-    func setupViewForToan(team: Team) {
+    func setupViewForTeam(team: Team) {
         //setup imageView
+        
         if team.imgDic != nil {
-            self.squareImageOfTeamForImageView(team, imgView: teamImage)
+            let imageURL = KivaImage.urlForImageFormat(team.imgDic!, format: KivaImageFormat.KivaImageFormatSquare)
+            KivaImage.squareImageOfURLForImageView(imageURL, imgView: teamImage)
         }
         
         self.nameLabel.text  = team.name
@@ -105,25 +107,6 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
         self.loanBecauseTextView.text = "Loan because: \(team.loan_because)"
     }
     
-    func squareImageOfTeamForImageView(team: Team, imgView: UIImageView) {
-        
-        let imageURL = team.urlForImageFormat(team.imgDic!, format:
-            Team.KivaImageFormat.KivaImageFormatSquare)
-        
-        let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
-        dispatch_async(imageFetchQ, {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true//not good
-            let imageData: NSData = NSData(contentsOfURL: imageURL)//could take a while
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false//not good
-            // UIImage is one of the few UIKit objects which is thread-safe, so we can do this here
-            let image: UIImage = UIImage(data: imageData)
-            dispatch_async(dispatch_get_main_queue(), {
-                imgView.image = image
-            })
-            
-        })
-    }
-
     @IBAction func urlButtonPressed(sender: AnyObject) {
         if self.website_url != nil {
             performSegueWithIdentifier("ShowTeamWebView", sender: sender)
