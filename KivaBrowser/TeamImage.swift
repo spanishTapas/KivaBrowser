@@ -31,6 +31,6 @@ extension Team {
     
     func urlForImageFormat (imgDic: NSDictionary, format:KivaImageFormat) -> NSURL {
         let urlString = self.urlStringForTeam(imgDic, format: format)
-        return NSURL(string: urlString)
+        return NSURL(string: urlString)!
     }
 }

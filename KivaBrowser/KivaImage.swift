@@ -33,7 +33,7 @@ class KivaImage {
     
     class func urlForImageFormat (imgDic: NSDictionary, format:KivaImageFormat) -> NSURL {
         let urlString = self.urlStringForKivaImage(imgDic, format: format)
-        return NSURL(string: urlString)
+        return NSURL(string: urlString)!
     }
 
     class func squareImageOfURLForImageView(imageURL: NSURL, imgView: UIImageView) {
@@ -43,10 +43,10 @@ class KivaImage {
         let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
         dispatch_async(imageFetchQ, {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true//not good
-            let imageData: NSData = NSData(contentsOfURL: imageURL)//could take a while
+            let imageData: NSData = NSData(contentsOfURL: imageURL)!//could take a while
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false//not good
             // UIImage is one of the few UIKit objects which is thread-safe, so we can do this here
-            let image: UIImage = UIImage(data: imageData)
+            let image: UIImage = UIImage(data: imageData)!
             dispatch_async(dispatch_get_main_queue(), {
                 imgView.image = image
             })

@@ -18,8 +18,7 @@ class JsonDataFetcher {
 
     func kivaDataFromURL(url: NSURL, error: NSErrorPointer) -> NSData? {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        
-        let data: NSData? = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingUncached, error: error)
+        let data: NSData? = NSData(contentsOfURL: url, options: NSDataReadingOptions.DataReadingUncached, error: error)
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         return data;
@@ -30,7 +29,7 @@ class JsonDataFetcher {
             var connectionError: NSError?
             let dataStr: String = "http://api.kivaws.org/v1/lending_actions/recent.json"
             //println("JsonDataFetcher fetchLatestLoanData dataStr = \(dataStr)")
-            let dataURL: NSURL = NSURL(string: dataStr)
+            let dataURL: NSURL = NSURL(string: dataStr)!
             let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
@@ -48,7 +47,7 @@ class JsonDataFetcher {
             var connectionError: NSError?
             let dataStr: String = "http://api.kivaws.org/v1/loans/search.json&page=\(pageNum)"
             //println("JsonDataFetcher fetchLatestLoanData dataStr = \(dataStr)")
-            let dataURL: NSURL = NSURL(string: dataStr)
+            let dataURL: NSURL = NSURL(string: dataStr)!
             let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
@@ -72,7 +71,7 @@ class JsonDataFetcher {
             pathComp += "&page=\(pageNum)"
             dataStr = dataStr.stringByAppendingString(pathComp)
             //println("JsonDataFetcher fetchLoansByRequest dataStr = \(dataStr)")
-            let dataURL: NSURL = NSURL(string: dataStr)
+            let dataURL: NSURL = NSURL(string: dataStr)!
             let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
@@ -89,7 +88,7 @@ class JsonDataFetcher {
         dispatch_async(kBGQueue, {
         var connectionError: NSError?
         let dataStr: String = "http://api.kivaws.org/v1/loans/search.json"
-        let dataURL: NSURL = NSURL(string: dataStr)
+        let dataURL: NSURL = NSURL(string: dataStr)!
         let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
@@ -113,7 +112,7 @@ class JsonDataFetcher {
             dataStr = dataStr.stringByAppendingString(pathComp)
             let dataURL = NSURL(string: dataStr)
             
-            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            let data: NSData? = self.kivaDataFromURL(dataURL!, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
                     self.delegate?.fetchingDataFailedWithError(&connectionError)
@@ -133,7 +132,7 @@ class JsonDataFetcher {
             dataStr = dataStr.stringByAppendingString(".json")
             //println("JsonDataFetcher fetchDetailedLoanByID dataStr = \(dataStr)")
             let dataURL = NSURL(string: dataStr)
-            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            let data: NSData? = self.kivaDataFromURL(dataURL!, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
                     self.delegate?.fetchingDataFailedWithError(&connectionError)
@@ -152,7 +151,7 @@ class JsonDataFetcher {
             pathComp += "&page=\(pageNum)"
             dataStr = dataStr.stringByAppendingString(pathComp)
             println("JsonDataFetcher fetchTeamsBy dataStr = \(dataStr)")
-            let dataURL: NSURL = NSURL(string: dataStr)
+            let dataURL: NSURL = NSURL(string: dataStr)!
             let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
@@ -175,7 +174,7 @@ class JsonDataFetcher {
             dataStr = dataStr.stringByAppendingString(pathComp)
             let dataURL = NSURL(string: dataStr)
             
-            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            let data: NSData? = self.kivaDataFromURL(dataURL!, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
                     self.delegate?.fetchingDataFailedWithError(&connectionError)
@@ -192,7 +191,7 @@ class JsonDataFetcher {
             var connectionError: NSError?
             let dataStr: String = "http://api.kivaws.org/v1/lenders/newest.json&page=\(pageNum)"
             //println("JsonDataFetcher fetchLatestLenderData dataStr = \(dataStr)")
-            let dataURL: NSURL = NSURL(string: dataStr)
+            let dataURL: NSURL = NSURL(string: dataStr)!
             let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
@@ -209,7 +208,7 @@ class JsonDataFetcher {
         dispatch_async(kBGQueue, {
             var connectionError: NSError?
             let dataStr: String = "http://api.kivaws.org/v1/lenders/newest.json"
-            let dataURL: NSURL = NSURL(string: dataStr)
+            let dataURL: NSURL = NSURL(string: dataStr)!
             let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
@@ -233,7 +232,7 @@ class JsonDataFetcher {
             pathComp += "&page=\(pageNum)"
             dataStr = dataStr.stringByAppendingString(pathComp)
             //println("JsonDataFetcher fetchLendersByRequest dataStr = \(dataStr)")
-            let dataURL: NSURL = NSURL(string: dataStr)
+            let dataURL: NSURL = NSURL(string: dataStr)!
             let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
@@ -256,7 +255,7 @@ class JsonDataFetcher {
             dataStr = dataStr.stringByAppendingString(pathComp)
             let dataURL = NSURL(string: dataStr)
             
-            let data: NSData? = self.kivaDataFromURL(dataURL, error: &connectionError)
+            let data: NSData? = self.kivaDataFromURL(dataURL!, error: &connectionError)
             dispatch_async(dispatch_get_main_queue(), {
                 if (connectionError != nil) {
                     self.delegate?.fetchingDataFailedWithError(&connectionError)

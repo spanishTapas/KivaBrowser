@@ -31,7 +31,7 @@ extension DetailedLoan {
     
     func urlForImageFormat (img_id: Int, format: KivaImageFormat) -> NSURL {
         let urlString = self.urlStringForDetailedLoan(img_id, format: format)
-        return NSURL(string: urlString)
+        return NSURL(string: urlString)!
     }
 
 }

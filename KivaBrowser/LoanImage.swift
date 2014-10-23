@@ -32,7 +32,7 @@ extension Loan {
     
     func urlForImageFormat (imgDic: NSDictionary, format:KivaImageFormat) -> NSURL {
         let urlString = self.urlStringForLoan(imgDic, format: format)
-        return NSURL(string: urlString)
+        return NSURL(string: urlString)!
     }
 }
 

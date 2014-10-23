@@ -59,7 +59,7 @@ class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSou
         let cellIdentifier = "SearchCriteria"
         var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
         // Configure the cell...
-        cell.textLabel?.text = self.titleForRow(indexPath.row)
+        cell.textLabel.text = self.titleForRow(indexPath.row)
         cell.detailTextLabel?.text = self.subtitleForRow(indexPath.row)
         return cell
     }
@@ -84,7 +84,7 @@ class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSou
         if sender is UITableViewCell {
             if segue.identifier == "PickCriteria" {
                 let cell: UITableViewCell = sender as UITableViewCell
-                if let pickerID = cell.textLabel?.text {
+                if let pickerID = cell.textLabel.text {
                     let destVC = segue.destinationViewController as CriteriaPicker
                     destVC.setupPickerID(pickerID)
                 }

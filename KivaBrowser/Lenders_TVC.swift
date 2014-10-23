@@ -115,10 +115,10 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
 
         if lender.imgDic != nil {
             let imageURL = KivaImage.urlForImageFormat(lender.imgDic!, format: KivaImageFormat.KivaImageFormatSquare)
-            KivaImage.squareImageOfURLForImageView(imageURL, imgView: cell.imageView!)
+            KivaImage.squareImageOfURLForImageView(imageURL, imgView: cell.imageView)
         }
         
-        cell.textLabel?.text = lender.name
+        cell.textLabel.text = lender.name
         
         if lender.whereabouts != "" {
             cell.detailTextLabel?.text = "\(lender.whereabouts) \(lender.country_code)"
