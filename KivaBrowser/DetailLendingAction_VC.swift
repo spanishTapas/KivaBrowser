@@ -15,12 +15,14 @@ class DetailLendingAction_VC: UIViewController, UIScrollViewDelegate, UITextView
     @IBOutlet weak var lenderInfo: UILabel!
     @IBOutlet weak var lenderCount: UILabel!
     @IBOutlet weak var lenderImage: UIImageView!
+    
     @IBOutlet weak var sectorLabel: UILabel!
     @IBOutlet weak var loanAmount: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
     
     @IBOutlet weak var borrowerInfo: UILabel!
+    
     @IBOutlet weak var borrowerImage: UIImageView!
     @IBOutlet weak var use: UITextView!
     

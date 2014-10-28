@@ -11,7 +11,6 @@ import UIKit
 
 class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, LoanManagerDelegate{
     let loanManager: LoanManager
-    
     var lenderArray = [Lender]()
     var searchResultsArray = [Lender]()
     
@@ -31,6 +30,7 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loanManager.fetcher = JsonDataFetcher()
         loanManager.fetcher!.delegate = loanManager
         loanManager.delegate = self
@@ -43,9 +43,6 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
         self.title = "Lenders"
     }
     
-//    func setsortByStr(sortByStr: String) {
-//        self.sortByStr = sortByStr
-//    }
    // #pragma mark - set Model
     func loadLendersForPage(pageNum: Int) {
         self.loanManager.fetchLatestLenders(pageNum)
@@ -70,7 +67,9 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
         //get paging Dictionary for this search
         return self.currPageNum >= self.paginator.pages
     }
-    
+    override func viewWillLayoutSubviews() {
+        
+    }
     //LoanManagerDelegate
     func didReceiveLenderPagingInfo(paginator: Paginator) {
         self.paginator = paginator
@@ -144,7 +143,8 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
         label.font = UIFont.boldSystemFontOfSize(16)
         label.textColor = UIColor.darkGrayColor()
         label.textAlignment = NSTextAlignment.Center
-        
+        label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
+
         if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"
             //println("LatestLenders_TVC...\(text)")

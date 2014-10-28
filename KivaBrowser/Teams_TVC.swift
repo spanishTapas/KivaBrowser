@@ -136,6 +136,8 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
         label.font = UIFont.boldSystemFontOfSize(16)
         label.textColor = UIColor.darkGrayColor()
         label.textAlignment = NSTextAlignment.Center
+        //resize label when orientation changes 
+        label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
         
         if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"

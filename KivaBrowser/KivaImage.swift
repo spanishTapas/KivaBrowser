@@ -43,14 +43,15 @@ class KivaImage {
         let imageFetchQ: dispatch_queue_t = dispatch_queue_create("image fetcher", nil)
         dispatch_async(imageFetchQ, {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true//not good
-            let imageData: NSData = NSData(contentsOfURL: imageURL)!//could take a while
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false//not good
-            // UIImage is one of the few UIKit objects which is thread-safe, so we can do this here
-            let image: UIImage = UIImage(data: imageData)!
-            dispatch_async(dispatch_get_main_queue(), {
-                imgView.image = image
-            })
-            
+            if let imageData: NSData = NSData(contentsOfURL: imageURL) {
+                //could take a while
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false//not good
+                // UIImage is one of the few UIKit objects which is thread-safe, so we can do this here
+                let image: UIImage = UIImage(data: imageData)!
+                dispatch_async(dispatch_get_main_queue(), {
+                    imgView.image = image
+                })
+            }
         })
     }
     

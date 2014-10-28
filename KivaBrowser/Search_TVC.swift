@@ -41,6 +41,10 @@ class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSou
         button.layer.borderWidth = 2.0
         button.layer.cornerRadius = 15.0
         button.userInteractionEnabled = true
+        //resize label when orientation changes
+        button.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleBottomMargin
+
+        
         button.addTarget(self, action: "searchButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         self.tableView.addSubview(button)
     }

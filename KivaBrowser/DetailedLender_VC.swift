@@ -53,17 +53,27 @@ class DetailedLender_VC: UIViewController, UIScrollViewDelegate, UITextViewDeleg
             self.loanCountLabel.text = "Loan Count: 0"
         }
         if lender.member_since.isEmpty {
-            self.memberSinceLabel.text = "Member Since:"
+            self.memberSinceLabel.text = "Member Since: N/A"
         } else {
             self.memberSinceLabel.text = "Member Since: \(lender.member_since)"
+        }
+        if lender.occupation.isEmpty && lender.occupational_info.isEmpty {
+            self.occupationLabel.text = "Occupation: N/A"
+        } else if !lender.occupation.isEmpty {
+            self.occupationLabel.text = lender.occupation
+        } else if !lender.occupational_info.isEmpty {
+            self.occupationLabel.text = lender.occupational_info
         }
         if lender.personal_url.isEmpty {
             self.urlLabel.text = "Personal_URL: N/A"
         } else {
             self.urlLabel.text = "Personal_URL: \(lender.personal_url)"
         }
-        
-        self.loanBecauseTextView.text = "Loan_because: \(lender.loan_because)"
+        if !lender.loan_because .isEmpty {
+            self.loanBecauseTextView.text = "Loan_because: \(lender.loan_because)"
+        } else {
+            self.loanBecauseTextView.text = "Loan_because: N/A"
+        }
         
     }
     
