@@ -12,6 +12,8 @@ import UIKit
 class DetailLendingAction_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegate {
     
    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var lenderInfo: UILabel!
     @IBOutlet weak var lenderCount: UILabel!
     @IBOutlet weak var lenderImage: UIImageView!
@@ -30,7 +32,7 @@ class DetailLendingAction_VC: UIViewController, UIScrollViewDelegate, UITextView
     
     override func viewDidLoad() {
         self.title = "Lending_Action Details"
-        
+        self.scrollView.delegate = self
         self.use.delegate = self
     }
     override func viewWillAppear(animated: Bool) {
@@ -39,9 +41,20 @@ class DetailLendingAction_VC: UIViewController, UIScrollViewDelegate, UITextView
         }
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        self.scrollView.layoutIfNeeded()
+        self.scrollView.contentSize = self.contentView.bounds.size
+        let bottomOffset: CGPoint = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.height)
+        //println("bottomOffset=\(bottomOffset)")
+        self.scrollView.setContentOffset(bottomOffset, animated: true)
+    }
+    
     func setLending_Action(lending_action: LendingAction) {
         self.lending_action = lending_action
     }
+    
     func setupViewForLending_Action(lending_action: LendingAction) {
         if let lender = lending_action.lender {
             let nameAttr: Dictionary = [NSFontAttributeName: UIFont.boldSystemFontOfSize(15)]

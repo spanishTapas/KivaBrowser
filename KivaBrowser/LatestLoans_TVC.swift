@@ -61,8 +61,7 @@ class LatestLoans_TVC: Loans_TVC, UIScrollViewDelegate {
         label.textAlignment = NSTextAlignment.Center
         //resize label when orientation changes
         label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
-        
-        if let pages = self.paginator.pages {
+                if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"
             //println("LatestLoans_TVC...\(text)")
             label.text = text
