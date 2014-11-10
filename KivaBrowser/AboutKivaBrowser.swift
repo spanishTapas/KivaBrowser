@@ -11,6 +11,7 @@ import UIKit
 
 class AboutKivaBrowser: UIViewController, UITextViewDelegate, UIScrollViewDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var aboutKivaBrowser: UITextView!
     @IBOutlet weak var aboutKivaOrg: UITextView!
     
@@ -25,7 +26,6 @@ class AboutKivaBrowser: UIViewController, UITextViewDelegate, UIScrollViewDelega
         self.setupAboutKivaBrowser()
         self.setupAboutKivaOrg()
     }
-    
     
     func setupAboutKivaBrowser() {
         var kivaBrowserText = "KivaBrowser is an iOS client for kiva.org. KivaBrowser makes it easy to explore microfinance via the Kiva API. You can browse the latest lending_actions and loan_requests; browse loans, lending_teams, and lenders by different orders; and filter search results by customized criteria.\n"

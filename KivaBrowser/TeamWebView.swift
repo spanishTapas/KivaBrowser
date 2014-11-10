@@ -18,7 +18,7 @@ class TeamWebView: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let name = self.shortName {
-            self.title = "Team \"\(name)\" Website"
+            self.title = "\"\(name)\" Website"
         }
         if let url = self.websiteURL {
             self.loadWebsite(url)
@@ -30,11 +30,12 @@ class TeamWebView: UIViewController, UIWebViewDelegate {
         let loadQ: dispatch_queue_t = dispatch_queue_create("Website Load", nil)
         dispatch_async(loadQ, {
             let request: NSURLRequest = NSURLRequest(URL: url)
+            //println("teamURL = \(url)")
             self.teamWebView.scalesPageToFit = true
             
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             self.teamWebView.loadRequest(request)
-            
+            //println("website request = \(request)")
             if self.teamWebView.loading == false {
                 dispatch_async(dispatch_get_main_queue(), {
                     UIApplication.sharedApplication().networkActivityIndicatorVisible = false

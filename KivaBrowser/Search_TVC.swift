@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var searchButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+    let button_height: CGFloat = 44
+    
     var selectedCriteriaStr: String = ""
     
     var criteria: Dictionary<String, String>?
@@ -22,33 +26,61 @@ class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addSearchButtonToView()
-        //allCriteria = SearchCriteriaFetcher.searchCriteria
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
+        //self.tableView.setContentOffset(CGPointMake(0, self.tableView.frame.size.height - self.tableView.contentSize.height), animated: true)
     }
 
-    func addSearchButtonToView() {
-        let button: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
-        button.frame = CGRectMake(60, 360, 200, 44)
-        button.setTitle("Search", forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
-        button.backgroundColor = UIColor.whiteColor()
-        button.layer.borderColor = UIColor.grayColor().CGColor
-        button.layer.borderWidth = 2.0
-        button.layer.cornerRadius = 15.0
-        button.userInteractionEnabled = true
-        //resize label when orientation changes
-        button.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleBottomMargin
-
+    override func viewWillLayoutSubviews() {
+        self.setupSearchButton()
+        self.tableView.addSubview(self.searchButton)
+        //println("bounds = \(self.tableView.bounds.size.height), contentSize = \(self.tableView.contentSize.height)")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if self.tableView.bounds.size.height < self.tableView.contentSize.height + (button_height * 2) {
+            
+            self.tableView.setContentOffset(CGPointMake(0, button_height * 3), animated: true)
+        }
+    }
+    
+    func setupSearchButton() {
+        let orientation: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+        let portrait_width: CGFloat = 200
+        let landscape_width: CGFloat = 260
+        //let button_height: CGFloat = 44
         
-        button.addTarget(self, action: "searchButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.tableView.addSubview(button)
-    }
+        if (orientation == UIInterfaceOrientation.Portrait || orientation == UIInterfaceOrientation.PortraitUpsideDown) {
+            let portrait_x = (self.tableView.contentSize.width - portrait_width)/2
+            let portrait_y = self.tableView.contentSize.height + button_height
+            self.searchButton.frame = CGRectMake(portrait_x, portrait_y, portrait_width, button_height)
+            //println("portrait_searchButton_frame = \(self.searchButton.frame)")
+        } else if (orientation == UIInterfaceOrientation.LandscapeLeft ||
+            orientation == UIInterfaceOrientation.LandscapeRight) {
+            let landscape_x = (self.tableView.contentSize.width - landscape_width)/2
+            let landscape_y = self.tableView.contentSize.height + button_height
+            self.searchButton.frame = CGRectMake(landscape_x, landscape_y, landscape_width, button_height)
+            
+            //println("landscape_searchButton_frame = \(self.searchButton.frame)")
+        }
+        
+        self.searchButton.setTitle("Search", forState: UIControlState.Normal)
+        self.searchButton.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
+        self.searchButton.backgroundColor = UIColor.whiteColor()
+        self.searchButton.layer.borderColor = UIColor.grayColor().CGColor
+        self.searchButton.layer.borderWidth = 2.0
+        self.searchButton.layer.cornerRadius = 15.0
+        self.searchButton.userInteractionEnabled = true
+        //resize label when orientation changes
+        //self.searchButton.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleBottomMargin
 
+        self.searchButton.addTarget(self, action: "searchButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        //self.tableView.addSubview(self.searchButton)
+    }
+    
     //#pragma mark - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int  {
         // Return the number of sections.
