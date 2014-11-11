@@ -35,7 +35,7 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
         super.viewDidLoad()
         if let name = team?.shortname {
             self.shortName = name
-            self.title = "Team \"\(name)\" Details"
+            self.title = "\"\(name)\" Details"
         }
         
         self.scrollView.delegate = self

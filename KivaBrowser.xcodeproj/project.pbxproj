@@ -30,6 +30,8 @@
 		C7378F3619B90898009ACC71 /* CriteriaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7378F3519B90898009ACC71 /* CriteriaPicker.swift */; };
 		C7378F3819BA616D009ACC71 /* SearchResults_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7378F3719BA616D009ACC71 /* SearchResults_TVC.swift */; };
 		C7378F3A19BAE856009ACC71 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7378F3919BAE856009ACC71 /* Search.swift */; };
+		C744B5AC1A1097AF002C0375 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C744B5AB1A1097AF002C0375 /* Images-2.xcassets */; };
+		C744B5AE1A1099D2002C0375 /* KivaBrowser_LSF.xib in Resources */ = {isa = PBXBuildFile; fileRef = C744B5AD1A1099D2002C0375 /* KivaBrowser_LSF.xib */; };
 		C76F771319B12B7700E98451 /* DetailedLoanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F771219B12B7700E98451 /* DetailedLoanImage.swift */; };
 		C7A3F5E419F4E022005DFBF7 /* DetailLendingAction_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A3F5E319F4E022005DFBF7 /* DetailLendingAction_VC.swift */; };
 		C7ABFEB01990342A0016BA53 /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABFEAF1990342A0016BA53 /* LoanCell.swift */; };
@@ -96,6 +98,8 @@
 		C7378F3519B90898009ACC71 /* CriteriaPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaPicker.swift; sourceTree = "<group>"; };
 		C7378F3719BA616D009ACC71 /* SearchResults_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResults_TVC.swift; sourceTree = "<group>"; };
 		C7378F3919BAE856009ACC71 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		C744B5AB1A1097AF002C0375 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		C744B5AD1A1099D2002C0375 /* KivaBrowser_LSF.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KivaBrowser_LSF.xib; sourceTree = "<group>"; };
 		C76F771219B12B7700E98451 /* DetailedLoanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedLoanImage.swift; sourceTree = "<group>"; };
 		C7A3F5E319F4E022005DFBF7 /* DetailLendingAction_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLendingAction_VC.swift; sourceTree = "<group>"; };
 		C7ABFEAF1990342A0016BA53 /* LoanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		C71797C6198614200049D44C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C744B5AB1A1097AF002C0375 /* Images-2.xcassets */,
+				C744B5AD1A1099D2002C0375 /* KivaBrowser_LSF.xib */,
 				C71797CF198614200049D44C /* Images.xcassets */,
 				C71797C8198614200049D44C /* AppDelegate.swift */,
 				C71797C7198614200049D44C /* Info.plist */,
@@ -394,6 +400,7 @@
 				TargetAttributes = {
 					C71797C2198614200049D44C = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 8R5SSX8RV5;
 					};
 					C71797D4198614200049D44C = {
 						CreatedOnToolsVersion = 6.0;
@@ -427,10 +434,12 @@
 			files = (
 				C7245A4119EB94B200E2A7AB /* Teams.png in Resources */,
 				C7245A4319EBA2ED00E2A7AB /* Lenders.png in Resources */,
+				C744B5AC1A1097AF002C0375 /* Images-2.xcassets in Resources */,
 				C71797CE198614200049D44C /* Main.storyboard in Resources */,
 				C7245A5319ECE93500E2A7AB /* Loans.png in Resources */,
 				C71797D0198614200049D44C /* Images.xcassets in Resources */,
 				C7ADF73719F7170C008B3E8D /* About.png in Resources */,
+				C744B5AE1A1099D2002C0375 /* KivaBrowser_LSF.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,10 +615,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KivaBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -619,10 +630,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wanming zhang (5573ZQ3TYM)";
 				INFOPLIST_FILE = KivaBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
