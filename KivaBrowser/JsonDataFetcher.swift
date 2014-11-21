@@ -14,10 +14,11 @@ class JsonDataFetcher {
     // JsonDataFetcherDelegate
     weak var delegate: JsonDataFetcherDelegate?
     
-    let kBGQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) // a background queue
+    let kBGQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) // Items dispatched to the queue run at the default priority; the queue is scheduled for execution after all high priority queues have been scheduled, but before any low priority queues have been scheduled.
 
     func kivaDataFromURL(url: NSURL, error: NSErrorPointer) -> NSData? {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
         let data: NSData? = NSData(contentsOfURL: url, options: NSDataReadingOptions.DataReadingUncached, error: error)
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false

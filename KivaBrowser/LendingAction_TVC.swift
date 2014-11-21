@@ -17,7 +17,6 @@ class LendingAction_TVC: UITableViewController, UITableViewDelegate, UITableView
     var searchResultsArray = [LendingAction]()
     
     required init(coder aDecoder: NSCoder) {
-        
         self.loanManager = LoanManager()
         super.init(coder: aDecoder)
     }
