@@ -49,7 +49,8 @@ class TeamWebView: UIViewController, UIWebViewDelegate {
         self.websiteURL = url
     }
     
-    func setShortName(shortName: String) {
+    func setAShortName(shortName: String) {
         self.shortName = shortName
     }
+
 }

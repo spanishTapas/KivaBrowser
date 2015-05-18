@@ -79,7 +79,7 @@ class DetailedLoan: NSObject {
             if let paymentsArr = terms.valueForKey("scheduled_payments") as? NSArray
             {
                 if let payments = paymentsArr.objectAtIndex(0) as? NSDictionary{
-                    let dueStr = payments.valueForKey("due_date") as String
+                    let dueStr = payments.valueForKey("due_date") as! String
                     let dueDate = DetailedLoan.dateWithJsonString(dueStr)
                     let dueDateStr = DetailedLoan.stringFromDate(dueDate)
                     self.due_date = dueDateStr

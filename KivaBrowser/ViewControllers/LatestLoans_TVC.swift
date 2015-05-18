@@ -1,48 +1,55 @@
 //
-//  SearchResults_TVC.swift
+//  LatestLoans_TVC.swift
 //  KivaBrowser
 //
-//  Created by wanming zhang on 9/5/14.
+//  Created by wanming zhang on 8/7/14.
 //  Copyright (c) 2014 wanming zhang. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
-    var requestString: String = ""
-    var scopeStr: String = ""
-    //@property (weak, nonatomic) IBOutlet UISearchBar *loanFilter;
+class LatestLoans_TVC: Loans_TVC, UIScrollViewDelegate {
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.currPageNum = 1
         self.loadLoansForPage(1)
-        self.loanManager.fetchPagingInfoByRequest(requestString)
-        self.refreshControl?.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
-    }
-
-    func setRequestStr(requestStr: String) {
-        self.requestString = requestStr
+        self.loanManager.fetchPagingInfo()
+        //println("LatestLoans_TVC viewDidLoad self.loanManager = \(self.loanManager)")
+        self.title = "Loans"
+        self.refreshControl!.addTarget(self, action:"refresh", forControlEvents: .ValueChanged)
     }
     
     override func loadLoansForPage(pageNum: Int) {
-        //println("SearchResults_TVC loadLoansForPage self.loanManager.fetcher = \(self.loanManager.fetcher)")
-        self.loanManager.fetchSearchResultsByRequest(requestString, pageNum: pageNum)
+        self.loanManager.fetchLatestLoans(pageNum)
+        //println("LatestLoans = \(self.loanArray?.count) loans")
     }
-
+    
     func reachedLastPage() -> Bool {
         //get paging Dictionary for this search
         return self.currPageNum >= self.paginator.pages
     }
-
-    //#pragma mark - LoanManagerDelegate
+    
+    //LoanManagerDelegate
     override func didReceivePagingInfo(paginator: Paginator) {
         self.paginator = paginator
         //println("LatestLoans paginator.pages: \(self.paginator.pages)")
     }
-
+    
     //#pragma mark - Table view delegate
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 98.0
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        return 28.0
+    }
+    
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         //set up label
         let footerView: UIView = UIView(frame: CGRectMake(0, 0, 320, 98))
@@ -54,29 +61,34 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
         label.textAlignment = NSTextAlignment.Center
         //resize label when orientation changes
         label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
-        
-        if let pages = self.paginator.pages {
+                if let pages = self.paginator.pages {
             let text: String = "\(self.currPageNum) out of \(pages) pages"
-            println("LatestLoans_TVC...\(text)")
+            //println("LatestLoans_TVC...\(text)")
             label.text = text
-            println("\(label.text)")
+            //println("\(label.text)")
         }
-        
         if tableView != self.searchDisplayController?.searchResultsTableView {
             footerView.addSubview(label)
-            tableView.tableFooterView = footerView
         }
+        
+        //tableView.tableFooterView = footerView
         
         return footerView
     }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 98.0
+    //#pragma mark - Refreshing
+    // Fires off a block on a queue to fetch data from kiva
+    @IBAction func refresh() {
+        self.refreshControl!.beginRefreshing()
+        let fetchQ: dispatch_queue_t = dispatch_queue_create("Kiva Fetch", nil)
+        dispatch_async(fetchQ, {
+            self.loadLoansForPage(self.currPageNum)
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.refreshControl!.endRefreshing()
+            })
+        })
     }
-    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 28.0
-    }
-    
+
     //#pragma mark - UIScrollViewDelegate Methods
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         // when reaching bottom, load a new page
@@ -88,25 +100,9 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
                 self.isLoading = true
                 if (!self.reachedLastPage()) {
                     self.loadLoansForPage(++self.currPageNum)
-                    //self.currPageNum++;
                 }
             }
         }
-    }
-    
-    //#pragma mark - Refreshing
-    // Fires off a block on a queue to fetch data from kiva
-    
-    @IBAction func refresh() {
-        self.refreshControl!.beginRefreshing()
-        let fetchQ: dispatch_queue_t = dispatch_queue_create("Kiva Fetch", nil)
-        dispatch_async(fetchQ, {
-            self.loadLoansForPage(self.currPageNum)
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                self.refreshControl!.endRefreshing()
-            })
-        })
     }
     //#pragma mark Search Bar and Search Display Controller
     
@@ -141,22 +137,21 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
     func searchDisplayController(controller: UISearchDisplayController, willUnloadSearchResultsTableView tableView: UITableView) {
         // search is done so get rid of the search FRC and reclaim memory
     }
-    
-    //  The method runs the text filtering function whenever the user changes the search string in the search bar.
+
+//  The method runs the text filtering function whenever the user changes the search string in the search bar.
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
         // Tells the table data source to reload when text changes
-        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
         let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
         
         self.filterContentForSearchText(searchString, scope: selectedScope)
         return true
     }
-    
+
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
         // Tells the table data source to reload when scope bar selection changes
-        let scope = self.searchDisplayController!.searchBar.scopeButtonTitles as [String] 
-            self.filterContentForSearchText(self.searchDisplayController!.searchBar.text, scope: scope[searchOption])
-        
+        let scope = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text, scope: scope[searchOption])
         // Return true to cause the search result table view to be reloaded.
         return true
     }
@@ -168,25 +163,29 @@ class SearchResults_TVC: Loans_TVC, UIScrollViewDelegate {
             let view: UIView? = sender.superview
             var tableView = UITableView()
             if view?.superview is UITableView {
-                tableView = view?.superview as UITableView
+                tableView = view?.superview as! UITableView
             } else if view is UITableView {
-                tableView = view as UITableView
+                tableView = view as! UITableView
             } else {
                 //NSAssert(NO, @"UITableView shall always be found.");
             }
-            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
-            if segue.identifier == "Show Detail" {
+            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+            if segue.identifier == "Show Details" {
                 if tableView == self.searchDisplayController?.searchResultsTableView {
                     let selectedLoan: Loan = self.searchResultsArray[indexPath.row]
-                    let myDestVC = segue.destinationViewController as DetailedLoanVC
-                    myDestVC.setLoan_id(selectedLoan.loan_id!)
+                    let myDestVC = segue.destinationViewController as! DetailedLoanVC
+                    myDestVC.setTheLoan_id(selectedLoan.loan_id!)
                 } else {
                     let selectedLoan: Loan = self.loanArray[indexPath.row]
-                    let myDestVC = segue.destinationViewController as DetailedLoanVC
-                    myDestVC.setLoan_id(selectedLoan.loan_id!)
-                    println("SearchResults_TVC prepareForSegue selectedLoan.loan_id = \(selectedLoan.loan_id)")
+                    let myDestVC = segue.destinationViewController as! DetailedLoanVC
+                    myDestVC.setTheLoan_id(selectedLoan.loan_id!)
+                    //println("LatestLoans_TVC prepareForSegue selectedLoan.loan_id = \(selectedLoan.loan_id)"
                 }
             }
         }
     }
+    
 }
+
+
+

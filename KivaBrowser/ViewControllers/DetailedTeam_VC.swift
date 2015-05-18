@@ -44,7 +44,7 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
     }
     
     override func viewWillAppear(animated: Bool) {
-        if let team = self.team? {
+        if let team = self.team {
             self.setupViewForTeam(team)
         }
     }
@@ -117,10 +117,10 @@ class DetailedTeam_VC: UIViewController, UIScrollViewDelegate, UITextViewDelegat
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         if sender is UIButton {
             if segue.identifier == "ShowTeamWebView" {
-                let TWV = segue.destinationViewController as TeamWebView
+                let TWV = segue.destinationViewController as! TeamWebView
                 TWV.setTeamURL(self.website_url!)
                 if shortName != nil {
-                TWV.setShortName(shortName!)
+                TWV.setAShortName(shortName!)
                 }
             }
         }

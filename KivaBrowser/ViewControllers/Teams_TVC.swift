@@ -100,7 +100,7 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "TeamCell"
-        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as TeamCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! TeamCell
         if tableView == self.searchDisplayController?.searchResultsTableView {
             let team = searchResultsArray[indexPath.row] as Team
             self.configureCell(cell, team: team)
@@ -190,22 +190,22 @@ class Teams_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
             let view: UIView? = sender.superview
             var tableView = UITableView()
             if view?.superview is UITableView {
-                tableView = view?.superview as UITableView
+                tableView = view?.superview as! UITableView
             } else if view is UITableView {
-                tableView = view as UITableView
+                tableView = view as! UITableView
             } else {
                 //NSAssert(NO, @"UITableView shall always be found.");
             }
-            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
+            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
             
             if segue.identifier == "ShowTeam" {
                 if tableView == self.searchDisplayController?.searchResultsTableView {
                     let selectedTeam: Team = self.searchResultsArray[indexPath.row]
-                    let myDestVC = segue.destinationViewController as DetailedTeam_VC
+                    let myDestVC = segue.destinationViewController as! DetailedTeam_VC
                     myDestVC.setTeam(selectedTeam)
                 } else {
                     let selectedTeam: Team = self.teamArray[indexPath.row]
-                    let myDestVC = segue.destinationViewController as DetailedTeam_VC
+                    let myDestVC = segue.destinationViewController as! DetailedTeam_VC
                     myDestVC.setTeam(selectedTeam)
                 }
             }

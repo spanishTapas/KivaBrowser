@@ -36,7 +36,7 @@ class DetailLendingAction_VC: UIViewController, UIScrollViewDelegate, UITextView
         self.use.delegate = self
     }
     override func viewWillAppear(animated: Bool) {
-        if let lending_action = self.lending_action? {
+        if let lending_action = self.lending_action {
             self.setupViewForLending_Action(lending_action)
         }
     }

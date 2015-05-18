@@ -94,7 +94,7 @@ class Loans_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSour
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "LoanCell"
-        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as LoanCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! LoanCell
         if tableView == self.searchDisplayController?.searchResultsTableView {
             let loan = searchResultsArray[indexPath.row] as Loan
             self.configureCell(cell, loan: loan)

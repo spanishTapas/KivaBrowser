@@ -59,7 +59,7 @@ class Loan {
             self.activity = activity
         }
         if let status = loanDic.valueForKey("status") as? NSString {
-            self.status = status
+            self.status = status as String
         }
         
         if let lender_count = loanDic.valueForKey("lender_count") as? Int {

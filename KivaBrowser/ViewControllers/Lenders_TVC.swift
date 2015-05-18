@@ -99,7 +99,7 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "LenderCell"
-        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as LenderCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! LenderCell
         if tableView == self.searchDisplayController?.searchResultsTableView {
             let lender = searchResultsArray[indexPath.row] as Lender
             self.configureCell(cell, lender: lender)
@@ -114,10 +114,10 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
 
         if lender.imgDic != nil {
             let imageURL = KivaImage.urlForImageFormat(lender.imgDic!, format: KivaImageFormat.KivaImageFormatSquare)
-            KivaImage.squareImageOfURLForImageView(imageURL, imgView: cell.imageView)
+            KivaImage.squareImageOfURLForImageView(imageURL, imgView: cell.imageView!)
         }
         
-        cell.textLabel.text = lender.name
+        cell.textLabel!.text = lender.name
         
         if lender.whereabouts != "" {
             cell.detailTextLabel?.text = "\(lender.whereabouts) \(lender.country_code)"
@@ -229,7 +229,7 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
     //  The method runs the text filtering function whenever the user changes the search string in the search bar.
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
         // Tells the table data source to reload when text changes
-        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
         let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
         
         self.filterContentForSearchText(searchString, scope: selectedScope)
@@ -238,7 +238,7 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
         // Tells the table data source to reload when scope bar selection changes
-        let scope = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+        let scope = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
         self.filterContentForSearchText(self.searchDisplayController!.searchBar.text, scope: scope[searchOption])
         
         // Return true to cause the search result table view to be reloaded.
@@ -252,21 +252,21 @@ class Lenders_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSo
             let view: UIView? = sender.superview
             var tableView = UITableView()
             if view?.superview is UITableView {
-                tableView = view?.superview as UITableView
+                tableView = view?.superview as! UITableView
             } else if view is UITableView {
-                tableView = view as UITableView
+                tableView = view as! UITableView
             } else {
                 //NSAssert(NO, @"UITableView shall always be found.");
             }
-            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
+            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
             if segue.identifier == "ShowLender" {
                 if tableView == self.searchDisplayController?.searchResultsTableView {
                     let selectedLender: Lender = self.searchResultsArray[indexPath.row]
-                    let myDestVC = segue.destinationViewController as DetailedLender_VC
+                    let myDestVC = segue.destinationViewController as! DetailedLender_VC
                     myDestVC.setLender(selectedLender)
                 } else {
                     let selectedLender: Lender = self.lenderArray[indexPath.row]
-                    let myDestVC = segue.destinationViewController as DetailedLender_VC
+                    let myDestVC = segue.destinationViewController as! DetailedLender_VC
                     myDestVC.setLender(selectedLender)
 
                 }

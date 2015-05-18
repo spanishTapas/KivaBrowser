@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iks-tC-ECE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iks-tC-ECE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -70,7 +70,7 @@
                                                 <constraint firstAttribute="width" constant="108" id="qAm-d3-MzN"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -102,7 +102,7 @@
                                                 <constraint firstAttribute="width" constant="140" id="uxo-hk-YqF"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -134,7 +134,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="qaP-Gc-ZMN"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -166,7 +166,7 @@
                                                 <constraint firstAttribute="height" constant="37" id="e8o-4h-Xye"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -331,7 +331,7 @@
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HWg-4o-Dl8">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -340,7 +340,7 @@
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ndm-jh-xwK">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -739,7 +739,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Xc-Ny-IiB">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -748,7 +748,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uSP-Lp-oal">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -814,7 +814,7 @@
                                     <constraint firstAttribute="height" constant="21" id="oFn-EY-Uz9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -849,7 +849,7 @@
                                     <constraint firstAttribute="height" priority="750" constant="42" id="eDl-AO-gwi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -887,7 +887,7 @@
                                     <constraint firstAttribute="width" priority="750" constant="232" id="ptL-Rd-54o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -921,7 +921,7 @@
                                     <constraint firstAttribute="width" constant="152" id="sg8-Cn-FLS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -990,7 +990,7 @@
                                     <constraint firstAttribute="width" constant="152" id="x8x-dp-Qyo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1025,7 +1025,7 @@
                                     <constraint firstAttribute="width" priority="750" constant="360" id="yDb-wQ-mKm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1263,127 +1263,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="K7r-Ov-oxU">
-                                <rect key="frame" x="20" y="20" width="280" height="212"/>
-                                <color key="backgroundColor" red="0.84053396199999997" green="0.94877600019999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" priority="750" constant="260" id="1A5-R8-Afj"/>
-                                    <constraint firstAttribute="height" constant="228" id="Pg3-E5-Xit"/>
-                                    <constraint firstAttribute="width" constant="280" id="hha-Pd-Iij"/>
-                                    <constraint firstAttribute="height" priority="750" constant="212" id="hxB-bC-cEd"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1A5-R8-Afj"/>
-                                        <exclude reference="Pg3-E5-Xit"/>
-                                        <exclude reference="hha-Pd-Iij"/>
-                                        <exclude reference="hxB-bC-cEd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="1A5-R8-Afj"/>
-                                        <include reference="hxB-bC-cEd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Pg3-E5-Xit"/>
-                                        <include reference="hha-Pd-Iij"/>
-                                    </mask>
-                                </variation>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npf-6p-LIs">
-                                <rect key="frame" x="308" y="20" width="260" height="212"/>
-                                <color key="backgroundColor" red="0.84053396199999997" green="0.94877600019999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="750" constant="180" id="FT5-6i-hdN"/>
-                                    <constraint firstAttribute="width" priority="750" constant="280" id="LdO-96-08t"/>
-                                    <constraint firstAttribute="width" constant="260" id="Snk-Wk-EyY"/>
-                                    <constraint firstAttribute="height" priority="750" constant="212" id="yL8-4R-375"/>
-                                </constraints>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMX-ef-tfk">
+                                <rect key="frame" x="8" y="72" width="584" height="471"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.96862745098039216" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="FT5-6i-hdN"/>
-                                        <exclude reference="LdO-96-08t"/>
-                                        <exclude reference="Snk-Wk-EyY"/>
-                                        <exclude reference="yL8-4R-375"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Snk-Wk-EyY"/>
-                                        <include reference="yL8-4R-375"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="FT5-6i-hdN"/>
-                                        <include reference="LdO-96-08t"/>
-                                    </mask>
-                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Npf-6p-LIs" firstAttribute="leading" secondItem="K7r-Ov-oxU" secondAttribute="trailing" constant="8" id="Hfl-pY-Eu4"/>
-                            <constraint firstItem="K7r-Ov-oxU" firstAttribute="leading" secondItem="Oc6-XR-5CV" secondAttribute="leading" constant="20" id="VhF-SC-Pvq"/>
-                            <constraint firstItem="K7r-Ov-oxU" firstAttribute="top" secondItem="trZ-hN-JoL" secondAttribute="bottom" priority="750" constant="20" id="VpX-1k-IWd"/>
-                            <constraint firstItem="Npf-6p-LIs" firstAttribute="top" secondItem="K7r-Ov-oxU" secondAttribute="bottom" constant="8" id="bJw-WN-Zhb"/>
-                            <constraint firstItem="K7r-Ov-oxU" firstAttribute="leading" secondItem="Oc6-XR-5CV" secondAttribute="leading" constant="20" id="eWU-24-nTY"/>
-                            <constraint firstItem="Npf-6p-LIs" firstAttribute="leading" secondItem="Oc6-XR-5CV" secondAttribute="leading" constant="20" id="kmJ-5I-b5X"/>
-                            <constraint firstAttribute="centerY" secondItem="K7r-Ov-oxU" secondAttribute="centerY" constant="-8" id="mza-bN-K0g"/>
-                            <constraint firstItem="K7r-Ov-oxU" firstAttribute="top" secondItem="trZ-hN-JoL" secondAttribute="bottom" constant="20" id="v6c-ge-hME"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K7r-Ov-oxU" secondAttribute="trailing" constant="284" id="xZg-YA-a3l"/>
-                            <constraint firstItem="Npf-6p-LIs" firstAttribute="top" secondItem="trZ-hN-JoL" secondAttribute="bottom" priority="750" constant="20" id="zDG-zv-hgL"/>
+                            <constraint firstAttribute="trailing" secondItem="cMX-ef-tfk" secondAttribute="trailing" priority="752" constant="8" id="W12-4M-HIt"/>
+                            <constraint firstItem="cMX-ef-tfk" firstAttribute="leading" secondItem="Oc6-XR-5CV" secondAttribute="leading" priority="752" constant="8" id="fJU-jH-Aiy"/>
+                            <constraint firstItem="cMX-ef-tfk" firstAttribute="top" secondItem="trZ-hN-JoL" secondAttribute="bottom" priority="752" constant="8" id="mpg-60-xpB"/>
+                            <constraint firstItem="lYO-4I-nqd" firstAttribute="top" secondItem="cMX-ef-tfk" secondAttribute="bottom" priority="752" constant="8" id="qrS-Ng-VCO"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="VhF-SC-Pvq"/>
-                                <exclude reference="VpX-1k-IWd"/>
-                                <exclude reference="eWU-24-nTY"/>
-                                <exclude reference="mza-bN-K0g"/>
-                                <exclude reference="v6c-ge-hME"/>
-                                <exclude reference="xZg-YA-a3l"/>
-                                <exclude reference="Hfl-pY-Eu4"/>
-                                <exclude reference="bJw-WN-Zhb"/>
-                                <exclude reference="kmJ-5I-b5X"/>
-                                <exclude reference="zDG-zv-hgL"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <include reference="VhF-SC-Pvq"/>
-                                <include reference="VpX-1k-IWd"/>
-                                <exclude reference="mza-bN-K0g"/>
-                                <exclude reference="xZg-YA-a3l"/>
-                                <include reference="Hfl-pY-Eu4"/>
-                                <include reference="zDG-zv-hgL"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="K7r-Ov-oxU"/>
-                                <include reference="Npf-6p-LIs"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="eWU-24-nTY"/>
-                                <include reference="v6c-ge-hME"/>
-                                <include reference="bJw-WN-Zhb"/>
-                                <include reference="kmJ-5I-b5X"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="wFM-Rn-W2l"/>
                     <connections>
-                        <outlet property="aboutKivaBrowser" destination="K7r-Ov-oxU" id="7yD-ow-3Oc"/>
-                        <outlet property="aboutKivaOrg" destination="Npf-6p-LIs" id="P0E-eL-Vey"/>
+                        <outlet property="aboutKivaBrowser" destination="cMX-ef-tfk" id="mIh-mk-epy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJa-UQ-3gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1413,7 +1311,7 @@
         <scene sceneID="GfH-f8-aXd">
             <objects>
                 <tableViewController id="2M2-Tn-3qr" customClass="LendingAction_TVC" customModule="KivaBrowser" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="22" sectionFooterHeight="22" id="2dY-UJ-eih">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2dY-UJ-eih">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1422,342 +1320,8 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ywm-7j-bm7" id="H80-Vs-RrK">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCO-0T-oCJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="70b-W6-8jP"/>
-                                                <constraint firstAttribute="width" constant="80" id="Ixm-Sf-nmc"/>
-                                                <constraint firstAttribute="height" constant="80" id="UMq-YJ-T1C"/>
-                                                <constraint firstAttribute="height" constant="80" id="WC1-ZG-gbQ"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="70b-W6-8jP"/>
-                                                    <exclude reference="Ixm-Sf-nmc"/>
-                                                    <exclude reference="UMq-YJ-T1C"/>
-                                                    <exclude reference="WC1-ZG-gbQ"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="70b-W6-8jP"/>
-                                                    <include reference="UMq-YJ-T1C"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="Ixm-Sf-nmc"/>
-                                                    <include reference="WC1-ZG-gbQ"/>
-                                                </mask>
-                                            </variation>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPN-Mf-x91">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Ms9-ZV-MGE"/>
-                                                <constraint firstAttribute="height" constant="21" id="Mxw-q6-p1L"/>
-                                                <constraint firstAttribute="width" constant="96" id="UBo-0G-K5N"/>
-                                                <constraint firstAttribute="width" constant="96" id="bpq-P2-Jmy"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Ms9-ZV-MGE"/>
-                                                    <exclude reference="Mxw-q6-p1L"/>
-                                                    <exclude reference="UBo-0G-K5N"/>
-                                                    <exclude reference="bpq-P2-Jmy"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="Mxw-q6-p1L"/>
-                                                    <include reference="bpq-P2-Jmy"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="Ms9-ZV-MGE"/>
-                                                    <include reference="UBo-0G-K5N"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neO-14-6Z0">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="9fM-Lq-f2g"/>
-                                                <constraint firstAttribute="height" constant="21" id="COO-sy-1pS"/>
-                                                <constraint firstAttribute="width" constant="100" id="LR2-RA-80I"/>
-                                                <constraint firstAttribute="height" constant="21" id="zXc-uq-Noy"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="9fM-Lq-f2g"/>
-                                                    <exclude reference="COO-sy-1pS"/>
-                                                    <exclude reference="LR2-RA-80I"/>
-                                                    <exclude reference="zXc-uq-Noy"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="LR2-RA-80I"/>
-                                                    <include reference="zXc-uq-Noy"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="9fM-Lq-f2g"/>
-                                                    <include reference="COO-sy-1pS"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sector:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nB-se-efu">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="3Lc-2O-72w"/>
-                                                <constraint firstAttribute="width" constant="100" id="676-SN-J32"/>
-                                                <constraint firstAttribute="height" constant="21" id="Avc-6j-RBw"/>
-                                                <constraint firstAttribute="height" constant="21" id="djz-dl-B9F"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="3Lc-2O-72w"/>
-                                                    <exclude reference="676-SN-J32"/>
-                                                    <exclude reference="Avc-6j-RBw"/>
-                                                    <exclude reference="djz-dl-B9F"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="3Lc-2O-72w"/>
-                                                    <include reference="djz-dl-B9F"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="676-SN-J32"/>
-                                                    <include reference="Avc-6j-RBw"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Remaining" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jt-TD-Erw">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="41" id="2dD-er-EJv"/>
-                                                <constraint firstAttribute="width" constant="96" id="YKs-ib-3Bh"/>
-                                                <constraint firstAttribute="height" constant="41" id="qIm-fz-yXo"/>
-                                                <constraint firstAttribute="width" constant="96" id="yFn-i9-b8v"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="2dD-er-EJv"/>
-                                                    <exclude reference="YKs-ib-3Bh"/>
-                                                    <exclude reference="qIm-fz-yXo"/>
-                                                    <exclude reference="yFn-i9-b8v"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="YKs-ib-3Bh"/>
-                                                    <include reference="qIm-fz-yXo"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="2dD-er-EJv"/>
-                                                    <include reference="yFn-i9-b8v"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="37Z-SL-eYa">
-                                            <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="2" id="Apv-Tf-pU6"/>
-                                                <constraint firstAttribute="width" constant="96" id="IY4-Nj-vVi"/>
-                                                <constraint firstAttribute="width" constant="96" id="RaF-q4-DyY"/>
-                                                <constraint firstAttribute="height" constant="2" id="rnO-41-BwB"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Apv-Tf-pU6"/>
-                                                    <exclude reference="IY4-Nj-vVi"/>
-                                                    <exclude reference="RaF-q4-DyY"/>
-                                                    <exclude reference="rnO-41-BwB"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="Apv-Tf-pU6"/>
-                                                    <include reference="RaF-q4-DyY"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="IY4-Nj-vVi"/>
-                                                    <include reference="rnO-41-BwB"/>
-                                                </mask>
-                                            </variation>
-                                        </progressView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73Q-cC-Seo">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Iet-jk-2eq"/>
-                                                <constraint firstAttribute="width" constant="100" id="KW8-VN-QPd"/>
-                                                <constraint firstAttribute="width" constant="100" id="t2s-kh-y3n"/>
-                                                <constraint firstAttribute="height" constant="21" id="vWB-yo-p3h"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Iet-jk-2eq"/>
-                                                    <exclude reference="KW8-VN-QPd"/>
-                                                    <exclude reference="t2s-kh-y3n"/>
-                                                    <exclude reference="vWB-yo-p3h"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="t2s-kh-y3n"/>
-                                                    <include reference="vWB-yo-p3h"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="Iet-jk-2eq"/>
-                                                    <include reference="KW8-VN-QPd"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="4Jt-TD-Erw" firstAttribute="leading" secondItem="73Q-cC-Seo" secondAttribute="trailing" constant="8" id="2jY-33-Qea"/>
-                                        <constraint firstItem="neO-14-6Z0" firstAttribute="top" secondItem="H80-Vs-RrK" secondAttribute="top" constant="8" id="46N-Kt-NCw"/>
-                                        <constraint firstItem="37Z-SL-eYa" firstAttribute="leading" secondItem="H80-Vs-RrK" secondAttribute="leadingMargin" constant="208" id="4S6-p8-wJj"/>
-                                        <constraint firstItem="neO-14-6Z0" firstAttribute="leading" secondItem="CCO-0T-oCJ" secondAttribute="trailing" constant="8" id="4d5-KO-fdZ"/>
-                                        <constraint firstItem="1nB-se-efu" firstAttribute="leading" secondItem="CCO-0T-oCJ" secondAttribute="trailing" constant="8" id="4jC-58-qha"/>
-                                        <constraint firstItem="neO-14-6Z0" firstAttribute="top" secondItem="H80-Vs-RrK" secondAttribute="top" constant="8" id="6HF-7d-V7I"/>
-                                        <constraint firstItem="73Q-cC-Seo" firstAttribute="top" secondItem="neO-14-6Z0" secondAttribute="bottom" constant="8" id="86x-z5-qMB"/>
-                                        <constraint firstItem="1nB-se-efu" firstAttribute="top" secondItem="73Q-cC-Seo" secondAttribute="bottom" constant="8" id="FxC-2x-fKQ"/>
-                                        <constraint firstItem="UPN-Mf-x91" firstAttribute="top" secondItem="H80-Vs-RrK" secondAttribute="top" constant="8" id="Mie-Ca-4sq"/>
-                                        <constraint firstItem="1nB-se-efu" firstAttribute="top" secondItem="73Q-cC-Seo" secondAttribute="bottom" constant="8" id="Pfa-mf-sS7"/>
-                                        <constraint firstItem="UPN-Mf-x91" firstAttribute="leading" secondItem="neO-14-6Z0" secondAttribute="trailing" constant="8" id="QTn-Ki-1Fj"/>
-                                        <constraint firstItem="4Jt-TD-Erw" firstAttribute="top" secondItem="37Z-SL-eYa" secondAttribute="bottom" constant="8" id="SxV-h2-qd2"/>
-                                        <constraint firstItem="CCO-0T-oCJ" firstAttribute="leading" secondItem="H80-Vs-RrK" secondAttribute="leading" constant="20" id="TR9-u7-3Ja"/>
-                                        <constraint firstItem="37Z-SL-eYa" firstAttribute="leading" secondItem="H80-Vs-RrK" secondAttribute="leading" constant="216" id="WIm-Y5-eyy"/>
-                                        <constraint firstItem="CCO-0T-oCJ" firstAttribute="top" secondItem="H80-Vs-RrK" secondAttribute="top" constant="8" id="Zh1-dD-uis"/>
-                                        <constraint firstItem="4Jt-TD-Erw" firstAttribute="leading" secondItem="1nB-se-efu" secondAttribute="trailing" constant="8" id="acL-ZS-liI"/>
-                                        <constraint firstItem="CCO-0T-oCJ" firstAttribute="top" secondItem="H80-Vs-RrK" secondAttribute="top" constant="8" id="bng-gd-Byp"/>
-                                        <constraint firstItem="1nB-se-efu" firstAttribute="leading" secondItem="CCO-0T-oCJ" secondAttribute="trailing" constant="8" id="fxB-UO-yf7"/>
-                                        <constraint firstItem="37Z-SL-eYa" firstAttribute="top" secondItem="UPN-Mf-x91" secondAttribute="bottom" constant="10" id="hAw-Hn-7VN"/>
-                                        <constraint firstItem="73Q-cC-Seo" firstAttribute="leading" secondItem="CCO-0T-oCJ" secondAttribute="trailing" constant="8" id="iTZ-h5-6om"/>
-                                        <constraint firstItem="73Q-cC-Seo" firstAttribute="leading" secondItem="CCO-0T-oCJ" secondAttribute="trailing" constant="8" id="ixM-Yb-usM"/>
-                                        <constraint firstItem="37Z-SL-eYa" firstAttribute="top" secondItem="UPN-Mf-x91" secondAttribute="bottom" constant="10" id="jR7-C5-6oE"/>
-                                        <constraint firstItem="CCO-0T-oCJ" firstAttribute="leading" secondItem="H80-Vs-RrK" secondAttribute="leading" constant="20" id="p6x-Jq-7vX"/>
-                                        <constraint firstItem="4Jt-TD-Erw" firstAttribute="top" secondItem="37Z-SL-eYa" secondAttribute="bottom" constant="8" id="q40-gm-XTH"/>
-                                        <constraint firstItem="UPN-Mf-x91" firstAttribute="leading" secondItem="neO-14-6Z0" secondAttribute="trailing" constant="8" id="r3h-Zl-kc7"/>
-                                        <constraint firstItem="UPN-Mf-x91" firstAttribute="top" secondItem="H80-Vs-RrK" secondAttribute="top" constant="8" id="ubI-p4-TWz"/>
-                                        <constraint firstItem="neO-14-6Z0" firstAttribute="leading" secondItem="CCO-0T-oCJ" secondAttribute="trailing" constant="8" id="xEC-bO-i4Z"/>
-                                        <constraint firstItem="73Q-cC-Seo" firstAttribute="top" secondItem="neO-14-6Z0" secondAttribute="bottom" constant="8" id="yG5-pA-P37"/>
-                                    </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="TR9-u7-3Ja"/>
-                                            <exclude reference="Zh1-dD-uis"/>
-                                            <exclude reference="bng-gd-Byp"/>
-                                            <exclude reference="p6x-Jq-7vX"/>
-                                            <exclude reference="4S6-p8-wJj"/>
-                                            <exclude reference="WIm-Y5-eyy"/>
-                                            <exclude reference="hAw-Hn-7VN"/>
-                                            <exclude reference="jR7-C5-6oE"/>
-                                            <exclude reference="4jC-58-qha"/>
-                                            <exclude reference="FxC-2x-fKQ"/>
-                                            <exclude reference="Pfa-mf-sS7"/>
-                                            <exclude reference="fxB-UO-yf7"/>
-                                            <exclude reference="2jY-33-Qea"/>
-                                            <exclude reference="SxV-h2-qd2"/>
-                                            <exclude reference="acL-ZS-liI"/>
-                                            <exclude reference="q40-gm-XTH"/>
-                                            <exclude reference="86x-z5-qMB"/>
-                                            <exclude reference="iTZ-h5-6om"/>
-                                            <exclude reference="ixM-Yb-usM"/>
-                                            <exclude reference="yG5-pA-P37"/>
-                                            <exclude reference="Mie-Ca-4sq"/>
-                                            <exclude reference="QTn-Ki-1Fj"/>
-                                            <exclude reference="r3h-Zl-kc7"/>
-                                            <exclude reference="ubI-p4-TWz"/>
-                                            <exclude reference="46N-Kt-NCw"/>
-                                            <exclude reference="4d5-KO-fdZ"/>
-                                            <exclude reference="6HF-7d-V7I"/>
-                                            <exclude reference="xEC-bO-i4Z"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="heightClass=compact">
-                                        <mask key="constraints">
-                                            <include reference="TR9-u7-3Ja"/>
-                                            <include reference="bng-gd-Byp"/>
-                                            <include reference="4S6-p8-wJj"/>
-                                            <include reference="jR7-C5-6oE"/>
-                                            <include reference="FxC-2x-fKQ"/>
-                                            <include reference="fxB-UO-yf7"/>
-                                            <include reference="2jY-33-Qea"/>
-                                            <include reference="SxV-h2-qd2"/>
-                                            <include reference="86x-z5-qMB"/>
-                                            <include reference="ixM-Yb-usM"/>
-                                            <include reference="QTn-Ki-1Fj"/>
-                                            <include reference="ubI-p4-TWz"/>
-                                            <include reference="6HF-7d-V7I"/>
-                                            <include reference="xEC-bO-i4Z"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="heightClass=regular-widthClass=compact">
-                                        <mask key="subviews">
-                                            <include reference="CCO-0T-oCJ"/>
-                                            <include reference="UPN-Mf-x91"/>
-                                            <include reference="neO-14-6Z0"/>
-                                            <include reference="1nB-se-efu"/>
-                                            <include reference="4Jt-TD-Erw"/>
-                                            <include reference="37Z-SL-eYa"/>
-                                            <include reference="73Q-cC-Seo"/>
-                                        </mask>
-                                        <mask key="constraints">
-                                            <include reference="Zh1-dD-uis"/>
-                                            <include reference="p6x-Jq-7vX"/>
-                                            <include reference="WIm-Y5-eyy"/>
-                                            <include reference="hAw-Hn-7VN"/>
-                                            <include reference="4jC-58-qha"/>
-                                            <include reference="Pfa-mf-sS7"/>
-                                            <include reference="acL-ZS-liI"/>
-                                            <include reference="q40-gm-XTH"/>
-                                            <include reference="iTZ-h5-6om"/>
-                                            <include reference="yG5-pA-P37"/>
-                                            <include reference="Mie-Ca-4sq"/>
-                                            <include reference="r3h-Zl-kc7"/>
-                                            <include reference="46N-Kt-NCw"/>
-                                            <include reference="4d5-KO-fdZ"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="amountLabel" destination="UPN-Mf-x91" id="kgr-W0-B3s"/>
-                                    <outlet property="borrowerCountryLabel" destination="73Q-cC-Seo" id="dZ7-6x-anb"/>
-                                    <outlet property="borrowerImage" destination="CCO-0T-oCJ" id="evX-09-Ufj"/>
-                                    <outlet property="borrowerNameLabel" destination="neO-14-6Z0" id="tC2-t8-U35"/>
-                                    <outlet property="fundedProgressView" destination="37Z-SL-eYa" id="4ZY-O3-eSb"/>
-                                    <outlet property="loanSectorLabel" destination="1nB-se-efu" id="gVv-5H-HWO"/>
-                                    <outlet property="remainingLabel" destination="4Jt-TD-Erw" id="TdX-xG-wig"/>
                                     <segue destination="bWn-UY-rus" kind="show" identifier="ShowLendingActionDetail" id="jos-Mv-OUV"/>
                                 </connections>
                             </tableViewCell>
@@ -1809,7 +1373,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="dwL-rn-r8u"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -1931,7 +1495,7 @@
                                                     <constraint firstAttribute="width" constant="172" id="vCu-M2-nb4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -1963,7 +1527,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="mpb-ne-2ps"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -1995,7 +1559,7 @@
                                                     <constraint firstAttribute="width" constant="280" id="ntd-qZ-0na"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2056,7 +1620,7 @@
                                                     <constraint firstAttribute="width" constant="280" id="vHV-NO-Gti"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2421,7 +1985,7 @@
                                                 <constraint firstAttribute="width" priority="750" constant="204" id="sFe-P5-sqI"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -2460,7 +2024,7 @@
                                                 <constraint firstAttribute="height" constant="50" id="s2z-S4-JBv"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -2506,7 +2070,7 @@
                                                 <constraint firstAttribute="height" constant="20" id="Xof-GT-rUQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -2706,7 +2270,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="gDf-rO-EFR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2740,7 +2304,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="zXq-QP-yW4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2778,7 +2342,7 @@
                                                     <constraint firstAttribute="width" constant="152" id="tmp-rF-f1i"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2850,7 +2414,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="508" id="oey-9x-Vgu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2882,7 +2446,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="aBp-de-LFv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2914,7 +2478,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="v2Q-71-GQD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2946,7 +2510,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="tAU-D7-pG6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3056,7 +2620,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="152" id="u4W-LJ-lTf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3089,7 +2653,7 @@
                                                     <constraint firstAttribute="height" constant="25" id="nsO-Na-dlW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3585,7 +3149,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="v8K-db-7C8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3617,7 +3181,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="loR-ab-Nmj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3649,7 +3213,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="gYu-D7-oPb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3681,7 +3245,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="eba-Y5-fJv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3715,7 +3279,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="pu3-kQ-E2H"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3751,7 +3315,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="snu-6t-LHj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3783,7 +3347,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="s3q-Rw-amD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3815,7 +3379,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="280" id="k3r-P5-dB8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3847,7 +3411,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="520" id="wdx-sB-h7J"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3879,7 +3443,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="280" id="ukm-uZ-hnn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3911,7 +3475,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="fyk-kd-6Sn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -3976,7 +3540,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="520" id="qGm-im-0Lr"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -4455,7 +4019,7 @@
                                                 <constraint firstAttribute="width" constant="108" id="t2z-Tz-6Gz"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -4487,7 +4051,7 @@
                                                 <constraint firstAttribute="width" constant="140" id="q2w-Fo-w0p"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -4519,7 +4083,7 @@
                                                 <constraint firstAttribute="width" constant="76" id="kgn-9z-9SH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -4551,7 +4115,7 @@
                                                 <constraint firstAttribute="height" constant="37" id="vKJ-ry-d3M"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -4887,7 +4451,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="152" id="nkz-kI-o4L"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -4919,7 +4483,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="152" id="sYz-BC-ZYI"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -4951,7 +4515,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="lbw-Yb-zpk"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -4983,7 +4547,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="vp3-BP-2J0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5017,7 +4581,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="iQN-55-WVc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5053,7 +4617,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="xAh-Q9-t0U"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5085,7 +4649,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="wTk-2c-mge"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5117,7 +4681,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="mn7-rf-Zd2"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5149,7 +4713,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="vBV-PF-DFw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5181,7 +4745,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="xKL-g9-DbL"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5213,7 +4777,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="520" id="cUN-0x-7es"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5245,7 +4809,7 @@
                                                     <constraint firstAttribute="width" priority="750" constant="280" id="ymd-lC-Rfj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -5691,6 +5255,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8G-TC-Ym7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5125" y="591"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hb9-zd-rb0">
+            <objects>
+                <viewController id="lL2-7i-6Ms" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iXp-Y8-vW6"/>
+                        <viewControllerLayoutGuide type="bottom" id="WzN-Wm-RGz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o4B-cn-iC7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fC1-us-Qjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LendingActionCell" customModule="KivaBrowser" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AmQ-Qw-HU8">
+                    <rect key="frame" x="8" y="4" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="40R-z0-q3m"/>
+                        <constraint firstAttribute="height" constant="90" id="bNa-1q-K40"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2b-Ps-eHp">
+                    <rect key="frame" x="106" y="73" width="56" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMg-I2-rnn">
+                    <rect key="frame" x="357" y="4" width="10" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGl-r4-b9y">
+                    <rect key="frame" x="285" y="73" width="82" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="juq-He-6ut">
+                    <rect key="frame" x="271" y="48" width="96" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="0N6-An-SVK"/>
+                        <constraint firstAttribute="width" constant="96" id="oen-kT-DeW"/>
+                    </constraints>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Name:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZZ-xh-XAc">
+                    <rect key="frame" x="106" y="4" width="51" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Location:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8P-rm-q9A">
+                    <rect key="frame" x="106" y="44" width="157" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dZZ-xh-XAc" firstAttribute="leading" secondItem="AmQ-Qw-HU8" secondAttribute="trailing" constant="8" id="0np-jx-F4R"/>
+                <constraint firstAttribute="trailing" secondItem="DMg-I2-rnn" secondAttribute="trailing" priority="752" constant="8" id="2Bi-RQ-OwQ"/>
+                <constraint firstItem="DMg-I2-rnn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dZZ-xh-XAc" secondAttribute="trailing" priority="752" constant="8" id="Amu-tS-sX1"/>
+                <constraint firstItem="dZZ-xh-XAc" firstAttribute="leading" secondItem="AmQ-Qw-HU8" secondAttribute="trailing" constant="8" id="Bd3-RL-riA"/>
+                <constraint firstAttribute="trailing" secondItem="juq-He-6ut" secondAttribute="trailing" constant="8" id="CPo-IP-ODk"/>
+                <constraint firstAttribute="centerY" secondItem="juq-He-6ut" secondAttribute="centerY" priority="752" id="HpE-uk-ido"/>
+                <constraint firstAttribute="bottom" secondItem="XGl-r4-b9y" secondAttribute="bottom" constant="4" id="KA8-Un-Wvs"/>
+                <constraint firstAttribute="bottom" secondItem="i2b-Ps-eHp" secondAttribute="bottom" constant="4" id="MQS-o1-O6f"/>
+                <constraint firstAttribute="centerY" secondItem="AmQ-Qw-HU8" secondAttribute="centerY" id="Q16-dg-kZ6"/>
+                <constraint firstItem="Y8P-rm-q9A" firstAttribute="leading" secondItem="AmQ-Qw-HU8" secondAttribute="trailing" constant="8" id="RyT-vA-bKa"/>
+                <constraint firstItem="AmQ-Qw-HU8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="752" constant="8" id="Xkc-jz-18r"/>
+                <constraint firstItem="Y8P-rm-q9A" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dZZ-xh-XAc" secondAttribute="bottom" priority="752" constant="8" id="YJF-lX-Wj8"/>
+                <constraint firstAttribute="trailing" secondItem="XGl-r4-b9y" secondAttribute="trailing" constant="8" id="a4l-Yb-ldA"/>
+                <constraint firstItem="i2b-Ps-eHp" firstAttribute="leading" secondItem="AmQ-Qw-HU8" secondAttribute="trailing" constant="8" id="aKy-Of-3sL"/>
+                <constraint firstItem="DMg-I2-rnn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="hp2-RZ-B0v"/>
+                <constraint firstItem="i2b-Ps-eHp" firstAttribute="top" secondItem="Y8P-rm-q9A" secondAttribute="bottom" priority="752" constant="8" id="qX4-Tr-ycn"/>
+                <constraint firstItem="juq-He-6ut" firstAttribute="leading" secondItem="Y8P-rm-q9A" secondAttribute="trailing" priority="752" constant="8" id="tgJ-hW-7wy"/>
+                <constraint firstItem="Y8P-rm-q9A" firstAttribute="centerY" secondItem="AmQ-Qw-HU8" secondAttribute="centerY" id="yHv-L9-oE1"/>
+                <constraint firstItem="dZZ-xh-XAc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="zfT-zP-d6p"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Bd3-RL-riA"/>
+                    <exclude reference="yHv-L9-oE1"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="amountLabel" destination="DMg-I2-rnn" id="TYO-ZL-Pd0"/>
+                <outlet property="borrowerCountryLabel" destination="Y8P-rm-q9A" id="sfa-Yv-YF1"/>
+                <outlet property="borrowerImage" destination="AmQ-Qw-HU8" id="iox-C9-9Hk"/>
+                <outlet property="borrowerNameLabel" destination="dZZ-xh-XAc" id="m11-Jh-Xu8"/>
+                <outlet property="fundedProgressView" destination="juq-He-6ut" id="btv-1D-lCf"/>
+                <outlet property="loanSectorLabel" destination="i2b-Ps-eHp" id="TMB-aZ-sWh"/>
+                <outlet property="remainingLabel" destination="XGl-r4-b9y" id="SuI-nR-FDN"/>
+            </connections>
+            <point key="canvasLocation" x="224.5" y="233"/>
+        </view>
+    </objects>
+</document>

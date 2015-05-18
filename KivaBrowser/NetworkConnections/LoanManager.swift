@@ -63,7 +63,7 @@ class LoanManager :JsonDataFetcherDelegate {
         self.fetchLenderPagingInfoBy(requestStr)
     }
     
-    func receivedLending_ActionJsonData(data: NSData){
+    @objc func receivedLending_ActionJsonData(data: NSData){
         var error: NSError?
         if let lending_actions: [LendingAction]? = LendingAction.LendingActionArrayFromJsonData(data, error: &error) {
             println("LoanManager lending_actions.count: \(lending_actions?.count)")
@@ -75,7 +75,7 @@ class LoanManager :JsonDataFetcherDelegate {
         }
     }
     
-    func receivedJsonData(data: NSData) {
+    @objc func receivedJsonData(data: NSData) {
         var error: NSError?
         if let loans: [Loan]? = Loan.loanArrayFromJsonData(data, error: &error) {
             //println("LoanManager loans.count: \(loans?.count)")
@@ -87,7 +87,7 @@ class LoanManager :JsonDataFetcherDelegate {
         }
     }
     
-    func receivedDetailedLoanJson(jsonData: NSData) {
+    @objc func receivedDetailedLoanJson(jsonData: NSData) {
         var error: NSError?
         let detailedLoan: DetailedLoan? = DetailedLoan.detailedLoanFromJsonData(jsonData, error: &error)
         if (error != nil) {
@@ -98,11 +98,11 @@ class LoanManager :JsonDataFetcherDelegate {
         
     }
     
-    func fetchingDataFailedWithError(error: NSErrorPointer){
+    @objc func fetchingDataFailedWithError(error: NSErrorPointer){
         println("Error = \(error.debugDescription)")
     }
     
-    func receivedPagingInfo(data: NSData) {
+    @objc func receivedPagingInfo(data: NSData) {
         //println("LoanManager paginator")
         var error: NSError?
         let paginator: Paginator? = Paginator.paginatorFromJsonData(data, error: &error)
@@ -114,7 +114,7 @@ class LoanManager :JsonDataFetcherDelegate {
         }
     }
 
-    func receivedTeamJsonData(data: NSData) {
+    @objc func receivedTeamJsonData(data: NSData) {
         var error: NSError?
         if let teams: [Team]? = Team.TeamArrayFromJsonData(data, error: &error) {
             //println("LoanManager teams.count: \(teams?.count)")
@@ -126,7 +126,7 @@ class LoanManager :JsonDataFetcherDelegate {
         }
     }
 
-    func receivedTeamPagingInfo(data: NSData) {
+    @objc func receivedTeamPagingInfo(data: NSData) {
         //println("LoanManager teamPaginator")
         var error: NSError?
         let paginator: Paginator? = Paginator.paginatorFromJsonData(data, error: &error)
@@ -139,7 +139,7 @@ class LoanManager :JsonDataFetcherDelegate {
         }
     }
     
-    func receivedLenderJsonData(data: NSData) {
+    @objc func receivedLenderJsonData(data: NSData) {
         var error: NSError?
         if let lenders: [Lender]? = Lender.LenderArrayFromJsonData(data, error: &error) {
             println("LoanManager lenders.count: \(lenders?.count)")
@@ -151,7 +151,7 @@ class LoanManager :JsonDataFetcherDelegate {
         }
     }
     
-    func receivedLenderPagingInfo(data: NSData) {
+    @objc func receivedLenderPagingInfo(data: NSData) {
         //println("LoanManager lenderPaginator")
         var error: NSError?
         let paginator: Paginator? = Paginator.paginatorFromJsonData(data, error: &error)

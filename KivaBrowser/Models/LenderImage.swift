@@ -1,17 +1,16 @@
 //
-//  LoanImage.swift
+//  LenderImage.swift
 //  KivaBrowser
 //
-//  Created by wanming zhang on 7/30/14.
+//  Created by wanming zhang on 10/13/14.
 //  Copyright (c) 2014 wanming zhang. All rights reserved.
 //
 
 import Foundation
 
-extension Loan {
-    
-    func urlStringForLoan(imgDic: NSDictionary, format: KivaImageFormat) -> String {
-        let img_id: Int = imgDic.valueForKey("id") as Int
+extension Lender {
+    func urlStringForTeam(imgDic: NSDictionary, format: KivaImageFormat) -> String {
+        let img_id: Int = imgDic.valueForKey("id") as! Int
         let fileType = "jpg"
         var formatStr: String
         var height = 0, width = 0
@@ -31,8 +30,7 @@ extension Loan {
     }
     
     func urlForImageFormat (imgDic: NSDictionary, format:KivaImageFormat) -> NSURL {
-        let urlString = self.urlStringForLoan(imgDic, format: format)
+        let urlString = self.urlStringForTeam(imgDic, format: format)
         return NSURL(string: urlString)!
     }
 }
-

@@ -25,7 +25,7 @@ class DetailedLender_VC: UIViewController, UIScrollViewDelegate, UITextViewDeleg
         self.title = "Latest Lenders"
     }
     override func viewWillAppear(animated: Bool) {
-        if let lender = self.lender? {
+        if let lender = self.lender {
             self.setupViewForLender(lender)
         }
     }

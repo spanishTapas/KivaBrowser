@@ -12,7 +12,7 @@ import UIKit
 class KivaImage {
     
     class func urlStringForKivaImage(imgDic: NSDictionary, format: KivaImageFormat) -> String {
-        let img_id: Int = imgDic.valueForKey("id") as Int
+        let img_id: Int = imgDic.valueForKey("id") as! Int
         let fileType = "jpg"
         var formatStr: String
         var height = 0, width = 0

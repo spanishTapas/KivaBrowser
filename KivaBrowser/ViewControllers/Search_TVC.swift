@@ -11,7 +11,7 @@ import UIKit
 
 class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var searchButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+    var searchButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
     let button_height: CGFloat = 44
     
     var selectedCriteriaStr: String = ""
@@ -93,9 +93,9 @@ class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSou
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "SearchCriteria"
-        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         // Configure the cell...
-        cell.textLabel.text = self.titleForRow(indexPath.row)
+        cell.textLabel!.text = self.titleForRow(indexPath.row)
         cell.detailTextLabel?.text = self.subtitleForRow(indexPath.row)
         return cell
     }
@@ -119,9 +119,9 @@ class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSou
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if sender is UITableViewCell {
             if segue.identifier == "PickCriteria" {
-                let cell: UITableViewCell = sender as UITableViewCell
-                if let pickerID = cell.textLabel.text {
-                    let destVC = segue.destinationViewController as CriteriaPicker
+                let cell: UITableViewCell = sender as! UITableViewCell
+                if let pickerID = cell.textLabel!.text {
+                    let destVC = segue.destinationViewController as! CriteriaPicker
                     destVC.setupPickerID(pickerID)
                 }
             }
@@ -131,7 +131,7 @@ class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSou
             if segue.identifier == "Search" {
                 self.selectedCriteriaStr = self.criteriaString()
                 //println("Search_TVC prepareForSegue self.selectedCriteriaStr = \(self.selectedCriteriaStr)")
-               let destTVC = segue.destinationViewController as SearchResults_TVC
+               let destTVC = segue.destinationViewController as! SearchResults_TVC
                 destTVC.title = "Search Results"
                 destTVC.setRequestStr(self.selectedCriteriaStr)
             }
@@ -207,7 +207,7 @@ class Search_TVC: UITableViewController, UITableViewDelegate, UITableViewDataSou
     //   to the Done button.
     @IBAction func doneSelecting(segue: UIStoryboardSegue) {
         println("doneSelecting in Search_TVC")
-        let picker: CriteriaPicker = segue.sourceViewController as CriteriaPicker
+        let picker: CriteriaPicker = segue.sourceViewController as! CriteriaPicker
         if picker.pickerTag == "By Gender" {
             gender = picker.gender
         } else if picker.pickerTag == "By Sector" {

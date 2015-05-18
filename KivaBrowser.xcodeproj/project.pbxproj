@@ -7,57 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C70E381419C7B55A00A6663A /* DetailedLoanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E381319C7B55A00A6663A /* DetailedLoanVC.swift */; };
 		C71797C9198614200049D44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797C8198614200049D44C /* AppDelegate.swift */; };
 		C71797CE198614200049D44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71797CC198614200049D44C /* Main.storyboard */; };
 		C71797D0198614200049D44C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C71797CF198614200049D44C /* Images.xcassets */; };
 		C71797DC198614200049D44C /* KivaBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797DB198614200049D44C /* KivaBrowserTests.swift */; };
-		C71797EA1986260F0049D44C /* Loans_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797E91986260F0049D44C /* Loans_TVC.swift */; };
-		C71797EC198630A00049D44C /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797EB198630A00049D44C /* Loan.swift */; };
-		C71797EF198788700049D44C /* CreateLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797EE198788700049D44C /* CreateLoan.swift */; };
-		C71797F11989683E0049D44C /* LoanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71797F01989683E0049D44C /* LoanImage.swift */; };
-		C71937FC19DE266900D1AA17 /* Teams_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71937FB19DE266900D1AA17 /* Teams_TVC.swift */; };
-		C7245A4119EB94B200E2A7AB /* Teams.png in Resources */ = {isa = PBXBuildFile; fileRef = C7245A4019EB94B200E2A7AB /* Teams.png */; };
-		C7245A4319EBA2ED00E2A7AB /* Lenders.png in Resources */ = {isa = PBXBuildFile; fileRef = C7245A4219EBA2ED00E2A7AB /* Lenders.png */; };
-		C7245A4719EBA8D200E2A7AB /* Lender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7245A4619EBA8D200E2A7AB /* Lender.swift */; };
-		C7245A4A19EC7E8700E2A7AB /* CreateLender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7245A4919EC7E8700E2A7AB /* CreateLender.swift */; };
-		C7245A4C19EC9AE100E2A7AB /* LenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7245A4B19EC9AE100E2A7AB /* LenderImage.swift */; };
-		C7245A4E19ECE05000E2A7AB /* Lenders_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7245A4D19ECE05000E2A7AB /* Lenders_TVC.swift */; };
-		C7245A5119ECE49F00E2A7AB /* LenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7245A5019ECE49F00E2A7AB /* LenderCell.swift */; };
-		C7245A5319ECE93500E2A7AB /* Loans.png in Resources */ = {isa = PBXBuildFile; fileRef = C7245A5219ECE93500E2A7AB /* Loans.png */; };
-		C7245A5519ECECA000E2A7AB /* DetailedLender_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7245A5419ECECA000E2A7AB /* DetailedLender_VC.swift */; };
-		C7378F3419B7BC41009ACC71 /* Search_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7378F3319B7BC41009ACC71 /* Search_TVC.swift */; };
-		C7378F3619B90898009ACC71 /* CriteriaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7378F3519B90898009ACC71 /* CriteriaPicker.swift */; };
-		C7378F3819BA616D009ACC71 /* SearchResults_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7378F3719BA616D009ACC71 /* SearchResults_TVC.swift */; };
-		C7378F3A19BAE856009ACC71 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7378F3919BAE856009ACC71 /* Search.swift */; };
 		C744B5AC1A1097AF002C0375 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C744B5AB1A1097AF002C0375 /* Images-2.xcassets */; };
 		C744B5AE1A1099D2002C0375 /* KivaBrowser_LSF.xib in Resources */ = {isa = PBXBuildFile; fileRef = C744B5AD1A1099D2002C0375 /* KivaBrowser_LSF.xib */; };
-		C76F771319B12B7700E98451 /* DetailedLoanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F771219B12B7700E98451 /* DetailedLoanImage.swift */; };
-		C7A3F5E419F4E022005DFBF7 /* DetailLendingAction_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A3F5E319F4E022005DFBF7 /* DetailLendingAction_VC.swift */; };
-		C7ABFEB01990342A0016BA53 /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABFEAF1990342A0016BA53 /* LoanCell.swift */; };
-		C7ABFEB21990A36D0016BA53 /* JsonDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABFEB11990A36D0016BA53 /* JsonDataFetcher.swift */; };
-		C7ABFEB519919C340016BA53 /* JsonDataFetcherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABFEB419919C340016BA53 /* JsonDataFetcherDelegate.swift */; };
-		C7ABFEB71992131F0016BA53 /* LoanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABFEB61992131F0016BA53 /* LoanManager.swift */; };
-		C7ABFEBA1992196C0016BA53 /* LoanManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABFEB91992196C0016BA53 /* LoanManagerDelegate.swift */; };
-		C7ABFEBC19943E7B0016BA53 /* LatestLoans_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABFEBB19943E7B0016BA53 /* LatestLoans_TVC.swift */; };
-		C7ADF73419F71633008B3E8D /* AboutKivaBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ADF73319F71633008B3E8D /* AboutKivaBrowser.swift */; };
-		C7ADF73719F7170C008B3E8D /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = C7ADF73619F7170C008B3E8D /* About.png */; };
-		C7B4D02819DFC5E90042C2F7 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D02719DFC5E90042C2F7 /* Team.swift */; };
-		C7B4D02B19DFCB0C0042C2F7 /* CreateTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D02A19DFCB0C0042C2F7 /* CreateTeam.swift */; };
-		C7B4D02D19E1FBA40042C2F7 /* TeamImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D02C19E1FBA40042C2F7 /* TeamImage.swift */; };
-		C7B4D02F19E270780042C2F7 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D02E19E270780042C2F7 /* TeamCell.swift */; };
-		C7B4D03319E3BE640042C2F7 /* BrowseTeamBy_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D03219E3BE640042C2F7 /* BrowseTeamBy_TVC.swift */; };
-		C7B4D03719E600A90042C2F7 /* DetailedTeam_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D03619E600A90042C2F7 /* DetailedTeam_VC.swift */; };
-		C7B4D03919E887890042C2F7 /* TeamWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4D03819E887890042C2F7 /* TeamWebView.swift */; };
-		C7B58FB019F1C1D9005CD06E /* LendingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B58FAF19F1C1D9005CD06E /* LendingAction.swift */; };
-		C7B58FB319F1C278005CD06E /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B58FB219F1C278005CD06E /* ImageFormat.swift */; };
-		C7B58FB519F1DDFC005CD06E /* CreateLendingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B58FB419F1DDFC005CD06E /* CreateLendingAction.swift */; };
-		C7B58FB719F1E396005CD06E /* LendingAction_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B58FB619F1E396005CD06E /* LendingAction_TVC.swift */; };
-		C7B58FBA19F23866005CD06E /* LendingActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B58FB919F23866005CD06E /* LendingActionCell.swift */; };
-		C7B58FBE19F2F85E005CD06E /* KivaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B58FBD19F2F85E005CD06E /* KivaImage.swift */; };
-		C7E5F95819958D0D00566754 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5F95719958D0D00566754 /* Paginator.swift */; };
-		C7E5F95B19A87C6C00566754 /* DetailedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5F95A19A87C6C00566754 /* DetailedLoan.swift */; };
-		C7E5F95E19A9C10300566754 /* CreateDetailedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5F95D19A9C10300566754 /* CreateDetailedLoan.swift */; };
+		C7F9C7A91B054F8900FA6D75 /* LenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7A51B054F8900FA6D75 /* LenderCell.swift */; };
+		C7F9C7AA1B054F8900FA6D75 /* LendingActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7A61B054F8900FA6D75 /* LendingActionCell.swift */; };
+		C7F9C7AB1B054F8900FA6D75 /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7A71B054F8900FA6D75 /* LoanCell.swift */; };
+		C7F9C7AC1B054F8900FA6D75 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7A81B054F8900FA6D75 /* TeamCell.swift */; };
+		C7F9C7BC1B054F9E00FA6D75 /* AboutKivaBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7AD1B054F9E00FA6D75 /* AboutKivaBrowser.swift */; };
+		C7F9C7BD1B054F9E00FA6D75 /* BrowseTeamBy_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7AE1B054F9E00FA6D75 /* BrowseTeamBy_TVC.swift */; };
+		C7F9C7BE1B054F9E00FA6D75 /* CriteriaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7AF1B054F9E00FA6D75 /* CriteriaPicker.swift */; };
+		C7F9C7BF1B054F9E00FA6D75 /* DetailedLender_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B01B054F9E00FA6D75 /* DetailedLender_VC.swift */; };
+		C7F9C7C01B054F9E00FA6D75 /* DetailedLoanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B11B054F9E00FA6D75 /* DetailedLoanVC.swift */; };
+		C7F9C7C11B054F9E00FA6D75 /* DetailedTeam_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B21B054F9E00FA6D75 /* DetailedTeam_VC.swift */; };
+		C7F9C7C21B054F9E00FA6D75 /* DetailLendingAction_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B31B054F9E00FA6D75 /* DetailLendingAction_VC.swift */; };
+		C7F9C7C31B054F9E00FA6D75 /* LatestLoans_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B41B054F9E00FA6D75 /* LatestLoans_TVC.swift */; };
+		C7F9C7C41B054F9E00FA6D75 /* Lenders_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B51B054F9E00FA6D75 /* Lenders_TVC.swift */; };
+		C7F9C7C51B054F9E00FA6D75 /* LendingAction_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B61B054F9E00FA6D75 /* LendingAction_TVC.swift */; };
+		C7F9C7C61B054F9E00FA6D75 /* Loans_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B71B054F9E00FA6D75 /* Loans_TVC.swift */; };
+		C7F9C7C71B054F9E00FA6D75 /* Search_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B81B054F9E00FA6D75 /* Search_TVC.swift */; };
+		C7F9C7C81B054F9E00FA6D75 /* SearchResults_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7B91B054F9E00FA6D75 /* SearchResults_TVC.swift */; };
+		C7F9C7C91B054F9E00FA6D75 /* Teams_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7BA1B054F9E00FA6D75 /* Teams_TVC.swift */; };
+		C7F9C7CA1B054F9E00FA6D75 /* TeamWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7BB1B054F9E00FA6D75 /* TeamWebView.swift */; };
+		C7F9C7CF1B054FB000FA6D75 /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F9C7CB1B054FB000FA6D75 /* About.png */; };
+		C7F9C7D01B054FB000FA6D75 /* Lenders.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F9C7CC1B054FB000FA6D75 /* Lenders.png */; };
+		C7F9C7D11B054FB000FA6D75 /* Loans.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F9C7CD1B054FB000FA6D75 /* Loans.png */; };
+		C7F9C7D21B054FB000FA6D75 /* Teams.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F9C7CE1B054FB000FA6D75 /* Teams.png */; };
+		C7F9C7F81B05508900FA6D75 /* JsonDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7F71B05508900FA6D75 /* JsonDataFetcher.swift */; };
+		C7F9C7FC1B05509F00FA6D75 /* JsonDataFetcherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7F91B05509F00FA6D75 /* JsonDataFetcherDelegate.swift */; };
+		C7F9C7FD1B05509F00FA6D75 /* LoanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7FA1B05509F00FA6D75 /* LoanManager.swift */; };
+		C7F9C7FE1B05509F00FA6D75 /* LoanManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C7FB1B05509F00FA6D75 /* LoanManagerDelegate.swift */; };
+		C7F9C8141B05512900FA6D75 /* CreateDetailedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8021B05512900FA6D75 /* CreateDetailedLoan.swift */; };
+		C7F9C8151B05512900FA6D75 /* CreateLender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8031B05512900FA6D75 /* CreateLender.swift */; };
+		C7F9C8161B05512900FA6D75 /* CreateLendingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8041B05512900FA6D75 /* CreateLendingAction.swift */; };
+		C7F9C8171B05512900FA6D75 /* CreateLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8051B05512900FA6D75 /* CreateLoan.swift */; };
+		C7F9C8181B05512900FA6D75 /* CreateTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8061B05512900FA6D75 /* CreateTeam.swift */; };
+		C7F9C8191B05512900FA6D75 /* DetailedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8071B05512900FA6D75 /* DetailedLoan.swift */; };
+		C7F9C81A1B05512900FA6D75 /* DetailedLoanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8081B05512900FA6D75 /* DetailedLoanImage.swift */; };
+		C7F9C81B1B05512900FA6D75 /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8091B05512900FA6D75 /* ImageFormat.swift */; };
+		C7F9C81C1B05512900FA6D75 /* KivaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C80A1B05512900FA6D75 /* KivaImage.swift */; };
+		C7F9C81D1B05512900FA6D75 /* Lender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C80B1B05512900FA6D75 /* Lender.swift */; };
+		C7F9C81E1B05512900FA6D75 /* LenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C80C1B05512900FA6D75 /* LenderImage.swift */; };
+		C7F9C81F1B05512900FA6D75 /* LendingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C80D1B05512900FA6D75 /* LendingAction.swift */; };
+		C7F9C8201B05512900FA6D75 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C80E1B05512900FA6D75 /* Loan.swift */; };
+		C7F9C8211B05512900FA6D75 /* LoanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C80F1B05512900FA6D75 /* LoanImage.swift */; };
+		C7F9C8221B05512900FA6D75 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8101B05512900FA6D75 /* Paginator.swift */; };
+		C7F9C8231B05512900FA6D75 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8111B05512900FA6D75 /* Search.swift */; };
+		C7F9C8241B05512900FA6D75 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8121B05512900FA6D75 /* Team.swift */; };
+		C7F9C8251B05512900FA6D75 /* TeamImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8131B05512900FA6D75 /* TeamImage.swift */; };
+		C7F9C82A1B066EF000FA6D75 /* LoanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F9C8291B066EF000FA6D75 /* LoanCell.xib */; };
+		C7F9C8341B06705700FA6D75 /* LendingActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F9C8331B06705700FA6D75 /* LendingActionCell.xib */; };
+		C7F9C8361B06706F00FA6D75 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F9C8351B06706F00FA6D75 /* TeamCell.xib */; };
+		C7F9C8391B06981500FA6D75 /* KivaFontsAndColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9C8381B06981500FA6D75 /* KivaFontsAndColors.swift */; };
+		C7F9C8401B06BCE700FA6D75 /* MyriadSetBundle.ttc in Resources */ = {isa = PBXBuildFile; fileRef = C7F9C83F1B06BCE700FA6D75 /* MyriadSetBundle.ttc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +76,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C70E381319C7B55A00A6663A /* DetailedLoanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedLoanVC.swift; sourceTree = "<group>"; };
 		C71797C3198614200049D44C /* KivaBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KivaBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71797C7198614200049D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C71797C8198614200049D44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,52 +84,58 @@
 		C71797D5198614200049D44C /* KivaBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KivaBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71797DA198614200049D44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C71797DB198614200049D44C /* KivaBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KivaBrowserTests.swift; sourceTree = "<group>"; };
-		C71797E91986260F0049D44C /* Loans_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loans_TVC.swift; sourceTree = "<group>"; };
-		C71797EB198630A00049D44C /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
-		C71797EE198788700049D44C /* CreateLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateLoan.swift; sourceTree = "<group>"; };
-		C71797F01989683E0049D44C /* LoanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanImage.swift; sourceTree = "<group>"; };
-		C71937FB19DE266900D1AA17 /* Teams_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams_TVC.swift; sourceTree = "<group>"; };
-		C7245A4019EB94B200E2A7AB /* Teams.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Teams.png; sourceTree = "<group>"; };
-		C7245A4219EBA2ED00E2A7AB /* Lenders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lenders.png; sourceTree = "<group>"; };
-		C7245A4619EBA8D200E2A7AB /* Lender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lender.swift; sourceTree = "<group>"; };
-		C7245A4919EC7E8700E2A7AB /* CreateLender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateLender.swift; sourceTree = "<group>"; };
-		C7245A4B19EC9AE100E2A7AB /* LenderImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LenderImage.swift; sourceTree = "<group>"; };
-		C7245A4D19ECE05000E2A7AB /* Lenders_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lenders_TVC.swift; sourceTree = "<group>"; };
-		C7245A5019ECE49F00E2A7AB /* LenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LenderCell.swift; sourceTree = "<group>"; };
-		C7245A5219ECE93500E2A7AB /* Loans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loans.png; sourceTree = "<group>"; };
-		C7245A5419ECECA000E2A7AB /* DetailedLender_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedLender_VC.swift; sourceTree = "<group>"; };
-		C7378F3319B7BC41009ACC71 /* Search_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search_TVC.swift; sourceTree = "<group>"; };
-		C7378F3519B90898009ACC71 /* CriteriaPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaPicker.swift; sourceTree = "<group>"; };
-		C7378F3719BA616D009ACC71 /* SearchResults_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResults_TVC.swift; sourceTree = "<group>"; };
-		C7378F3919BAE856009ACC71 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		C744B5AB1A1097AF002C0375 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		C744B5AD1A1099D2002C0375 /* KivaBrowser_LSF.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KivaBrowser_LSF.xib; sourceTree = "<group>"; };
-		C76F771219B12B7700E98451 /* DetailedLoanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedLoanImage.swift; sourceTree = "<group>"; };
-		C7A3F5E319F4E022005DFBF7 /* DetailLendingAction_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLendingAction_VC.swift; sourceTree = "<group>"; };
-		C7ABFEAF1990342A0016BA53 /* LoanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
-		C7ABFEB11990A36D0016BA53 /* JsonDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDataFetcher.swift; sourceTree = "<group>"; };
-		C7ABFEB419919C340016BA53 /* JsonDataFetcherDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDataFetcherDelegate.swift; sourceTree = "<group>"; };
-		C7ABFEB61992131F0016BA53 /* LoanManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanManager.swift; sourceTree = "<group>"; };
-		C7ABFEB91992196C0016BA53 /* LoanManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanManagerDelegate.swift; sourceTree = "<group>"; };
-		C7ABFEBB19943E7B0016BA53 /* LatestLoans_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestLoans_TVC.swift; sourceTree = "<group>"; };
-		C7ADF73319F71633008B3E8D /* AboutKivaBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutKivaBrowser.swift; sourceTree = "<group>"; };
-		C7ADF73619F7170C008B3E8D /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
-		C7B4D02719DFC5E90042C2F7 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		C7B4D02A19DFCB0C0042C2F7 /* CreateTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTeam.swift; sourceTree = "<group>"; };
-		C7B4D02C19E1FBA40042C2F7 /* TeamImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamImage.swift; sourceTree = "<group>"; };
-		C7B4D02E19E270780042C2F7 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
-		C7B4D03219E3BE640042C2F7 /* BrowseTeamBy_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseTeamBy_TVC.swift; sourceTree = "<group>"; };
-		C7B4D03619E600A90042C2F7 /* DetailedTeam_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTeam_VC.swift; sourceTree = "<group>"; };
-		C7B4D03819E887890042C2F7 /* TeamWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamWebView.swift; sourceTree = "<group>"; };
-		C7B58FAF19F1C1D9005CD06E /* LendingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LendingAction.swift; sourceTree = "<group>"; };
-		C7B58FB219F1C278005CD06E /* ImageFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFormat.swift; sourceTree = "<group>"; };
-		C7B58FB419F1DDFC005CD06E /* CreateLendingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateLendingAction.swift; sourceTree = "<group>"; };
-		C7B58FB619F1E396005CD06E /* LendingAction_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LendingAction_TVC.swift; sourceTree = "<group>"; };
-		C7B58FB919F23866005CD06E /* LendingActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LendingActionCell.swift; sourceTree = "<group>"; };
-		C7B58FBD19F2F85E005CD06E /* KivaImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KivaImage.swift; sourceTree = "<group>"; };
-		C7E5F95719958D0D00566754 /* Paginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
-		C7E5F95A19A87C6C00566754 /* DetailedLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedLoan.swift; sourceTree = "<group>"; };
-		C7E5F95D19A9C10300566754 /* CreateDetailedLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDetailedLoan.swift; sourceTree = "<group>"; };
+		C7F9C7A51B054F8900FA6D75 /* LenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LenderCell.swift; path = Views/LenderCell.swift; sourceTree = "<group>"; };
+		C7F9C7A61B054F8900FA6D75 /* LendingActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LendingActionCell.swift; path = Views/LendingActionCell.swift; sourceTree = "<group>"; };
+		C7F9C7A71B054F8900FA6D75 /* LoanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoanCell.swift; path = Views/LoanCell.swift; sourceTree = "<group>"; };
+		C7F9C7A81B054F8900FA6D75 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamCell.swift; path = Views/TeamCell.swift; sourceTree = "<group>"; };
+		C7F9C7AD1B054F9E00FA6D75 /* AboutKivaBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutKivaBrowser.swift; path = ViewControllers/AboutKivaBrowser.swift; sourceTree = "<group>"; };
+		C7F9C7AE1B054F9E00FA6D75 /* BrowseTeamBy_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrowseTeamBy_TVC.swift; path = ViewControllers/BrowseTeamBy_TVC.swift; sourceTree = "<group>"; };
+		C7F9C7AF1B054F9E00FA6D75 /* CriteriaPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CriteriaPicker.swift; path = ViewControllers/CriteriaPicker.swift; sourceTree = "<group>"; };
+		C7F9C7B01B054F9E00FA6D75 /* DetailedLender_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedLender_VC.swift; path = ViewControllers/DetailedLender_VC.swift; sourceTree = "<group>"; };
+		C7F9C7B11B054F9E00FA6D75 /* DetailedLoanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedLoanVC.swift; path = ViewControllers/DetailedLoanVC.swift; sourceTree = "<group>"; };
+		C7F9C7B21B054F9E00FA6D75 /* DetailedTeam_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedTeam_VC.swift; path = ViewControllers/DetailedTeam_VC.swift; sourceTree = "<group>"; };
+		C7F9C7B31B054F9E00FA6D75 /* DetailLendingAction_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailLendingAction_VC.swift; path = ViewControllers/DetailLendingAction_VC.swift; sourceTree = "<group>"; };
+		C7F9C7B41B054F9E00FA6D75 /* LatestLoans_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LatestLoans_TVC.swift; path = ViewControllers/LatestLoans_TVC.swift; sourceTree = "<group>"; };
+		C7F9C7B51B054F9E00FA6D75 /* Lenders_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lenders_TVC.swift; path = ViewControllers/Lenders_TVC.swift; sourceTree = "<group>"; };
+		C7F9C7B61B054F9E00FA6D75 /* LendingAction_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LendingAction_TVC.swift; path = ViewControllers/LendingAction_TVC.swift; sourceTree = "<group>"; };
+		C7F9C7B71B054F9E00FA6D75 /* Loans_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Loans_TVC.swift; path = ViewControllers/Loans_TVC.swift; sourceTree = "<group>"; };
+		C7F9C7B81B054F9E00FA6D75 /* Search_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Search_TVC.swift; path = ViewControllers/Search_TVC.swift; sourceTree = "<group>"; };
+		C7F9C7B91B054F9E00FA6D75 /* SearchResults_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResults_TVC.swift; path = ViewControllers/SearchResults_TVC.swift; sourceTree = "<group>"; };
+		C7F9C7BA1B054F9E00FA6D75 /* Teams_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Teams_TVC.swift; path = ViewControllers/Teams_TVC.swift; sourceTree = "<group>"; };
+		C7F9C7BB1B054F9E00FA6D75 /* TeamWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamWebView.swift; path = ViewControllers/TeamWebView.swift; sourceTree = "<group>"; };
+		C7F9C7CB1B054FB000FA6D75 /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = About.png; path = TabBarIcons/About.png; sourceTree = "<group>"; };
+		C7F9C7CC1B054FB000FA6D75 /* Lenders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lenders.png; path = TabBarIcons/Lenders.png; sourceTree = "<group>"; };
+		C7F9C7CD1B054FB000FA6D75 /* Loans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Loans.png; path = TabBarIcons/Loans.png; sourceTree = "<group>"; };
+		C7F9C7CE1B054FB000FA6D75 /* Teams.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Teams.png; path = TabBarIcons/Teams.png; sourceTree = "<group>"; };
+		C7F9C7F71B05508900FA6D75 /* JsonDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonDataFetcher.swift; path = NetworkConnections/JsonDataFetcher.swift; sourceTree = "<group>"; };
+		C7F9C7F91B05509F00FA6D75 /* JsonDataFetcherDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonDataFetcherDelegate.swift; path = NetworkConnections/JsonDataFetcherDelegate.swift; sourceTree = "<group>"; };
+		C7F9C7FA1B05509F00FA6D75 /* LoanManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoanManager.swift; path = NetworkConnections/LoanManager.swift; sourceTree = "<group>"; };
+		C7F9C7FB1B05509F00FA6D75 /* LoanManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoanManagerDelegate.swift; path = NetworkConnections/LoanManagerDelegate.swift; sourceTree = "<group>"; };
+		C7F9C8021B05512900FA6D75 /* CreateDetailedLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateDetailedLoan.swift; path = Models/CreateDetailedLoan.swift; sourceTree = "<group>"; };
+		C7F9C8031B05512900FA6D75 /* CreateLender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateLender.swift; path = Models/CreateLender.swift; sourceTree = "<group>"; };
+		C7F9C8041B05512900FA6D75 /* CreateLendingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateLendingAction.swift; path = Models/CreateLendingAction.swift; sourceTree = "<group>"; };
+		C7F9C8051B05512900FA6D75 /* CreateLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateLoan.swift; path = Models/CreateLoan.swift; sourceTree = "<group>"; };
+		C7F9C8061B05512900FA6D75 /* CreateTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTeam.swift; path = Models/CreateTeam.swift; sourceTree = "<group>"; };
+		C7F9C8071B05512900FA6D75 /* DetailedLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedLoan.swift; path = Models/DetailedLoan.swift; sourceTree = "<group>"; };
+		C7F9C8081B05512900FA6D75 /* DetailedLoanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedLoanImage.swift; path = Models/DetailedLoanImage.swift; sourceTree = "<group>"; };
+		C7F9C8091B05512900FA6D75 /* ImageFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Models/ImageFormat.swift; sourceTree = "<group>"; };
+		C7F9C80A1B05512900FA6D75 /* KivaImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KivaImage.swift; path = Models/KivaImage.swift; sourceTree = "<group>"; };
+		C7F9C80B1B05512900FA6D75 /* Lender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lender.swift; path = Models/Lender.swift; sourceTree = "<group>"; };
+		C7F9C80C1B05512900FA6D75 /* LenderImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LenderImage.swift; path = Models/LenderImage.swift; sourceTree = "<group>"; };
+		C7F9C80D1B05512900FA6D75 /* LendingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LendingAction.swift; path = Models/LendingAction.swift; sourceTree = "<group>"; };
+		C7F9C80E1B05512900FA6D75 /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Loan.swift; path = Models/Loan.swift; sourceTree = "<group>"; };
+		C7F9C80F1B05512900FA6D75 /* LoanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoanImage.swift; path = Models/LoanImage.swift; sourceTree = "<group>"; };
+		C7F9C8101B05512900FA6D75 /* Paginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Paginator.swift; path = Models/Paginator.swift; sourceTree = "<group>"; };
+		C7F9C8111B05512900FA6D75 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Search.swift; path = Models/Search.swift; sourceTree = "<group>"; };
+		C7F9C8121B05512900FA6D75 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Models/Team.swift; sourceTree = "<group>"; };
+		C7F9C8131B05512900FA6D75 /* TeamImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamImage.swift; path = Models/TeamImage.swift; sourceTree = "<group>"; };
+		C7F9C8291B066EF000FA6D75 /* LoanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoanCell.xib; path = Views/LoanCell.xib; sourceTree = "<group>"; };
+		C7F9C8331B06705700FA6D75 /* LendingActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LendingActionCell.xib; path = Views/LendingActionCell.xib; sourceTree = "<group>"; };
+		C7F9C8351B06706F00FA6D75 /* TeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TeamCell.xib; path = Views/TeamCell.xib; sourceTree = "<group>"; };
+		C7F9C8381B06981500FA6D75 /* KivaFontsAndColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KivaFontsAndColors.swift; path = Globals/KivaFontsAndColors.swift; sourceTree = "<group>"; };
+		C7F9C83F1B06BCE700FA6D75 /* MyriadSetBundle.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = MyriadSetBundle.ttc; path = Resource/MyriadSetBundle.ttc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,22 +177,14 @@
 		C71797C5198614200049D44C /* KivaBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				C7F9C83E1B06BCAE00FA6D75 /* Resource */,
+				C7F9C83A1B06983100FA6D75 /* Globals */,
+				C7F9C8011B05510C00FA6D75 /* Models */,
+				C7F9C79E1B054DFA00FA6D75 /* Views */,
+				C7F9C79F1B054E0700FA6D75 /* ViewControllers */,
+				C7F9C7A01B054E1200FA6D75 /* TabBarIcons */,
+				C7F9C7A11B054E2C00FA6D75 /* NetworkConnections */,
 				C71797CC198614200049D44C /* Main.storyboard */,
-				C7ADF73519F71655008B3E8D /* About */,
-				C7B58FB219F1C278005CD06E /* ImageFormat.swift */,
-				C7B58FBD19F2F85E005CD06E /* KivaImage.swift */,
-				C7B58FB819F1E3A5005CD06E /* LendingAction_TVC */,
-				C7B4D03419E3BF3B0042C2F7 /* Loans_TVC */,
-				C7B4D03519E3BF4B0042C2F7 /* Teams_TVC */,
-				C7245A4F19ECE06200E2A7AB /* Lenders_TVC */,
-				C71797ED198630CB0049D44C /* Loan */,
-				C7E5F95C19A87C7700566754 /* DetailedLoan */,
-				C7B58FB119F1C215005CD06E /* LendingAction */,
-				C7B4D02919DFC5FE0042C2F7 /* Team */,
-				C7245A4819EBA8F200E2A7AB /* Lender */,
-				C7ABFEB8199213370016BA53 /* LoanManager */,
-				C7ABFEB31990A3AB0016BA53 /* JsonDataFetcher */,
-				C7E5F95919958D1C00566754 /* Paginator */,
 				C71797C6198614200049D44C /* Supporting Files */,
 			);
 			path = KivaBrowser;
@@ -217,138 +219,103 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C71797ED198630CB0049D44C /* Loan */ = {
+		C7F9C79E1B054DFA00FA6D75 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C71797EB198630A00049D44C /* Loan.swift */,
-				C71797EE198788700049D44C /* CreateLoan.swift */,
-				C71797F01989683E0049D44C /* LoanImage.swift */,
+				C7F9C7A51B054F8900FA6D75 /* LenderCell.swift */,
+				C7F9C7A61B054F8900FA6D75 /* LendingActionCell.swift */,
+				C7F9C8331B06705700FA6D75 /* LendingActionCell.xib */,
+				C7F9C7A71B054F8900FA6D75 /* LoanCell.swift */,
+				C7F9C8291B066EF000FA6D75 /* LoanCell.xib */,
+				C7F9C7A81B054F8900FA6D75 /* TeamCell.swift */,
+				C7F9C8351B06706F00FA6D75 /* TeamCell.xib */,
 			);
-			name = Loan;
+			name = Views;
 			sourceTree = "<group>";
 		};
-		C7245A4819EBA8F200E2A7AB /* Lender */ = {
+		C7F9C79F1B054E0700FA6D75 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C7245A4619EBA8D200E2A7AB /* Lender.swift */,
-				C7245A4919EC7E8700E2A7AB /* CreateLender.swift */,
-				C7245A4B19EC9AE100E2A7AB /* LenderImage.swift */,
+				C7F9C7AD1B054F9E00FA6D75 /* AboutKivaBrowser.swift */,
+				C7F9C7AE1B054F9E00FA6D75 /* BrowseTeamBy_TVC.swift */,
+				C7F9C7AF1B054F9E00FA6D75 /* CriteriaPicker.swift */,
+				C7F9C7B01B054F9E00FA6D75 /* DetailedLender_VC.swift */,
+				C7F9C7B11B054F9E00FA6D75 /* DetailedLoanVC.swift */,
+				C7F9C7B21B054F9E00FA6D75 /* DetailedTeam_VC.swift */,
+				C7F9C7B31B054F9E00FA6D75 /* DetailLendingAction_VC.swift */,
+				C7F9C7B41B054F9E00FA6D75 /* LatestLoans_TVC.swift */,
+				C7F9C7B51B054F9E00FA6D75 /* Lenders_TVC.swift */,
+				C7F9C7B61B054F9E00FA6D75 /* LendingAction_TVC.swift */,
+				C7F9C7B71B054F9E00FA6D75 /* Loans_TVC.swift */,
+				C7F9C7B81B054F9E00FA6D75 /* Search_TVC.swift */,
+				C7F9C7B91B054F9E00FA6D75 /* SearchResults_TVC.swift */,
+				C7F9C7BA1B054F9E00FA6D75 /* Teams_TVC.swift */,
+				C7F9C7BB1B054F9E00FA6D75 /* TeamWebView.swift */,
 			);
-			name = Lender;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		C7245A4F19ECE06200E2A7AB /* Lenders_TVC */ = {
+		C7F9C7A01B054E1200FA6D75 /* TabBarIcons */ = {
 			isa = PBXGroup;
 			children = (
-				C7245A4219EBA2ED00E2A7AB /* Lenders.png */,
-				C7245A4D19ECE05000E2A7AB /* Lenders_TVC.swift */,
-				C7245A5019ECE49F00E2A7AB /* LenderCell.swift */,
-				C7245A5419ECECA000E2A7AB /* DetailedLender_VC.swift */,
+				C7F9C7CB1B054FB000FA6D75 /* About.png */,
+				C7F9C7CC1B054FB000FA6D75 /* Lenders.png */,
+				C7F9C7CD1B054FB000FA6D75 /* Loans.png */,
+				C7F9C7CE1B054FB000FA6D75 /* Teams.png */,
 			);
-			name = Lenders_TVC;
+			name = TabBarIcons;
 			sourceTree = "<group>";
 		};
-		C7ABFEB31990A3AB0016BA53 /* JsonDataFetcher */ = {
+		C7F9C7A11B054E2C00FA6D75 /* NetworkConnections */ = {
 			isa = PBXGroup;
 			children = (
-				C7ABFEB11990A36D0016BA53 /* JsonDataFetcher.swift */,
-				C7ABFEB419919C340016BA53 /* JsonDataFetcherDelegate.swift */,
+				C7F9C7F91B05509F00FA6D75 /* JsonDataFetcherDelegate.swift */,
+				C7F9C7FA1B05509F00FA6D75 /* LoanManager.swift */,
+				C7F9C7FB1B05509F00FA6D75 /* LoanManagerDelegate.swift */,
+				C7F9C7F71B05508900FA6D75 /* JsonDataFetcher.swift */,
 			);
-			name = JsonDataFetcher;
+			name = NetworkConnections;
 			sourceTree = "<group>";
 		};
-		C7ABFEB8199213370016BA53 /* LoanManager */ = {
+		C7F9C8011B05510C00FA6D75 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C7ABFEB61992131F0016BA53 /* LoanManager.swift */,
-				C7ABFEB91992196C0016BA53 /* LoanManagerDelegate.swift */,
+				C7F9C8021B05512900FA6D75 /* CreateDetailedLoan.swift */,
+				C7F9C8031B05512900FA6D75 /* CreateLender.swift */,
+				C7F9C8041B05512900FA6D75 /* CreateLendingAction.swift */,
+				C7F9C8051B05512900FA6D75 /* CreateLoan.swift */,
+				C7F9C8061B05512900FA6D75 /* CreateTeam.swift */,
+				C7F9C8071B05512900FA6D75 /* DetailedLoan.swift */,
+				C7F9C8081B05512900FA6D75 /* DetailedLoanImage.swift */,
+				C7F9C8091B05512900FA6D75 /* ImageFormat.swift */,
+				C7F9C80A1B05512900FA6D75 /* KivaImage.swift */,
+				C7F9C80B1B05512900FA6D75 /* Lender.swift */,
+				C7F9C80C1B05512900FA6D75 /* LenderImage.swift */,
+				C7F9C80D1B05512900FA6D75 /* LendingAction.swift */,
+				C7F9C80E1B05512900FA6D75 /* Loan.swift */,
+				C7F9C80F1B05512900FA6D75 /* LoanImage.swift */,
+				C7F9C8101B05512900FA6D75 /* Paginator.swift */,
+				C7F9C8111B05512900FA6D75 /* Search.swift */,
+				C7F9C8121B05512900FA6D75 /* Team.swift */,
+				C7F9C8131B05512900FA6D75 /* TeamImage.swift */,
 			);
-			name = LoanManager;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		C7ADF73519F71655008B3E8D /* About */ = {
+		C7F9C83A1B06983100FA6D75 /* Globals */ = {
 			isa = PBXGroup;
 			children = (
-				C7ADF73619F7170C008B3E8D /* About.png */,
-				C7ADF73319F71633008B3E8D /* AboutKivaBrowser.swift */,
+				C7F9C8381B06981500FA6D75 /* KivaFontsAndColors.swift */,
 			);
-			name = About;
+			name = Globals;
 			sourceTree = "<group>";
 		};
-		C7B4D02919DFC5FE0042C2F7 /* Team */ = {
+		C7F9C83E1B06BCAE00FA6D75 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				C7B4D02719DFC5E90042C2F7 /* Team.swift */,
-				C7B4D02A19DFCB0C0042C2F7 /* CreateTeam.swift */,
-				C7B4D02C19E1FBA40042C2F7 /* TeamImage.swift */,
+				C7F9C83F1B06BCE700FA6D75 /* MyriadSetBundle.ttc */,
 			);
-			name = Team;
-			sourceTree = "<group>";
-		};
-		C7B4D03419E3BF3B0042C2F7 /* Loans_TVC */ = {
-			isa = PBXGroup;
-			children = (
-				C7245A5219ECE93500E2A7AB /* Loans.png */,
-				C71797E91986260F0049D44C /* Loans_TVC.swift */,
-				C7ABFEBB19943E7B0016BA53 /* LatestLoans_TVC.swift */,
-				C70E381319C7B55A00A6663A /* DetailedLoanVC.swift */,
-				C7ABFEAF1990342A0016BA53 /* LoanCell.swift */,
-				C7378F3319B7BC41009ACC71 /* Search_TVC.swift */,
-				C7378F3519B90898009ACC71 /* CriteriaPicker.swift */,
-				C7378F3719BA616D009ACC71 /* SearchResults_TVC.swift */,
-				C7378F3919BAE856009ACC71 /* Search.swift */,
-			);
-			name = Loans_TVC;
-			sourceTree = "<group>";
-		};
-		C7B4D03519E3BF4B0042C2F7 /* Teams_TVC */ = {
-			isa = PBXGroup;
-			children = (
-				C7245A4019EB94B200E2A7AB /* Teams.png */,
-				C71937FB19DE266900D1AA17 /* Teams_TVC.swift */,
-				C7B4D03219E3BE640042C2F7 /* BrowseTeamBy_TVC.swift */,
-				C7B4D02E19E270780042C2F7 /* TeamCell.swift */,
-				C7B4D03619E600A90042C2F7 /* DetailedTeam_VC.swift */,
-				C7B4D03819E887890042C2F7 /* TeamWebView.swift */,
-			);
-			name = Teams_TVC;
-			sourceTree = "<group>";
-		};
-		C7B58FB119F1C215005CD06E /* LendingAction */ = {
-			isa = PBXGroup;
-			children = (
-				C7B58FAF19F1C1D9005CD06E /* LendingAction.swift */,
-				C7B58FB419F1DDFC005CD06E /* CreateLendingAction.swift */,
-			);
-			name = LendingAction;
-			sourceTree = "<group>";
-		};
-		C7B58FB819F1E3A5005CD06E /* LendingAction_TVC */ = {
-			isa = PBXGroup;
-			children = (
-				C7B58FB619F1E396005CD06E /* LendingAction_TVC.swift */,
-				C7B58FB919F23866005CD06E /* LendingActionCell.swift */,
-				C7A3F5E319F4E022005DFBF7 /* DetailLendingAction_VC.swift */,
-			);
-			name = LendingAction_TVC;
-			sourceTree = "<group>";
-		};
-		C7E5F95919958D1C00566754 /* Paginator */ = {
-			isa = PBXGroup;
-			children = (
-				C7E5F95719958D0D00566754 /* Paginator.swift */,
-			);
-			name = Paginator;
-			sourceTree = "<group>";
-		};
-		C7E5F95C19A87C7700566754 /* DetailedLoan */ = {
-			isa = PBXGroup;
-			children = (
-				C7E5F95A19A87C6C00566754 /* DetailedLoan.swift */,
-				C7E5F95D19A9C10300566754 /* CreateDetailedLoan.swift */,
-				C76F771219B12B7700E98451 /* DetailedLoanImage.swift */,
-			);
-			name = DetailedLoan;
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,14 +399,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7245A4119EB94B200E2A7AB /* Teams.png in Resources */,
-				C7245A4319EBA2ED00E2A7AB /* Lenders.png in Resources */,
+				C7F9C8401B06BCE700FA6D75 /* MyriadSetBundle.ttc in Resources */,
 				C744B5AC1A1097AF002C0375 /* Images-2.xcassets in Resources */,
 				C71797CE198614200049D44C /* Main.storyboard in Resources */,
-				C7245A5319ECE93500E2A7AB /* Loans.png in Resources */,
+				C7F9C82A1B066EF000FA6D75 /* LoanCell.xib in Resources */,
+				C7F9C7D11B054FB000FA6D75 /* Loans.png in Resources */,
 				C71797D0198614200049D44C /* Images.xcassets in Resources */,
-				C7ADF73719F7170C008B3E8D /* About.png in Resources */,
+				C7F9C8341B06705700FA6D75 /* LendingActionCell.xib in Resources */,
+				C7F9C7D01B054FB000FA6D75 /* Lenders.png in Resources */,
+				C7F9C7D21B054FB000FA6D75 /* Teams.png in Resources */,
 				C744B5AE1A1099D2002C0375 /* KivaBrowser_LSF.xib in Resources */,
+				C7F9C7CF1B054FB000FA6D75 /* About.png in Resources */,
+				C7F9C8361B06706F00FA6D75 /* TeamCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,48 +428,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7B4D03919E887890042C2F7 /* TeamWebView.swift in Sources */,
-				C7B58FB719F1E396005CD06E /* LendingAction_TVC.swift in Sources */,
-				C7E5F95B19A87C6C00566754 /* DetailedLoan.swift in Sources */,
-				C7245A5519ECECA000E2A7AB /* DetailedLender_VC.swift in Sources */,
-				C7B58FB019F1C1D9005CD06E /* LendingAction.swift in Sources */,
-				C7ABFEBA1992196C0016BA53 /* LoanManagerDelegate.swift in Sources */,
-				C7378F3419B7BC41009ACC71 /* Search_TVC.swift in Sources */,
-				C7ABFEB519919C340016BA53 /* JsonDataFetcherDelegate.swift in Sources */,
-				C7245A4E19ECE05000E2A7AB /* Lenders_TVC.swift in Sources */,
-				C7E5F95E19A9C10300566754 /* CreateDetailedLoan.swift in Sources */,
-				C7B58FBE19F2F85E005CD06E /* KivaImage.swift in Sources */,
+				C7F9C7BF1B054F9E00FA6D75 /* DetailedLender_VC.swift in Sources */,
+				C7F9C7BE1B054F9E00FA6D75 /* CriteriaPicker.swift in Sources */,
+				C7F9C7C71B054F9E00FA6D75 /* Search_TVC.swift in Sources */,
 				C71797C9198614200049D44C /* AppDelegate.swift in Sources */,
-				C7ABFEBC19943E7B0016BA53 /* LatestLoans_TVC.swift in Sources */,
-				C7245A4C19EC9AE100E2A7AB /* LenderImage.swift in Sources */,
-				C71797EF198788700049D44C /* CreateLoan.swift in Sources */,
-				C7B4D02819DFC5E90042C2F7 /* Team.swift in Sources */,
-				C7B4D03719E600A90042C2F7 /* DetailedTeam_VC.swift in Sources */,
-				C7ADF73419F71633008B3E8D /* AboutKivaBrowser.swift in Sources */,
-				C71797F11989683E0049D44C /* LoanImage.swift in Sources */,
-				C7A3F5E419F4E022005DFBF7 /* DetailLendingAction_VC.swift in Sources */,
-				C7ABFEB01990342A0016BA53 /* LoanCell.swift in Sources */,
-				C7B4D03319E3BE640042C2F7 /* BrowseTeamBy_TVC.swift in Sources */,
-				C7ABFEB71992131F0016BA53 /* LoanManager.swift in Sources */,
-				C7B4D02F19E270780042C2F7 /* TeamCell.swift in Sources */,
-				C7B4D02D19E1FBA40042C2F7 /* TeamImage.swift in Sources */,
-				C7B58FB519F1DDFC005CD06E /* CreateLendingAction.swift in Sources */,
-				C71797EC198630A00049D44C /* Loan.swift in Sources */,
-				C76F771319B12B7700E98451 /* DetailedLoanImage.swift in Sources */,
-				C7378F3819BA616D009ACC71 /* SearchResults_TVC.swift in Sources */,
-				C7B58FBA19F23866005CD06E /* LendingActionCell.swift in Sources */,
-				C7B58FB319F1C278005CD06E /* ImageFormat.swift in Sources */,
-				C71797EA1986260F0049D44C /* Loans_TVC.swift in Sources */,
-				C7245A4719EBA8D200E2A7AB /* Lender.swift in Sources */,
-				C71937FC19DE266900D1AA17 /* Teams_TVC.swift in Sources */,
-				C7245A4A19EC7E8700E2A7AB /* CreateLender.swift in Sources */,
-				C7ABFEB21990A36D0016BA53 /* JsonDataFetcher.swift in Sources */,
-				C7B4D02B19DFCB0C0042C2F7 /* CreateTeam.swift in Sources */,
-				C7378F3A19BAE856009ACC71 /* Search.swift in Sources */,
-				C7245A5119ECE49F00E2A7AB /* LenderCell.swift in Sources */,
-				C7378F3619B90898009ACC71 /* CriteriaPicker.swift in Sources */,
-				C70E381419C7B55A00A6663A /* DetailedLoanVC.swift in Sources */,
-				C7E5F95819958D0D00566754 /* Paginator.swift in Sources */,
+				C7F9C7C81B054F9E00FA6D75 /* SearchResults_TVC.swift in Sources */,
+				C7F9C7C61B054F9E00FA6D75 /* Loans_TVC.swift in Sources */,
+				C7F9C8251B05512900FA6D75 /* TeamImage.swift in Sources */,
+				C7F9C8141B05512900FA6D75 /* CreateDetailedLoan.swift in Sources */,
+				C7F9C8241B05512900FA6D75 /* Team.swift in Sources */,
+				C7F9C7A91B054F8900FA6D75 /* LenderCell.swift in Sources */,
+				C7F9C7AC1B054F8900FA6D75 /* TeamCell.swift in Sources */,
+				C7F9C81A1B05512900FA6D75 /* DetailedLoanImage.swift in Sources */,
+				C7F9C7CA1B054F9E00FA6D75 /* TeamWebView.swift in Sources */,
+				C7F9C8221B05512900FA6D75 /* Paginator.swift in Sources */,
+				C7F9C7C21B054F9E00FA6D75 /* DetailLendingAction_VC.swift in Sources */,
+				C7F9C7C51B054F9E00FA6D75 /* LendingAction_TVC.swift in Sources */,
+				C7F9C7AA1B054F8900FA6D75 /* LendingActionCell.swift in Sources */,
+				C7F9C7AB1B054F8900FA6D75 /* LoanCell.swift in Sources */,
+				C7F9C7BD1B054F9E00FA6D75 /* BrowseTeamBy_TVC.swift in Sources */,
+				C7F9C7C91B054F9E00FA6D75 /* Teams_TVC.swift in Sources */,
+				C7F9C7F81B05508900FA6D75 /* JsonDataFetcher.swift in Sources */,
+				C7F9C81E1B05512900FA6D75 /* LenderImage.swift in Sources */,
+				C7F9C7C01B054F9E00FA6D75 /* DetailedLoanVC.swift in Sources */,
+				C7F9C7FC1B05509F00FA6D75 /* JsonDataFetcherDelegate.swift in Sources */,
+				C7F9C8201B05512900FA6D75 /* Loan.swift in Sources */,
+				C7F9C81F1B05512900FA6D75 /* LendingAction.swift in Sources */,
+				C7F9C81C1B05512900FA6D75 /* KivaImage.swift in Sources */,
+				C7F9C8191B05512900FA6D75 /* DetailedLoan.swift in Sources */,
+				C7F9C7FD1B05509F00FA6D75 /* LoanManager.swift in Sources */,
+				C7F9C8391B06981500FA6D75 /* KivaFontsAndColors.swift in Sources */,
+				C7F9C81D1B05512900FA6D75 /* Lender.swift in Sources */,
+				C7F9C8211B05512900FA6D75 /* LoanImage.swift in Sources */,
+				C7F9C7C31B054F9E00FA6D75 /* LatestLoans_TVC.swift in Sources */,
+				C7F9C7BC1B054F9E00FA6D75 /* AboutKivaBrowser.swift in Sources */,
+				C7F9C81B1B05512900FA6D75 /* ImageFormat.swift in Sources */,
+				C7F9C7C11B054F9E00FA6D75 /* DetailedTeam_VC.swift in Sources */,
+				C7F9C7FE1B05509F00FA6D75 /* LoanManagerDelegate.swift in Sources */,
+				C7F9C7C41B054F9E00FA6D75 /* Lenders_TVC.swift in Sources */,
+				C7F9C8171B05512900FA6D75 /* CreateLoan.swift in Sources */,
+				C7F9C8161B05512900FA6D75 /* CreateLendingAction.swift in Sources */,
+				C7F9C8231B05512900FA6D75 /* Search.swift in Sources */,
+				C7F9C8151B05512900FA6D75 /* CreateLender.swift in Sources */,
+				C7F9C8181B05512900FA6D75 /* CreateTeam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,9 +35,9 @@ class BrowseTeamBy_TVC: UITableViewController, UITableViewDelegate, UITableViewD
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "BrowseBy"
-        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         // Configure the cell...
-        cell.textLabel.text = self.titleForRow(indexPath.row)
+        cell.textLabel!.text = self.titleForRow(indexPath.row)
         return cell
     }
     
@@ -56,9 +56,9 @@ class BrowseTeamBy_TVC: UITableViewController, UITableViewDelegate, UITableViewD
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if sender is UITableViewCell {
             if segue.identifier == "BrowseTeamBy" {
-                let cell: UITableViewCell = sender as UITableViewCell
-                if let browseBy = cell.textLabel.text {
-                    let destVC = segue.destinationViewController as Teams_TVC
+                let cell: UITableViewCell = sender as! UITableViewCell
+                if let browseBy = cell.textLabel!.text {
+                    let destVC = segue.destinationViewController as! Teams_TVC
                     //set up destinationVC title
                     destVC.title =  "\(browseBy)"
                     self.selectedCriteriaStr = self.selectCriteria(browseBy)

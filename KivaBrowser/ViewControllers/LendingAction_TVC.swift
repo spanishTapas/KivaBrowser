@@ -84,7 +84,18 @@ class LendingAction_TVC: UITableViewController, UITableViewDelegate, UITableView
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "LendingActionCell"
-        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as LendingActionCell
+
+        var cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! LendingActionCell
+        
+        var nib = NSBundle.mainBundle().loadNibNamed("LendingActionCell", owner: self, options: nil) as NSArray
+        cell = nib.objectAtIndex(0) as! LendingActionCell
+    
+        cell.layoutIfNeeded()
+        //cell.bounds = CGRectMake(0, 0,CGRectGetWidth(tableView.bounds), 99999);
+        //cell.contentView.bounds = cell.bounds;
+        //cell.borrowerNameLabel.preferredMaxLayoutWidth = CGRectGetWidth(cell.borrowerNameLabel.frame);
+        //cell.borrowerCountryLabel.preferredMaxLayoutWidth = CGRectGetWidth(cell.borrowerCountryLabel.frame);
+
         if tableView == self.searchDisplayController?.searchResultsTableView {
             let lending_action = searchResultsArray[indexPath.row] as LendingAction
             self.configureCell(cell, lending_action: lending_action)
@@ -92,6 +103,7 @@ class LendingAction_TVC: UITableViewController, UITableViewDelegate, UITableView
             let lending_action = lendingActionArray[indexPath.row] as LendingAction
             self.configureCell(cell, lending_action: lending_action)
         }
+        
         return cell
     }
     
@@ -113,7 +125,6 @@ class LendingAction_TVC: UITableViewController, UITableViewDelegate, UITableView
             let remaining = amount - funded
             let progress = float_t(funded)/float_t(amount)
             cell.fundedProgressView.progress = progress
-            cell.fundedProgressView.progressTintColor = UIColor.greenColor()
             
             let fundedPercentage = progress * 100
             let percentageStr = "\(Int(fundedPercentage))% funded"
@@ -180,25 +191,26 @@ class LendingAction_TVC: UITableViewController, UITableViewDelegate, UITableView
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController]
         if sender is LendingActionCell {
+            println("...Segue...")
             let view: UIView? = sender.superview
             var tableView = UITableView()
             if view?.superview is UITableView {
-                tableView = view?.superview as UITableView
+                tableView = view?.superview as! UITableView
             } else if view is UITableView {
-                tableView = view as UITableView
+                tableView = view as! UITableView
             } else {
                 //NSAssert(NO, @"UITableView shall always be found.");
             }
-            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as UITableViewCell)!
+            let indexPath: NSIndexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
             
             if segue.identifier == "ShowLendingActionDetail" {
                 if tableView == self.searchDisplayController?.searchResultsTableView {
                     let selectedLending_Action: LendingAction = self.searchResultsArray[indexPath.row]
-                    let myDestVC = segue.destinationViewController as DetailLendingAction_VC
+                    let myDestVC = segue.destinationViewController as! DetailLendingAction_VC
                     myDestVC.setLending_Action(selectedLending_Action)
                 } else {
                     let selectedLending_Action: LendingAction = self.lendingActionArray[indexPath.row]
-                    let myDestVC = segue.destinationViewController as DetailLendingAction_VC
+                    let myDestVC = segue.destinationViewController as! DetailLendingAction_VC
                     myDestVC.setLending_Action(selectedLending_Action)
                 }
             }

@@ -69,7 +69,7 @@ class DetailedLoanVC: UIViewController, LoanManagerDelegate, UIScrollViewDelegat
             self.scrollView.setContentOffset(bottomOffset, animated: true)
         }
     
-    func setLoan_id(loan_id: Int) {
+    func setTheLoan_id(loan_id: Int) {
         self.loan_id = loan_id
         println("Detailedloan self.loan_id: \(self.loan_id)")
     }
